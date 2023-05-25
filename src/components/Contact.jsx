@@ -22,15 +22,15 @@ const Contact = () => {
 
     setForm({ ...form, [name]: value });
   }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     // Need to setup emailjs account
     emailjs.send(
-      '', // Template
-      '', // service
+      import.meta.env.VITE_SERVICE_KEY,
+      import.meta.env.VITE_TEMPLATE_KEY, // Template
+       // service
       {
         from_name: form.name,
         to_name: 'Sanskar',
@@ -38,7 +38,7 @@ const Contact = () => {
         to_email: 'modisanskar5@gmail.com',
         message: form.message,
       },
-      '' // public key
+      import.meta.env.VITE_PUBLIC_KEY, // public key
     ).then(() => {
       setLoading(false);
       alert('Thank you. I will get back to you as soon as possible.');
