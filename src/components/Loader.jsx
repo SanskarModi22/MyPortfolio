@@ -6,13 +6,7 @@ const Loader = () => {
   return (
     <Html>
       <span className="canvas-loader"></span>
-      <p
-        style={{
-          fontSize: 14,
-          color: "#F1F1F1",
-          fontWeight: 800,
-          marginTop: 40,
-        }}
+      <p className="font-extrabold text-[#f1f1f1] text-sm my-10"
       >
         {progress.toFixed(2)}%
       </p>
