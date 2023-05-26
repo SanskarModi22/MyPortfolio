@@ -289,29 +289,29 @@ const projects = [{
         image: fundzer,
         source_code_link: "https://github.com/Invest-Mate",
     },
-    // {
-    //     name: "Screen Share",
-    //     description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
-    //     tags: [{
-    //             name: "webrtc",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "socket.io",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "ejs",
-    //             color: "pink-text-gradient",
-    //         },
-    //         {
-    //             name: "jquery",
-    //             color: "green-text-gradient",
-    //         },
-    //     ],
-    //     image: screenshare,
-    //     source_code_link: "https://github.com/SanskarModi22/Screen-Share",
-    // },
+    {
+        name: "Screen Share",
+        description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
+        tags: [{
+                name: "webrtc",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "socket.io",
+                color: "green-text-gradient",
+            },
+            {
+                name: "ejs",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "jquery",
+                color: "green-text-gradient",
+            },
+        ],
+        image: screenshare,
+        source_code_link: "https://github.com/SanskarModi22/Screen-Share",
+    },
     {
         name: "Foodly",
         description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
