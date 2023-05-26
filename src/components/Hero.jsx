@@ -33,7 +33,7 @@ const Hero = () => {
               className="border-[1px] border-white py-3 px-6 rounded-md hover:bg-secondary hover:text-primary duration-200 transition-all"
             >
               <a
-                href="https://juadebmantra.netlify.app"
+                href="https://linktr.ee/SanskarModi2203"
                 className="text-[16px]"
               >
                LinkTree
@@ -44,7 +44,7 @@ const Hero = () => {
               className="border-[1px] border-white py-3 px-6 rounded-md hover:bg-secondary hover:text-primary duration-200 transition-all"
             >
               <a
-                href="https://drive.google.com/file/d/1ZTnD33Is7kFTN8gnlnvIbafnAIA-Pd6E/view?usp=sharing"
+                href="https://rb.gy/bddzi"
                 download={true}
                 className="text-[16px]"
               >
