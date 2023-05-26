@@ -15,24 +15,53 @@ const Hero = () => {
           <div className={`w-1 sm:h-80 h-40 violet-gradient`} />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I&apos;m <span className={`text-[#915eff]`}>Sanskar</span>
+        <div className="flex flex-col items-center justify-center mt-5 w-full">
+          <h1
+            className={`${styles.heroHeadText} text-white text-center flex flex-col lg:flex-row w-full md:w-auto items-center justify-center gap-6`}
+          >
+           Hi,Iʻm Sanskar Modi
+           
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a Full Stack developer developing Mobile<br className="sm:block hidden" />{" "}
-            and web applications
+          <p
+            className={`text-[17px] leading-[30px] mt-6 text-white-100 w-full md:w-[75%] text-center`}
+          >
+            I am a problem-solving full-stack developer with expertise in mobile and web application development. With a passion for creating robust and user-friendly solutions, I excel at analyzing complex problems and implementing innovative strategies to overcome them. My versatile skill set and strong communication skills enable me to deliver high-quality, tailored solutions that meet the unique needs of my clients.
           </p>
+          <div className="flex flex-col md:flex-row items-center justify-start gap-8 mt-12 ">
+            <button
+              type="submit"
+              className="border-[1px] border-white py-3 px-6 rounded-md hover:bg-secondary hover:text-primary duration-200 transition-all"
+            >
+              <a
+                href="https://juadebmantra.netlify.app"
+                className="text-[16px]"
+              >
+               LinkTree
+              </a>
+            </button>
+            <button
+              type="submit"
+              className="border-[1px] border-white py-3 px-6 rounded-md hover:bg-secondary hover:text-primary duration-200 transition-all"
+            >
+              <a
+                href="https://drive.google.com/file/d/1ZTnD33Is7kFTN8gnlnvIbafnAIA-Pd6E/view?usp=sharing"
+                download={true}
+                className="text-[16px]"
+              >
+                Download CV
+              </a>
+            </button>
+          </div>
         </div>
       </div>
 
-      <ComputersCanvas />
-      <div className="absolute xs:bottom-10 bottom-40 w-full flex justify-center items-center">
+      {/* <ComputersCanvas /> */}
+      <div className=" hidden absolute xs:bottom-10 bottom-40 w-full md:flex justify-center items-center">
         {/* A link that navigates to the element with the ID "about" */}
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             {/* An animated element */}
-            <motion.dev
+            <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{
                 duration: 1.5, // Animation duration of 1.5 seconds
@@ -41,7 +70,7 @@ const Hero = () => {
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
               // The Ball Element inside the animation
-            ></motion.dev>
+            ></motion.div>
           </div>
         </a>
       </div>
