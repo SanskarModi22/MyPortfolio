@@ -27,7 +27,7 @@ const Navbar = () => {
           }}
         >
           {/* Link Containing the name and Logo for which on by clicking will be going up */}
-          <img src={logo} alt="logo" className={`w-9 h-9 object-contain`} />
+          <img src={logo} alt="logo" className={`w-11 h-11 object-contain`} />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Sanskar &nbsp;<span className="sm:block hidden">| Portfolio</span>{" "}
           </p>
