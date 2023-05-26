@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
@@ -22,12 +23,32 @@ const Hero = () => {
            Hi,Iʻm Sanskar Modi
            
           </h1>
+          <div className={`${styles.heroTypedText} mt-2 text-white-100`}>
+            <Typewriter
+              options={{
+                strings: [
+                  "Software Developer",
+                  "Engineer",
+                  "Leader",
+                  "Full Stack Developer",
+                ],
+                autoStart: true,
+                loop: true,
+                cursor: "|",
+                delay: 100,
+                deleteSpeed: 40,
+                pauseFor: 1000,
+                wrapperClassName: "text-[#dfd9ff]",
+                cursorClassName: "purple-text-gradient",
+              }}
+            />
+          </div>
           <p
             className={`text-[17px] leading-[30px] mt-6 text-white-100 w-full md:w-[75%] text-center`}
           >
             I am a problem-solving full-stack developer with expertise in mobile and web application development.I excel at analyzing complex problems and implementing innovative strategies to overcome them.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-start gap-8 mt-12 ">
+          <div className="flex  md:flex-row items-center justify-start gap-8 mt-12 ">
             <button
               type="submit"
               className="border-[1px] border-white py-3 px-6 rounded-md hover:bg-secondary hover:text-primary duration-200 transition-all"
