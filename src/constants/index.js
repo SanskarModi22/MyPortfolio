@@ -33,6 +33,12 @@ import {
     oneall,
     goblaq,
     quonectic,
+    reddit,
+    cocreate,
+    recruit,
+    fundzer,
+    screenshare,
+    foodly,
 } from "../assets";
 
 export const navLinks = [{
@@ -204,61 +210,126 @@ const testimonials = [{
 ];
 
 const projects = [{
-        name: "Car Rent",
-        description: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        name: "Reddit Clone",
+        description: "Developed a fully functional Reddit clone with user authentication, subreddit creation, post creation, comment creation, and upvoting/downvoting features.",
         tags: [{
-                name: "react",
+                name: "flutter",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "firebase",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "riverpod",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: reddit,
+        source_code_link: "https://github.com/SanskarModi22/Reddit-Clone",
     },
     {
-        name: "Job IT",
-        description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        name: "CoCreate",
+        description: "Developed a Google Docs clone that enables real-time collaboration for up to 3+ individuals on a single document.",
         tags: [{
-                name: "react",
+                name: "flutter",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "nodejs",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "mongoDB",
                 color: "pink-text-gradient",
             },
+            {
+                name: "socket.io",
+                color: "green-text-gradient",
+            },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: cocreate,
+        source_code_link: "https://github.com/SanskarModi22/CoCreate",
     },
     {
-        name: "Trip Guide",
-        description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        name: "RecruitX",
+        description: "Developed a mobile app connecting job seekers and employers based on skills and availability, with an intuitive UI and features for job search, applicant tracking, and employer profiles.",
         tags: [{
-                name: "nextjs",
+                name: "flutter",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "firebase",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "provider",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: recruit,
+        source_code_link: "https://github.com/SanskarModi22/RecruitX",
+    },
+    {
+        name: "Fundzer",
+        description: "Fundzer is an innovative platform designed to address financial challenges by connecting individuals or groups in need with philanthropists seeking impactful causes to support.",
+        tags: [{
+                name: "flutter",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "mongoDB",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: fundzer,
+        source_code_link: "https://github.com/Invest-Mate",
+    },
+    {
+        name: "Screen Share",
+        description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
+        tags: [{
+                name: "webrtc",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "socket.io",
+                color: "green-text-gradient",
+            },
+            {
+                name: "ejs",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "jquery",
+                color: "green-text-gradient",
+            },
+        ],
+        image: screenshare,
+        source_code_link: "https://github.com/SanskarModi22/Screen-Share",
+    },
+    {
+        name: "Foodly",
+        description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
+        tags: [{
+                name: "flutter",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "firebase",
+                color: "green-text-gradient",
+            },
+            {
+                name: "provider",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: foodly,
+        source_code_link: "https://github.com/RGTechPro/foodly",
     },
 ];
 

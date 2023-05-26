@@ -36,6 +36,13 @@ import quonectic from "./company/Quonectic.jpg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import foodly from "./Foodly.jpg";
+import fundzer from "./Fundzer.png";
+import cocreate from "./GoogleDocs.png";
+import recruit from "./RecruitX.jpeg";
+import reddit from "./RedditClone.png";
+import screenshare from "./ScreenShare.png";
+
 
 export {
     logo,
@@ -74,5 +81,11 @@ export {
     freelancer,
     oneall,
     goblaq,
-    quonectic
+    quonectic,
+    foodly,
+    fundzer,
+    cocreate,
+    recruit,
+    reddit,
+    screenshare
 };
