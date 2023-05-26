@@ -8,14 +8,14 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl max-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[1px] max-w-7xl max-auto flex flex-row items-start gap-5`}
       >
-        <div className={`flex flex-col justify-center items-center mt-5`}>
+        {/* <div className={`flex flex-col justify-center items-center `}>
           <div className={`w-5 h-5 rounded-full bg-[#915eff]`} />
           <div className={`w-1 sm:h-80 h-40 violet-gradient`} />
-        </div>
+        </div> */}
 
-        <div className="flex flex-col items-center justify-center mt-5 w-full">
+        <div className="flex flex-col items-center justify-center m-auto w-full">
           <h1
             className={`${styles.heroHeadText} text-white text-center flex flex-col lg:flex-row w-full md:w-auto items-center justify-center gap-6`}
           >
@@ -25,7 +25,7 @@ const Hero = () => {
           <p
             className={`text-[17px] leading-[30px] mt-6 text-white-100 w-full md:w-[75%] text-center`}
           >
-            I am a problem-solving full-stack developer with expertise in mobile and web application development. With a passion for creating robust and user-friendly solutions, I excel at analyzing complex problems and implementing innovative strategies to overcome them. My versatile skill set and strong communication skills enable me to deliver high-quality, tailored solutions that meet the unique needs of my clients.
+            I am a problem-solving full-stack developer with expertise in mobile and web application development.I excel at analyzing complex problems and implementing innovative strategies to overcome them.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-start gap-8 mt-12 ">
             <button
@@ -54,8 +54,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
+      <div>
+        <br />
+        <br />
+      </div>
       {/* <ComputersCanvas /> */}
+      <br />
+      <br />
       <div className=" hidden absolute xs:bottom-10 bottom-40 w-full md:flex justify-center items-center">
         {/* A link that navigates to the element with the ID "about" */}
         <a href="#about">
