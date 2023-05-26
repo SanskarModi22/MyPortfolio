@@ -270,67 +270,67 @@ const projects = [{
         image: recruit,
         source_code_link: "https://github.com/SanskarModi22/RecruitX",
     },
-    {
-        name: "Fundzer",
-        description: "Fundzer is an innovative platform designed to address financial challenges by connecting individuals or groups in need with philanthropists seeking impactful causes to support.",
-        tags: [{
-                name: "flutter",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "nodejs",
-                color: "green-text-gradient",
-            },
-            {
-                name: "mongoDB",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: fundzer,
-        source_code_link: "https://github.com/Invest-Mate",
-    },
-    {
-        name: "Screen Share",
-        description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
-        tags: [{
-                name: "webrtc",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "socket.io",
-                color: "green-text-gradient",
-            },
-            {
-                name: "ejs",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "jquery",
-                color: "green-text-gradient",
-            },
-        ],
-        image: screenshare,
-        source_code_link: "https://github.com/SanskarModi22/Screen-Share",
-    },
-    {
-        name: "Foodly",
-        description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
-        tags: [{
-                name: "flutter",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "firebase",
-                color: "green-text-gradient",
-            },
-            {
-                name: "provider",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: foodly,
-        source_code_link: "https://github.com/RGTechPro/foodly",
-    },
+    // {
+    //     name: "Fundzer",
+    //     description: "Fundzer is an innovative platform designed to address financial challenges by connecting individuals or groups in need with philanthropists seeking impactful causes to support.",
+    //     tags: [{
+    //             name: "flutter",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "nodejs",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "mongoDB",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: fundzer,
+    //     source_code_link: "https://github.com/Invest-Mate",
+    // },
+    // {
+    //     name: "Screen Share",
+    //     description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
+    //     tags: [{
+    //             name: "webrtc",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "socket.io",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "ejs",
+    //             color: "pink-text-gradient",
+    //         },
+    //         {
+    //             name: "jquery",
+    //             color: "green-text-gradient",
+    //         },
+    //     ],
+    //     image: screenshare,
+    //     source_code_link: "https://github.com/SanskarModi22/Screen-Share",
+    // },
+    // {
+    //     name: "Foodly",
+    //     description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
+    //     tags: [{
+    //             name: "flutter",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "firebase",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "provider",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: foodly,
+    //     source_code_link: "https://github.com/RGTechPro/foodly",
+    // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
