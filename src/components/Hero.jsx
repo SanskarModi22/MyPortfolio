@@ -48,7 +48,7 @@ const Hero = () => {
                 download={true}
                 className="text-[16px]"
               >
-                Download CV
+                Resume
               </a>
             </button>
           </div>
