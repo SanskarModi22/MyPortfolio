@@ -69,6 +69,69 @@ const services = [{
     },
 ];
 
+const skilltag = {
+    typescript: {
+        name: "TypeScript",
+        textCol: "#FFFFFF",
+        backCol: "#007ACC",
+    },
+    node: {
+        name: "NodeJS",
+        textCol: "#FFFFFF",
+        backCol: "#DD1B16",
+    },
+    githubActions: {
+        name: "GitHub Actions",
+        textCol: "#FFFFFF",
+        backCol: "#171515",
+    },
+    blazor: {
+        name: "Blazor",
+        textCol: "#FFFFFF",
+        backCol: "#E0234E",
+    },
+    csharp: {
+        name: "C#",
+        textCol: "#FFFFFF",
+        backCol: "#f06529",
+    },
+    css: {
+        name: "CSS",
+        textCol: "#FFFFFF",
+        backCol: "#264DE4",
+    },
+    javascript: {
+        name: "JavaScript",
+        textCol: "#FFFFFF",
+        backCol: "#F0DB4F",
+    },
+    socket: {
+        name: "Socket.io",
+        textCol: "#FFFFFF",
+        backCol: "#563D7C",
+    },
+    flutter: {
+        name: "Flutter",
+        textCol: "#FFFFFF",
+        backCol: "#61DBFB",
+    },
+    visualBasic: {
+        name: "Visual Basic",
+        textCol: "#FFFFFF",
+        backCol: "#136099",
+    },
+    firebase: {
+        name: "Firebase",
+        textCol: "#FFFFFF",
+        backCol: "#A91D22",
+    },
+    webrtc: {
+        name: "WebRTC",
+        textCol: "#FFFFFF",
+        backCol: "#FF9900",
+    },
+};
+
 const technologies = [{
         name: "JavaScript",
         icon: javascript,
@@ -145,6 +208,11 @@ const experiences = [{
             "Completed end-to-end web and mobile app projects, ensuring 100% client satisfaction",
             "Collaborated in a team to deliver high-quality projects within deadlines, communicating effectively with team members",
         ],
+        technologies: [
+            skilltag.flutter,
+            skilltag.javascript,
+            skilltag.firebase,
+        ],
     },
     {
         title: "Project Lead , FullStack Developer",
@@ -158,6 +226,14 @@ const experiences = [{
             "Developed a screen and audio sharing application using WebRTC and Socket.io",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
+        technologies: [
+            skilltag.flutter,
+            skilltag.javascript,
+            skilltag.firebase,
+            skilltag.webrtc,
+            skilltag.socket,
+            skilltag.css
+        ],
     },
     {
         title: "FullStack Developer",
@@ -169,6 +245,15 @@ const experiences = [{
             " Developed 15+ responsive frontend pages using HTML, CSS, and Blazor, integrated with a C# backend, resulting in a 10% increase in website traffic",
             "Created and launched Flutter web app with NodeJS, Express, and MongoDB backend based on Adobe XD design.Enabled user registration for events and newsletters, resulting in 500 new registrations within the first month",
             "Implementing responsive design and ensuring cross-browser compatibility.",
+        ],
+        technologies: [
+            skilltag.flutter,
+            skilltag.javascript,
+            skilltag.firebase,
+            skilltag.csharp,
+            skilltag.blazor,
+            skilltag.css,
+            skilltag.node
         ],
     },
     {
@@ -182,6 +267,10 @@ const experiences = [{
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
             "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
+        ],
+        technologies: [
+            skilltag.flutter,
+            skilltag.firebase,
         ],
     },
 ];
