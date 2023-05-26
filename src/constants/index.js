@@ -270,25 +270,25 @@ const projects = [{
         image: recruit,
         source_code_link: "https://github.com/SanskarModi22/RecruitX",
     },
-    // {
-    //     name: "Fundzer",
-    //     description: "Fundzer is an innovative platform designed to address financial challenges by connecting individuals or groups in need with philanthropists seeking impactful causes to support.",
-    //     tags: [{
-    //             name: "flutter",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "nodejs",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "mongoDB",
-    //             color: "pink-text-gradient",
-    //         },
-    //     ],
-    //     image: fundzer,
-    //     source_code_link: "https://github.com/Invest-Mate",
-    // },
+    {
+        name: "Fundzer",
+        description: "Fundzer is an innovative platform designed to address financial challenges by connecting individuals or groups in need with philanthropists seeking impactful causes to support.",
+        tags: [{
+                name: "flutter",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nodejs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "mongoDB",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: fundzer,
+        source_code_link: "https://github.com/Invest-Mate",
+    },
     // {
     //     name: "Screen Share",
     //     description: "Screen Share is an impressive application that replicates the functionality of Google Meet, providing users with a seamless platform for collaborative and interactive video conferencing. With its user-friendly interface and robust features, Screen Share offers a reliable solution for virtual meetings and screen sharing needs.",
