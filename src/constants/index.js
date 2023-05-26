@@ -312,25 +312,25 @@ const projects = [{
     //     image: screenshare,
     //     source_code_link: "https://github.com/SanskarModi22/Screen-Share",
     // },
-    // {
-    //     name: "Foodly",
-    //     description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
-    //     tags: [{
-    //             name: "flutter",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "firebase",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "provider",
-    //             color: "pink-text-gradient",
-    //         },
-    //     ],
-    //     image: foodly,
-    //     source_code_link: "https://github.com/RGTechPro/foodly",
-    // },
+    {
+        name: "Foodly",
+        description: "Foodly is a comprehensive food delivery app that seamlessly connects users with restaurants, offering a wide range of features including catalogues, menu filtering, cart management, order tracking, and user profile management.",
+        tags: [{
+                name: "flutter",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "firebase",
+                color: "green-text-gradient",
+            },
+            {
+                name: "provider",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: foodly,
+        source_code_link: "https://github.com/RGTechPro/foodly",
+    },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
