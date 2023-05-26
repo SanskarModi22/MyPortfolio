@@ -7,7 +7,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import vite from "../../public/vite.svg";
+import vite from "./tech/vite.svg";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -29,6 +29,10 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import freelancer from "./company/freelancer.svg";
+import oneall from "./company/oneall.jpg";
+import goblaq from "./company/goblaq.png";
+import quonectic from "./company/Quonectic.jpg";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -66,5 +70,9 @@ export {
     firebase,
     flutter,
     nest,
-    next
+    next,
+    freelancer,
+    oneall,
+    goblaq,
+    quonectic
 };

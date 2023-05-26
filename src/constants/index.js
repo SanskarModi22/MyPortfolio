@@ -29,6 +29,10 @@ import {
     jobit,
     tripguide,
     threejs,
+    freelancer,
+    oneall,
+    goblaq,
+    quonectic,
 } from "../assets";
 
 export const navLinks = [{
@@ -126,35 +130,33 @@ const technologies = [{
 ];
 
 const experiences = [{
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Freelancer",
+        company_name: "",
+        icon: freelancer,
         iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        date: "August 2022 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Completed end-to-end web and mobile app projects, ensuring 100% client satisfaction",
+            "Collaborated in a team to deliver high-quality projects within deadlines, communicating effectively with team members",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Project Lead , FullStack Developer",
+        company_name: "OneAll Digital",
+        icon: oneall,
         iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        date: "May 2022 - June 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Oversaw project schedules and coordinated with clients and development team to achieve timely delivery of 3 successful projects resulting in a 70% increase in client satisfaction",
+            "Developed Saarthi, a taxi service app and led the development team. Designed and integrated the responsive UI for the Driver app, resulting in a 40% increase in user engagement",
+            "Developed a screen and audio sharing application using WebRTC and Socket.io",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
     {
         title: "Web Developer",
         company_name: "Shopify",
-        icon: shopify,
+        icon: goblaq,
         iconBg: "#383E56",
         date: "Jan 2022 - Jan 2023",
         points: [
@@ -167,7 +169,7 @@ const experiences = [{
     {
         title: "Full stack Developer",
         company_name: "Meta",
-        icon: meta,
+        icon: quonectic,
         iconBg: "#E6DEDD",
         date: "Jan 2023 - Present",
         points: [
