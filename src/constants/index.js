@@ -1,6 +1,12 @@
+/* eslint-disable no-unused-vars */
 import {
     mobile,
     backend,
+    flutter,
+    next,
+    nest,
+    firebase,
+    vite,
     creator,
     web,
     javascript,
@@ -44,28 +50,16 @@ const services = [{
         icon: web,
     },
     {
-        title: "React Native Developer",
+        title: "Flutter Developer",
         icon: mobile,
     },
     {
         title: "Backend Developer",
         icon: backend,
     },
-    {
-        title: "Content Creator",
-        icon: creator,
-    },
 ];
 
 const technologies = [{
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
         name: "JavaScript",
         icon: javascript,
     },
@@ -94,17 +88,37 @@ const technologies = [{
         icon: mongodb,
     },
     {
-        name: "Three JS",
-        icon: threejs,
+        name: "NextJS",
+        icon: next,
     },
+    {
+        name: "NestJS",
+        icon: nest,
+    },
+    {
+        name: "Firebase",
+        icon: firebase,
+    },
+    {
+        name: "Flutter",
+        icon: flutter,
+    },
+    {
+        name: "Vite",
+        icon: vite,
+    },
+    // {
+    //     name: "Three JS",
+    //     icon: threejs,
+    // },
     {
         name: "git",
         icon: git,
     },
-    {
-        name: "figma",
-        icon: figma,
-    },
+    // {
+    //     name: "figma",
+    //     icon: figma,
+    // },
     {
         name: "docker",
         icon: docker,
