@@ -42,7 +42,10 @@ import cocreate from "./GoogleDocs.png";
 import recruit from "./RecruitX.jpeg";
 import reddit from "./RedditClone.png";
 import screenshare from "./ScreenShare.png";
-
+import instagram from "./instagram.png";
+import leetcode from "./leetcode.png";
+import linkedin from "./linkedin.png";
+import twitter from "./twitter.png";
 
 export {
     logo,
@@ -87,5 +90,9 @@ export {
     cocreate,
     recruit,
     reddit,
-    screenshare
+    screenshare,
+    instagram,
+    leetcode,
+    twitter,
+    linkedin
 };

@@ -5,6 +5,8 @@ import emailjs from '@emailjs/browser';
 import { SectionWrapper } from '../hoc';
 import { EarthCanvas } from './canvas';
 import { slideIn } from '../utils/motion';
+import ProjectLink from "./ProjectLink";
+import { github,linkedin ,twitter, instagram , leetcode } from '../assets';
 // import { s } from 'maath/dist/misc-7d870b3c.esm';
 
 
@@ -65,7 +67,29 @@ const Contact = () => {
       >
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
+        <div className="flex gap-3 mt-1">
+          <ProjectLink
+            link={"https://github.com/SanskarModi22"}
+            image={github}
+          />
 
+          <ProjectLink
+            link={"https://www.linkedin.com/in/sanskar-modi-220a42151/"}
+            image={linkedin}
+          />
+          <ProjectLink
+            link={"https://leetcode.com/modisanskar5/"}
+            image={leetcode}
+          />
+          <ProjectLink
+            link={"https://twitter.com/SanskarModiji"}
+            image={twitter}
+          />
+          <ProjectLink
+            link={"https://www.instagram.com/modi_the_great_223/"}
+            image={instagram}
+          />
+        </div>
         <form 
           ref={formRef}
           onSubmit={handleSubmit}
