@@ -27,6 +27,7 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
+                  "Product Manager",
                   "Software Developer",
                   "Engineer",
                   "Leader",
