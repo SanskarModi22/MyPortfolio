@@ -33,6 +33,8 @@ import freelancer from "./company/freelancer.svg";
 import oneall from "./company/oneall.jpg";
 import goblaq from "./company/goblaq.png";
 import quonectic from "./company/Quonectic.jpg";
+import taxian from "./company/taxian.png";
+import ono from "./company/ono.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -94,5 +96,7 @@ export {
     instagram,
     leetcode,
     twitter,
-    linkedin
+    linkedin,
+    taxian,
+    ono
 };

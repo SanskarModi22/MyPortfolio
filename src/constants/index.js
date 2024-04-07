@@ -39,6 +39,8 @@ import {
     fundzer,
     screenshare,
     foodly,
+    taxian,
+    ono
 } from "../assets";
 
 export const navLinks = [{
@@ -72,11 +74,30 @@ const services = [{
         title: "Backend Developer",
         icon: backend,
     },
+    {
+        title: "Product Manager",
+        icon: creator,
+    },
 ];
 
 const skilltag = {
+    consulting: {
+        name: "Consulting",
+        textCol: "#FFFFFF",
+        backCol: "#f06529",
+    },
+    bloc: {
+        name: "BLOC",
+        textCol: "#FFFFFF",
+        backCol: "#DD1B16",
+    },
     typescript: {
         name: "TypeScript",
+        textCol: "#FFFFFF",
+        backCol: "#007ACC",
+    },
+    pm: {
+        name: "Project Management",
         textCol: "#FFFFFF",
         backCol: "#007ACC",
     },
@@ -95,6 +116,11 @@ const skilltag = {
         textCol: "#FFFFFF",
         backCol: "#E0234E",
     },
+    problem: {
+        name: "Problem Solving",
+        textCol: "#FFFFFF",
+        backCol: "#E0234E",
+    },
     csharp: {
         name: "C#",
         textCol: "#FFFFFF",
@@ -105,8 +131,18 @@ const skilltag = {
         textCol: "#FFFFFF",
         backCol: "#264DE4",
     },
+    stake: {
+        name: "Stake-Holder Management",
+        textCol: "#FFFFFF",
+        backCol: "#264DE4",
+    },
     javascript: {
         name: "JavaScript",
+        textCol: "#FFFFFF",
+        backCol: "#F0DB4F",
+    },
+    growth: {
+        name: "Growth Strategies",
         textCol: "#FFFFFF",
         backCol: "#F0DB4F",
     },
@@ -115,8 +151,18 @@ const skilltag = {
         textCol: "#FFFFFF",
         backCol: "#563D7C",
     },
+    apollo: {
+        name: "Apollo.io",
+        textCol: "#FFFFFF",
+        backCol: "#563D7C",
+    },
     flutter: {
         name: "Flutter",
+        textCol: "#FFFFFF",
+        backCol: "#61DBFB",
+    },
+    communication: {
+        name: "Communication",
         textCol: "#FFFFFF",
         backCol: "#61DBFB",
     },
@@ -204,6 +250,46 @@ const technologies = [{
 ];
 
 const experiences = [{
+        title: "Product Manager (Growth & Strategy)",
+        company_name: "ONO Suite",
+        icon: ono,
+        iconBg: "#383E56",
+        date: "Jan 2024 - Present",
+        points: [
+            "Successfully reached out to 50+ brand founders and management, resulting in 20% conversion rate and ultimate partnerships with key brands within the B2B food industry.",
+            "Identified and solved challenges for clients, resulting in a 15% reduction in operation costs while simultaneously boosting sales and improving customer satisfaction.",
+            "Coordinated with the development, design, marketing, sales, and testing teams, quickly resolving blockers and issues, resulting in a 30% increase in project efficiency and on-time delivery.",
+            "Executed successful email campaigns, resulting in a 5-6% reply rate and increased brand visibility for ONO Suite in the USA, Middle East, and Europe.",
+            "Spearheaded the integration of various technologies and formed partnerships with hardware vendors and resellers, leading to a 25% expansion in product capabilities and market reach within the restaurant tech industry."
+        ],
+        technologies: [
+            skilltag.apollo,
+            skilltag.communication,
+            skilltag.growth,
+            skilltag.problem,
+            skilltag.stake
+        ],
+    },
+    {
+        title: "Founding Software Engineer",
+        company_name: "Taxian",
+        icon: taxian,
+        iconBg: "#E6DEDD",
+        date: "Oct 2023 - Present",
+        points: [
+            "Developed and deployed a comprehensive Flutter application on the Play Store, achieving a 100% successful deployment rate and reaching an audience of over 500 active users.",
+            "Implemented and optimized various features, increasing user engagement by 30% through the introduction of new features and seamless integration of external APIs.",
+            "Meticulously replicated Figma designs, resulting in a 25% improvement in UI/UX satisfaction scores through iterative design enhancements and user testing.",
+            "Efficiently managed a team of 5 members, reducing development cycle time by 20% through clear task allocation and coordination",
+            "Implemented performance optimizations that reduced app loading time by 15% and increased overall performance metrics by 25%."
+        ],
+        technologies: [
+            skilltag.flutter,
+            skilltag.bloc,
+            skilltag.pm
+        ],
+    },
+    {
         title: "Freelancer",
         company_name: "",
         icon: freelancer,
