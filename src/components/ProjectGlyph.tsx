@@ -170,15 +170,85 @@ function Funnel() {
   );
 }
 
+
+function Slabs() {
+  // a staircase: unit price falls as quantity crosses each tier
+  const steps = [
+    { x: 24, y: 88, w: 44, h: 8 },
+    { x: 72, y: 72, w: 44, h: 8 },
+    { x: 120, y: 56, w: 44, h: 8 },
+    { x: 168, y: 40, w: 44, h: 8 },
+  ];
+  return (
+    <>
+      {steps.map((st, i) => (
+        <g key={i}>
+          <rect className={`g-cell ${i > 0 ? "g-cell-on" : ""}`} x={st.x} y={st.y} width={st.w} height={st.h} rx={2} style={{ animationDelay: `${i * 140}ms` }} />
+          <line className="g-draw g-faint" x1={st.x + st.w} y1={st.y + 4} x2={st.x + st.w + 4} y2={st.y - 12} pathLength={1} style={{ animationDelay: `${i * 140}ms` }} />
+        </g>
+      ))}
+      <line className="g-draw" x1={18} y1={100} x2={222} y2={100} pathLength={1} />
+      <text className="g-label" x={24} y={112}>qty →</text>
+      <text className="g-label" x={196} y={30} textAnchor="middle">10% margin</text>
+      <text className="g-label" x={120} y={118} textAnchor="middle">2% · 4% · 10%</text>
+    </>
+  );
+}
+
+function Ladder() {
+  // a reward ladder with one rung lit, and two cohorts diverging
+  const rungs = [22, 40, 58, 76];
+  return (
+    <>
+      <line className="g-draw" x1={40} y1={18} x2={40} y2={90} pathLength={1} />
+      <line className="g-draw" x1={78} y1={18} x2={78} y2={90} pathLength={1} style={{ animationDelay: "80ms" }} />
+      {rungs.map((y, i) => (
+        <rect key={i} className={`g-cell ${i === 1 ? "g-cell-on" : ""}`} x={40} y={y} width={38} height={4} rx={1} style={{ animationDelay: `${i * 120}ms` }} />
+      ))}
+      <path className="g-draw g-accent-stroke" d="M 96 62 C 140 62, 160 34, 210 28" pathLength={1} style={{ animationDelay: "420ms" }} />
+      <path className="g-draw g-faint" d="M 96 62 C 140 62, 160 74, 210 80" pathLength={1} style={{ animationDelay: "520ms" }} />
+      <circle className="g-accent-fill" cx={212} cy={28} r={2.6} />
+      <circle className="g-dot" cx={212} cy={80} r={2.2} />
+      <text className="g-label" x={59} y={104} textAnchor="middle">gift ladder</text>
+      <text className="g-label" x={190} y={18} textAnchor="middle">50%</text>
+      <text className="g-label" x={190} y={94} textAnchor="middle">19%</text>
+    </>
+  );
+}
+
+function Screens() {
+  // three kiosk screens feeding one point-of-sale
+  return (
+    <>
+      {[18, 66, 114].map((x, i) => (
+        <g key={i}>
+          <rect className="g-frame" x={x} y={22} width={36} height={56} rx={4} />
+          <rect className={`g-cell ${i === 1 ? "g-cell-on" : ""}`} x={x + 6} y={30} width={24} height={4} rx={1} style={{ animationDelay: `${i * 120}ms` }} />
+          <rect className="g-cell" x={x + 6} y={38} width={16} height={3} rx={1} />
+          <rect className="g-cell" x={x + 6} y={44} width={20} height={3} rx={1} />
+          <line className="g-draw g-faint" x1={x + 18} y1={78} x2={x + 18} y2={88} pathLength={1} style={{ animationDelay: `${200 + i * 100}ms` }} />
+          <line className="g-draw g-faint" x1={x + 18} y1={88} x2={186} y2={88} pathLength={1} style={{ animationDelay: `${260 + i * 100}ms` }} />
+        </g>
+      ))}
+      <rect className="g-gate" x={178} y={54} width={44} height={28} rx={5} />
+      <text className="g-label" x={200} y={71} textAnchor="middle">pos</text>
+      <text className="g-label" x={90} y={104} textAnchor="middle">dine in · take away · qr</text>
+    </>
+  );
+}
+
 const GLYPHS: Record<string, () => React.ReactElement> = {
   "jit-pivot": Breaker,
   "contribution-turnaround": Pipeline,
   "whatsapp-channel": Fleet,
+  "buyer-app-plg": Funnel,
+  "pricing-experiments": Slabs,
+  "rewards-retention": Ladder,
+  "doka": Audit,
+  "ono-product": Screens,
   "move-it-daas": TwoAgents,
   "vernacular-search": ToolGrid,
   "restaurant-tech-gtm": Ledger,
-  "buyer-app-plg": Funnel,
-  "doka": Audit,
 };
 
 export function ProjectGlyph({ slug, className = "" }: { slug: string; className?: string }) {

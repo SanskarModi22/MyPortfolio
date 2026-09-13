@@ -11,7 +11,7 @@ export function StatRail({ items }: { items: Metric[] }) {
         <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_220px_at_20%_0%,var(--accent-soft),transparent_70%)] opacity-70" />
         <div className="relative flex items-center justify-between border-b border-line px-5 py-2.5 font-mono text-[10.5px] uppercase tracking-[0.18em] text-faint">
           <span>Outcomes</span>
-          <span className="normal-case tracking-normal">each figure says how it was measured, and whose measurement it is</span>
+          <span className="normal-case tracking-normal">how each one was measured, and whose measurement it is</span>
         </div>
         <ol className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {items.map((m, i) => (

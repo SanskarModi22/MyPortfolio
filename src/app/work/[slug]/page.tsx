@@ -90,7 +90,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── Architecture ────────────────────────────────────────────── */}
           {diagram ? (
-            <Section title="Architecture" kicker="Hover or tap a component. Amber boxes are the guard rails — the rules that hold when people, partners or systems misbehave.">
+            <Section title="Architecture" kicker="Hover or tap any part of it. Amber boxes are the rules that hold when people, partners or systems get it wrong.">
               <Reveal>
                 <Diagram spec={diagram} title={p.title} />
               </Reveal>
@@ -118,7 +118,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── Numbers ─────────────────────────────────────────────────── */}
           {p.metrics ? (
-            <Section title="Numbers, honestly" kicker="Each figure says how it was measured and whose measurement it is. None are estimates.">
+            <Section title="Numbers, honestly" kicker="Each figure says how it was measured and whose measurement it is. None of them are estimates.">
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {p.metrics.map((m, i) => (
                   <Reveal key={m.label} delay={(i % 3) * 0.06}>
@@ -129,7 +129,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
               {p.honesty ? (
                 <Reveal className="mt-5">
                   <div className="rounded-xl border border-warn/30 bg-warn-soft/60 p-4 text-[14px] leading-relaxed text-ink">
-                    <span className="mr-2 font-mono text-[10.5px] uppercase tracking-[0.16em] text-warn">What these numbers mean</span>
+                    <span className="mr-2 font-mono text-[10.5px] uppercase tracking-[0.16em] text-warn">What these numbers do and do not show</span>
                     <Rich text={p.honesty} />
                   </div>
                 </Reveal>
@@ -139,7 +139,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── Lessons ─────────────────────────────────────────────────── */}
           {p.lessons ? (
-            <Section title="Lessons I keep">
+            <Section title="What I took from it">
               <ul className="grid gap-4 md:grid-cols-3">
                 {p.lessons.map((l, i) => (
                   <Reveal key={l} as="li" delay={i * 0.07}>

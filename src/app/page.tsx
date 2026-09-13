@@ -91,10 +91,10 @@ export default function Home() {
 
 
         {/* ── Hire me for ──────────────────────────────────────────────── */}
-        <Section id="hire" title="What to hire me for" kicker="Five roles I am a real fit for. Each line links to the case that proves it.">
+        <Section id="hire" title="What I can be hired for" kicker="Six roles I am a fit for. Each one links to the case behind it.">
           <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {profile.hire.map((h, i) => (
-              <Reveal key={h.role} as="li" delay={i * 0.05} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
+              <Reveal key={h.role} as="li" delay={i * 0.05} className="">
                 <Link href={h.href} className="block h-full">
                   <Spotlight className="h-full">
                     <div className="flex h-full flex-col p-5">
@@ -103,7 +103,7 @@ export default function Home() {
                         <span className="text-accent">→ the case</span>
                       </div>
                       <h3 className="mt-2 text-[18px] font-semibold leading-snug text-ink">{h.role}</h3>
-                      <p className="serif-lesson mt-1.5 text-[17px] leading-snug text-ink">{h.line}</p>
+                      <p className="mt-1.5 text-[15px] font-medium leading-snug text-ink">{h.line}</p>
                       <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{h.proof}</p>
                     </div>
                   </Spotlight>
@@ -149,14 +149,14 @@ export default function Home() {
         </Section>
 
         {/* ── Selected work ────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Eight cases I want to be judged on. Scroll — each one takes its turn on the right; click any to read the problem, how it worked, the numbers, and what I got wrong.">
+        <Section id="work" title="Case studies" kicker="Eleven cases. Scroll, and each one takes its turn on the right. Click any of them for the problem, how it worked, the numbers, and what I got wrong.">
           <Reveal>
             <WorkSwitch items={cards} />
           </Reveal>
         </Section>
 
         {/* ── More work ────────────────────────────────────────────────── */}
-        <Section id="more-work" title="Also shipped" kicker="Things I took end to end — including the ones that did not work.">
+        <Section id="more-work" title="Also shipped" kicker="Things I took end to end, including the ones that did not work.">
           <ul className="divide-y divide-line rounded-xl border border-line bg-surface">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>
@@ -244,7 +244,7 @@ export default function Home() {
         <Section id="contact" title="Contact">
           <Reveal>
             <div className="rounded-xl border border-line bg-surface p-6 sm:p-8">
-              <p className="serif-lesson text-2xl text-ink sm:text-3xl">Have a number going the wrong way and nobody has worked out why? Let&apos;s talk.</p>
+              <p className="serif-lesson text-2xl text-ink sm:text-3xl">If a number in your business is going the wrong way and nobody has worked out why, that is the work I do.</p>
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <a href={`mailto:${profile.email}`} className="font-mono text-[15px] text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
                   {profile.email}

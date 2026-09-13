@@ -14,16 +14,16 @@ const main = `
 console.log(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(r.name.first+" "+r.name.last)} — resume</title>
 <style>
 @page{size:A4;margin:7mm 8mm}
-*{box-sizing:border-box}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1f1c18;font-size:8.2pt;line-height:1.3;margin:0}
+*{box-sizing:border-box}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1f1c18;font-size:7.9pt;line-height:1.27;margin:0}
 a{color:#0d6e55;text-decoration:none}
 .head{text-align:center;border-bottom:1px solid #b3a993;padding-bottom:5pt;margin-bottom:6pt}
 .name{font-size:22pt;letter-spacing:-.01em}.name b{font-weight:700}.name span{font-weight:300;color:#6b665e}
 .sub{font-size:8.6pt;color:#6b665e;margin-top:2pt}.contact{font-size:8pt;color:#6b665e;margin-top:2pt}
 .grid{display:grid;grid-template-columns:29% 1fr;gap:0 9mm}
-h3{font-size:7pt;letter-spacing:.18em;text-transform:uppercase;color:#6b665e;border-bottom:1px solid #e1d9c9;padding-bottom:2pt;margin:7pt 0 4pt}
+h3{font-size:6.7pt;letter-spacing:.16em;text-transform:uppercase;color:#6b665e;border-bottom:1px solid #e1d9c9;padding-bottom:2pt;margin:7pt 0 4pt}
 h3:first-child{margin-top:0}.blk{margin-bottom:3pt}.meta{color:#6b665e;font-size:7.8pt}
 p{margin:0}.role{margin-bottom:4pt}.rh{display:flex;justify-content:space-between;gap:6pt;font-size:9.2pt}
-ul{list-style:none;margin:1pt 0 0;padding:0}li{margin-top:1.5pt;padding-left:9pt;position:relative}
+ul{list-style:none;margin:1pt 0 0;padding:0}li{margin-top:1.2pt;padding-left:9pt;position:relative}
 li:before{content:"•";position:absolute;left:0;color:#6b665e}li.sub{font-weight:700;margin-top:3.5pt}
 li.leaf{padding-left:16pt}li.leaf:before{content:"○";left:7pt}
 </style></head><body>
