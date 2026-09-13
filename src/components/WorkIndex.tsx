@@ -165,7 +165,7 @@ export function WorkIndex({ items }: { items: WorkCard[] }) {
           </div>
         ) : (
           <div key="idle" className="panel-swap">
-            <p className="panel-row serif-lesson text-[26px] leading-tight text-ink sm:text-[30px]">Six decisions, one rule: say what problem, for whom, and what number will tell us it worked.</p>
+            <p className="panel-row serif-lesson text-[26px] leading-tight text-ink sm:text-[30px]">Eight cases, one rule: say what problem, for whom, and what number will tell us it worked.</p>
             <p className="panel-row mt-3 text-[14px] leading-relaxed text-muted">Scroll — each case takes its turn here. Click any row to read the constraint, the mechanism, the numbers and what I got wrong.</p>
             <div className="panel-row mt-6 font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">Themes</div>
             <div className="panel-row mt-2 flex flex-wrap gap-1.5" onMouseLeave={() => setThemeHL(null)}>

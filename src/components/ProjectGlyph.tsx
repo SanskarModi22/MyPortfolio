@@ -132,13 +132,40 @@ function Audit() {
           <line className="g-tick" x1={78} y1={y + 3} x2={100} y2={y + 3} />
         </g>
       ))}
-      <text className="g-label" x={40} y={112} textAnchor="middle">catalogue · calls · carts</text>
+      <text className="g-label" x={40} y={112} textAnchor="middle">pitch · price · contract</text>
       {/* scanning lens */}
       <g className="g-lens">
         <circle className="g-hub g-accent-stroke" cx={170} cy={32} r={12} />
         <line className="g-accent-stroke" x1={179} y1={41} x2={190} y2={52} />
       </g>
-      <text className="g-label" x={176} y={96} textAnchor="middle">17 days</text>
+      <text className="g-label" x={176} y={96} textAnchor="middle">ios approved</text>
+    </>
+  );
+}
+
+
+function Funnel() {
+  // a funnel that widens instead of narrowing once the floors are removed
+  const rows = [
+    { y: 22, w: 168, on: 4 },
+    { y: 40, w: 132, on: 5 },
+    { y: 58, w: 96, on: 6 },
+    { y: 76, w: 60, on: 8 },
+  ];
+  return (
+    <>
+      {rows.map((r, i) => (
+        <g key={i}>
+          <rect className="g-frame" x={120 - r.w / 2} y={r.y - 6} width={r.w} height={12} rx={3} />
+          {Array.from({ length: 8 }, (_, k) => (
+            <rect key={k} className={`g-cell ${k < r.on ? "g-cell-on" : ""}`} x={120 - r.w / 2 + 6 + k * ((r.w - 12) / 8)} y={r.y - 3} width={4} height={6} rx={1} style={{ animationDelay: `${i * 120 + k * 40}ms` }} />
+          ))}
+        </g>
+      ))}
+      <line className="g-draw g-accent-stroke" x1={40} y1={16} x2={40} y2={82} pathLength={1} />
+      <text className="g-label" x={40} y={96} textAnchor="middle">floors removed</text>
+      <text className="g-label" x={200} y={96} textAnchor="middle">89% carts below mov</text>
+      <text className="g-label" x={120} y={112} textAnchor="middle">signup · otp · language · mov</text>
     </>
   );
 }
@@ -150,7 +177,8 @@ const GLYPHS: Record<string, () => React.ReactElement> = {
   "move-it-daas": TwoAgents,
   "vernacular-search": ToolGrid,
   "restaurant-tech-gtm": Ledger,
-  "milkoreach": Audit,
+  "buyer-app-plg": Funnel,
+  "doka": Audit,
 };
 
 export function ProjectGlyph({ slug, className = "" }: { slug: string; className?: string }) {

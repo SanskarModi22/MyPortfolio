@@ -3,6 +3,7 @@ import { profile } from "@/content/profile";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
+  { href: "/#hire", label: "Hire me" },
   { href: "/#work", label: "Work" },
   { href: "/#experience", label: "Experience" },
   { href: "/#contact", label: "Contact" },

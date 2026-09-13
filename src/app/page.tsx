@@ -89,8 +89,32 @@ export default function Home() {
         {/* ── Headline numbers ─────────────────────────────────────────── */}
         <StatRail items={heroMetrics} />
 
+
+        {/* ── Hire me for ──────────────────────────────────────────────── */}
+        <Section id="hire" title="What to hire me for" kicker="Five roles I am a real fit for. Each line links to the case that proves it.">
+          <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            {profile.hire.map((h, i) => (
+              <Reveal key={h.role} as="li" delay={i * 0.05} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
+                <Link href={h.href} className="block h-full">
+                  <Spotlight className="h-full">
+                    <div className="flex h-full flex-col p-5">
+                      <div className="flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
+                        <span>0{i + 1}</span>
+                        <span className="text-accent">→ the case</span>
+                      </div>
+                      <h3 className="mt-2 text-[18px] font-semibold leading-snug text-ink">{h.role}</h3>
+                      <p className="serif-lesson mt-1.5 text-[17px] leading-snug text-ink">{h.line}</p>
+                      <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{h.proof}</p>
+                    </div>
+                  </Spotlight>
+                </Link>
+              </Reveal>
+            ))}
+          </ol>
+        </Section>
+
         {/* ── Intro + signals ──────────────────────────────────────────── */}
-        <Section id="about" title="What I actually do">
+        <Section id="about" title="Who I am">
           <div className="grid gap-10 md:grid-cols-[1fr_1.2fr]">
             <Reveal className="prose-tight text-[15.5px] leading-relaxed text-muted md:sticky md:top-24 md:self-start">
               {profile.intro.map((p) => (
@@ -125,14 +149,14 @@ export default function Home() {
         </Section>
 
         {/* ── Selected work ────────────────────────────────────────────── */}
-        <Section id="work" title="Selected work" kicker="Six decisions I want to be judged on. Scroll through them — each one takes its turn on the right; click any to read the problem, the mechanism, the numbers and what I got wrong.">
+        <Section id="work" title="Case studies" kicker="Eight cases I want to be judged on. Scroll — each one takes its turn on the right; click any to read the problem, how it worked, the numbers, and what I got wrong.">
           <Reveal>
             <WorkSwitch items={cards} />
           </Reveal>
         </Section>
 
         {/* ── More work ────────────────────────────────────────────────── */}
-        <Section id="more-work" title="More work" kicker="Things I took end to end — including the two that did not work.">
+        <Section id="more-work" title="Also shipped" kicker="Things I took end to end — including the ones that did not work.">
           <ul className="divide-y divide-line rounded-xl border border-line bg-surface">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>
