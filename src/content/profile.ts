@@ -60,7 +60,7 @@ export const profile = {
     {
       role: "Go-to-market and commercial",
       line: "Price it, pitch it, negotiate it, deliver it.",
-      proof: "Wrote a restaurant-tech company's price list, cold-pitched and signed a $7,000 app contract in Saudi Arabia with a prototype, closed a renewal by conceding six of seven legal redlines, and took a delivery product to market for 128 distributors.",
+      proof: "Wrote a restaurant-tech company's price list, cold-pitched and signed a $7,000 app contract in Saudi Arabia with a prototype, closed a renewal by conceding six of seven legal redlines, and took DAAS, a delivery service, to market for the distributors already on our marketplace.",
       href: "/work/doka",
     },
   ],
@@ -106,7 +106,7 @@ export const profile = {
         "Built and ran WhatsApp as a channel: campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Recommended stopping the spend when July came in at 1.12× against 13% commission.",
         "Ran the buyer-app changes that made ordering easier: signup form and OTP tap removed, language set from the shop's location, a lower first-order minimum, cart reminders, home tabs, free gifts, a support tab with a named relationship manager for 1.47 million buyers.",
         "Shipped four pricing experiments and then queried them: coupon usage went from 3% to 30% of orders with conversion flat; gift-scheme qualifiers re-ordered at three times the rate of everyone else.",
-        "Joint product owner of a delivery service sold to the distributors on our own marketplace: four to forty-three businesses, about 4,100 bookings in 2026.",
+        "Joint product owner of DAAS, the delivery-as-a-service business sold to the distributors on our own marketplace: truck-days booked a month went 137 to 497 over five months, 13,801 deliveries, ₹10.95 crore of goods moved for 48 paying distributors.",
         "Wrote more specifications than anyone in the company: 489 of 1,585 tickets, 192 full requirement documents. Ran the release gate for three apps: 242 versions, 805 of 1,613 pull requests.",
       ],
     },
