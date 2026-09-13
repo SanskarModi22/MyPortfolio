@@ -30,7 +30,7 @@ export const profile = {
     {
       role: "Growth product manager",
       line: "Build the channel, then measure it honestly enough to know when to stop.",
-      proof: "WhatsApp at ₹9.60 per install across 29,172 buyers, an audience model over 1.17 million people, campaigns followed to the order book, and the July report that said the channel was losing money.",
+      proof: "WhatsApp at ₹9.60 per install across 29,172 buyers, an audience model over 1.17 million people, campaigns followed to the order book, and the July report that said the channel was losing money. I started it because I had measured push: 81.77 million sends bought 130,000 opens.",
       href: "/work/whatsapp-channel",
     },
     {
@@ -80,7 +80,7 @@ export const profile = {
     {
       title: "I publish the figure that survives an audit",
       href: "/work/whatsapp-channel",
-      body: "Same-day attribution at 2.60× over a seven-day window that would have read 5.22×. A note at the top of my own report explaining that 1.12× is a loss when you keep 13% of the value. Five dated instances across two companies.",
+      body: "Same-day attribution at 2.60× over a seven-day window that would have read 5.22×. Two orders worth ₹5.6 lakh thrown out of my own daily report because the buyers had nothing to do with the campaign. A note at the top explaining that 1.12× is a loss when you keep 13% of the value.",
     },
     {
       title: "I sell and negotiate, not only specify",
@@ -103,7 +103,7 @@ export const profile = {
         "Hired to make engineering ship on time. Scope grew to product, growth and the delivery business across a team of twenty. The company closed in September 2026.",
         "Owned the operating model when we stopped taking commission and started buying, storing and delivering our own stock: twelve days from written plan to first delivery, and per-brand minimums replaced by one flat fee.",
         "Drove the fulfilment programme behind contribution per order moving from −₹196 to +₹36: parcels returned to origin from 42.6% to 21.4%, median delivery from 10.2 to 6.1 days.",
-        "Built and ran WhatsApp as a channel: campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Recommended stopping the spend when July came in at 1.12× against 13% commission.",
+        "Built and ran WhatsApp as a channel after measuring that push was failing: 81.77 million sends produced 130,000 opens over 31 days. Campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Also specified the 12 order-status templates, one message per order per stage. Recommended stopping the campaign spend when July came in at 1.12× against 13% commission.",
         "Ran the buyer-app changes that made ordering easier: signup form and OTP tap removed, language set from the shop's location, a lower first-order minimum, cart reminders, home tabs, free gifts, a support tab with a named relationship manager for 1.47 million buyers.",
         "Shipped four pricing experiments and then queried them: coupon usage went from 3% to 30% of orders with conversion flat; gift-scheme qualifiers re-ordered at three times the rate of everyone else.",
         "Joint product owner of DAAS, the delivery-as-a-service business sold to the distributors on our own marketplace: truck-days booked a month went 137 to 497 over five months, 13,801 deliveries, ₹10.95 crore of goods moved for 48 paying distributors.",
