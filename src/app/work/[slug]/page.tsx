@@ -126,14 +126,6 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
                   </Reveal>
                 ))}
               </div>
-              {p.honesty ? (
-                <Reveal className="mt-5">
-                  <div className="rounded-xl border border-warn/30 bg-warn-soft/60 p-4 text-[14px] leading-relaxed text-ink">
-                    <span className="mr-2 font-mono text-[10.5px] uppercase tracking-[0.16em] text-warn">What these numbers do and do not show</span>
-                    <Rich text={p.honesty} />
-                  </div>
-                </Reveal>
-              ) : null}
             </Section>
           ) : null}
 
