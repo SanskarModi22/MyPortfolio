@@ -175,7 +175,7 @@ export default function Home() {
                   </summary>
                   <div className="px-5 pb-5 text-[14px] leading-relaxed text-muted">
                     {p.detail?.map((d) => (
-                      <p key={d.slice(0, 16)}>
+                      <p key={d.slice(0, 16)} className="mt-3 first:mt-0">
                         <Rich text={d} />
                       </p>
                     ))}
