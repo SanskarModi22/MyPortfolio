@@ -14,7 +14,7 @@ const main = `
 console.log(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(r.name.first+" "+r.name.last)} — resume</title>
 <style>
 @page{size:A4;margin:7mm 8mm}
-*{box-sizing:border-box}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1f1c18;font-size:7.9pt;line-height:1.27;margin:0}
+*{box-sizing:border-box}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#1f1c18;font-size:7.85pt;line-height:1.23;margin:0}
 a{color:#0d6e55;text-decoration:none}
 .head{text-align:center;border-bottom:1px solid #b3a993;padding-bottom:5pt;margin-bottom:6pt}
 .name{font-size:22pt;letter-spacing:-.01em}.name b{font-weight:700}.name span{font-weight:300;color:#6b665e}

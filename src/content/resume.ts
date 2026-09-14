@@ -59,9 +59,9 @@ export const resume = {
       items: [
         { kind: "flat", text: "Product, growth, engineering delivery, QA and the AI pod across a team of 20. Monthly orders 219 → 5,784 over the tenure; 242 releases of three apps from one monorepo; #1 spec author, 489 of 1,585 tickets. Company wound down Sep 2026." },
         { kind: "sub", text: "Badho Wholesale (JIT pivot) — commission marketplace → own-warehouse distributor" },
-        { kind: "leaf", text: "Named the blocker in numbers (three per-brand minimums on one cart), then owned the operating model: warehouse and software specification, minimums replaced by a flat delivery fee. **First order live in 12 days**; daily carts in the launch cities 4.5 to 45.5." },
+        { kind: "leaf", text: "Named the blocker in numbers (three per-brand minimums on one cart), then owned the operating model: warehouse and software specification, minimums replaced by a flat delivery fee. **First order live in 12 days**; of 81 orders in the 8 days before closure, **43 were packed and never dispatched**." },
         { kind: "sub", text: "Fulfilment economics — freight legibility, automated courier claims, a returns stack" },
-        { kind: "leaf", text: "Two in five courier orders came back and every order lost money. Specified 34 of 42 fulfilment features: **return-to-origin 42.6% → 21.4%**, contribution per order **−₹196 → +₹126**, median delivery 10.2 → 6.1 days, p90 28.2 → 10.1. Return freight alone was **107% of the net loss**." },
+        { kind: "leaf", text: "Two in five courier orders came back and every order lost money. Specified 34 of 42 fulfilment features: **return-to-origin 42.6% → 21.4%**, contribution per order **−₹196 → +₹126**, median delivery 10.2 → 6.1 days, p90 28.2 → 10.1; return freight was **107% of the net loss**." },
         { kind: "sub", text: "WhatsApp channel — built, run and measured honestly" },
         { kind: "leaf", text: "Campaigns at 25k–62k recipients with per-send cost control, a seven-cohort model over 1.17M buyers, templates authored under my own name, vendor migrated in-house (₹0.145 → ₹0.115/msg); **₹9.60 per app install** across 29,172 buyers on same-day attribution. Recommended stopping the spend when July ROAS came in at 1.12× against a 13% take rate." },
         { kind: "sub", text: "Buyer app — made ordering easier, mostly by removing things" },
