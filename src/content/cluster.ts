@@ -13,7 +13,7 @@ export const CLUSTER: ClusterNode[] = [
   { slug: "doka", x: 70, y: 60, z: 0, size: "md", value: "5 steps · 3 angles", label: "cake configurator" },
   { slug: "ono-product", x: 24, y: 48, z: -10, size: "md", value: "19 malls", label: "kiosks I reported on" },
   { slug: "move-it-daas", x: 81, y: 72, z: 40, size: "md", value: "137 → 634", label: "truck-days a month" },
-  { slug: "vernacular-search", x: 52, y: 84, z: -20, size: "md", value: "699,684", label: "learned synonyms" },
+  { slug: "vernacular-search", x: 52, y: 84, z: -20, size: "md", value: "699,684", label: "synonyms, all live" },
   { slug: "restaurant-tech-gtm", x: 19, y: 72, z: -50, size: "sm", value: "79 kiosks", label: "three renewals" },
 ];
 

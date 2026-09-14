@@ -532,7 +532,7 @@ export const projects: Project[] = [
     headline: [
       { value: "699,684", label: "synonyms in the table", note: "queried from production", count: { to: 699684 } },
       { value: "32,536", label: "root words they attach to", note: "product concepts, not individual items", count: { to: 32536 } },
-      { value: "21.5", label: "synonyms per root word", note: "a fixed list would have been a fraction of this and would have aged", count: { to: 21.5, decimals: 1 } },
+      { value: "24.9 vs 11.7", label: "synonyms per root word, buyers' words against the catalogue's", note: "shopkeepers have more than twice as many names for a thing. 100% of root words reached the live search engine" },
     ],
     cta: "Read why precision mattered more than fuzziness",
     context: [
@@ -545,12 +545,18 @@ export const projects: Project[] = [
       { title: "Stay specific", body: "One rule keeps the layer from turning to mush: toor dal must resolve to arhar dal, not to dal. An early version over-generated and started matching hair oil to motor oil. The fix was a tighter prompt and an accuracy pass, not more fuzziness." },
       { title: "Learn from what buyers type", body: "The obvious build is a single pass over the catalogue, which goes stale immediately. Instead every real search emits an event, and the queue feeds the words the buyer typed back into the same generator. New terms are added, matching ones merged, and the synonyms attached to the product, brand and category records. The vocabulary of the customer base becomes something that grows." },
       { title: "Search Hindi labels at the same weight", body: "Hindi labels are searched at equal weight to English, so the multilingual catalogue work feeds search directly instead of sitting in a column nobody queries." },
+      { title: "The buyers' own words were the richest source, and I can prove it", body: "Six sources fed the synonym table: bulk catalogue dumps, brand and seller names, a seed set, and the queries buyers actually typed. **Queries typed by shopkeepers are a third of the root words but 37.6% of all the synonyms, at 24.9 per root word against 11.7 for anything derived from the catalogue.** A shopkeeper has more than twice as many ways of naming a thing as our own product data does. That is the argument for doing this at all, and it is measurable rather than asserted. One completeness check I had never run until now: **all 32,536 root words did reach the live search engine**, so nothing was generated and then silently left out." },
+      { title: "It ran once properly and then trickled", body: "The honest shape of this. The buyer-query source added **9,942 root words in December 2025, which is 98.1% of everything it ever produced.** The following eight months added 621 words between them, falling every month to 28 in August 2026, and the new entries were thinner too, about 7 synonyms each against 25.9 in the first month. So what I described as a system that learns from buyers ran as one good build and then a trickle. I cannot tell from the data whether the tail was genuinely exhausted or the pipeline stopped being fed, and I would not claim the flattering one." },
       { title: "Exact match first, then looser", body: "A shopkeeper restocking a known item wants that item, not a helpful selection of similar ones. Ranking is exact match first, then progressively looser, with popularity breaking ties." },
     ],
     metrics: [
       { value: "699,684", label: "synonyms generated", note: "from the catalogue, then extended by real searches" },
       { value: "32,536", label: "root words", note: "the concepts the synonyms attach to" },
-      { value: "21.5", label: "synonyms per root word", note: "the growth is the point; a fixed list would not reach this" },
+      { value: "24.9 vs 11.7", label: "synonyms per root word, buyer-typed against catalogue-derived", note: "buyer queries are 37.6% of all synonyms from a third of the root words" },
+      { value: "98.1%", label: "of the buyer-learned synonyms were built in one month", note: "December 2025. The next eight months added 621 root words, falling to 28 in August" },
+      { value: "32,536 of 32,536", label: "root words that reached the live search engine", note: "a completeness check nobody had run. Nothing was generated and then left out" },
+      { value: "28,328 → 68,203", label: "misspellings mapped to corrections", note: "a separate fuzzy-query table, 147,125 rows, loaded once in September 2025" },
+
       { value: "7 weeks", label: "the vendor's search lasted", note: "installed October 2025, removed. This replaced it" },
     ],
     honesty:
