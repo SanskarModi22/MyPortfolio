@@ -5,7 +5,7 @@ export type ClusterNode = { slug: string; x: number; y: number; z: number; size:
 
 export const CLUSTER: ClusterNode[] = [
   { slug: "jit-pivot", x: 50, y: 44, z: 90, size: "lg", value: "3 → 0", label: "minimums per basket" },
-  { slug: "contribution-turnaround", x: 21, y: 30, z: 30, size: "md", value: "−₹196 → +₹36", label: "per completed order" },
+  { slug: "contribution-turnaround", x: 21, y: 30, z: 30, size: "md", value: "−26% → +11.5%", label: "contribution margin" },
   { slug: "whatsapp-channel", x: 79, y: 28, z: 10, size: "md", value: "₹9.60", label: "per app install" },
   { slug: "buyer-app-plg", x: 30, y: 60, z: 20, size: "md", value: "30% → 94%", label: "finished registering" },
   { slug: "pricing-experiments", x: 62, y: 52, z: 25, size: "md", value: "6.9% → 36.6%", label: "orders with a coupon" },

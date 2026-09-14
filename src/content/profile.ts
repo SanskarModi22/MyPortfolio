@@ -17,12 +17,12 @@ export const profile = {
   resumeHref: "/resume.pdf",
 
   tagline:
-    "Product manager in Indian commerce. I find the number that is actually blocking the business, change the product to move it, and then check whether it moved.",
+    "Product manager in Indian commerce. I pick the number that decides whether the business survives, change the product to move it, and then go back to the database and check.",
 
   intro: [
     "One piece of context first, because it sets the scale of everything below. Badho's buyer app ran a local-seller marketplace until **February 2026, when that model was switched off** and replaced with an intercity one: brands shipping to shops by courier across the country. Almost none of the old buyer base came with it, **235 of 140,715**, so the new business was built from close to nothing. It went from **74 orders in January 2026 to 7,198 in June**, peaked at about ₹49 lakh of orders in a month, and ran on 12 sellers growing to 31. Every figure on this page is that business, or the warehouse model that replaced it in September. Small numbers built fast, and I would rather you read them that way than guess.",
     "Three years in Indian food and retail commerce, on both sides of it. At **ONO Suite** I priced, sold and delivered restaurant technology to chains in India and Saudi Arabia: self-ordering kiosks, QR ordering at the table, ordering apps, and a bespoke app for a Riyadh bakery where the customer designs their own cake. At **Badho** I ran product, growth and engineering delivery for a marketplace selling wholesale groceries to kirana shops. Team of twenty, three business models in eleven months, and I owned the operating model for the last one.",
-    "The way I work is the same every time. Name the problem in numbers, change one thing, then go back to the database and read what happened. That last step is why the cases on this page carry results that were not flattering. Coupon usage went from 7% to 37% of orders and conversion did not move. Half a million buyers were credited ₹75 and 342 of them spent it. Buyers whose first order contained a ₹1 item came back less often, not more.",
+    "The way I work is the same every time. Choose the number that decides whether the business lives, change one thing, then go back to the database and read what happened. At Badho that number was CM1, contribution margin after discounts, delivery and marketing, and it went from −26% of order value to +11.5% in six months. That last step is why the cases on this page carry results that were not flattering. Coupon usage went from 7% to 37% of orders and conversion did not move. Half a million buyers were credited ₹75 and 342 of them spent it. Buyers whose first order contained a ₹1 item came back less often, not more.",
     "I build things too. Two ordering products, the first working version of a WhatsApp sales agent and two web storefronts were mine, written with AI coding assistants. I ran WhatsApp as a channel at 25,000 to 62,000 recipients a campaign and wrote the approved templates myself. And I ran the release gate for three apps: 242 versions, 805 of 1,613 pull requests, and the release notes that told support what had changed.",
   ],
 
@@ -47,9 +47,9 @@ export const profile = {
       href: "/work/jit-pivot",
     },
     {
-      role: "Logistics and unit economics",
-      line: "Take a loss-making order to a profitable one.",
-      proof: "Contribution per order from −₹196 to +₹36, parcels returned to origin from 42.6% to 21.4%, slowest tenth of deliveries from 28 days to 10. Freight made visible, courier overcharges recovered automatically.",
+      role: "Unit economics and logistics",
+      line: "Choose the number that decides survival, then move it.",
+      proof: "Built the contribution-margin cascade for a marketplace with no cost of goods and took CM1 from −26% of order value to **+11.5%** in six months. Delivery cost 46% of order value to under 1%, commission taken 12.7% to 19.4%, parcels returned to origin 42.6% to 21.4%, slowest tenth of deliveries 28 days to 10.",
       href: "/work/contribution-turnaround",
     },
     {
@@ -69,7 +69,7 @@ export const profile = {
   // What is different about the work. First person, no hedging.
   signals: [
     {
-      title: "I find the number that is actually blocking things",
+      title: "I choose the number the business gets judged on",
       href: "/work/jit-pivot",
       body: "Retention looked like a marketing problem for months. It was three per-brand minimums in one cart: ₹300 each of oil, rice and spices is a ₹900 basket blocked three separate times. Putting that in numbers is what changed the company's model.",
     },
@@ -103,7 +103,7 @@ export const profile = {
       bullets: [
         "Hired to make engineering ship on time. Scope grew to product, growth and the delivery business across a team of twenty. The company closed in September 2026.",
         "Owned the operating model when we stopped taking commission and started buying, storing and delivering our own stock: twelve days from written plan to first delivery, and per-brand minimums replaced by one flat fee.",
-        "Drove the fulfilment programme behind contribution per order moving from −₹196 to +₹36: parcels returned to origin from 42.6% to 21.4%, median delivery from 10.2 to 6.1 days.",
+        "Designed the contribution-margin cascade the marketplace was run on, and took **CM1 from −26% of order value to +11.5%** between February and August 2026, positive from July. Delivery cost fell from 46% of order value to under 1%, commission taken rose 12.7% to 19.4%, parcels returned to origin fell 42.6% to 21.4% and median delivery 10.2 to 6.1 days.",
         "Built and ran WhatsApp as a channel after measuring that push was failing: of 11.76 million notifications queued, 8.8% were confirmed delivered and 58% were never attempted. Campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Also specified the 12 order-status templates, one message per order per stage. Recommended stopping the campaign spend when July came in at 1.12× against 13% commission.",
         "Ran the buyer-app changes that made ordering easier. Removing the signup form and an OTP tap took registration after phone verification from **30% to 94%**, with mid-form abandonment falling from 21,064 people in three weeks to 9. Language set from the shop location cut wrong-language apps in non-Hindi states from 38-46% to under 1%. A lower first-order minimum, cart reminders, home tabs, free gifts, and a support tab with a named relationship manager for 1.47 million buyers. The honest half: the share of installs reaching a first order still fell, 2.52% to 1.43%.",
         "Shipped four pricing experiments and then queried them: coupon usage went from 7% to 37% of orders with conversion flat, and a 37-minute configuration change later cut item-coupon spend 45.7% without losing a single order; gift-scheme qualifiers re-ordered at three times the rate of everyone else.",
