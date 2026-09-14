@@ -8,7 +8,7 @@ export const CLUSTER: ClusterNode[] = [
   { slug: "contribution-turnaround", x: 21, y: 30, z: 30, size: "md", value: "−₹196 → +₹36", label: "per completed order" },
   { slug: "whatsapp-channel", x: 79, y: 28, z: 10, size: "md", value: "₹9.60", label: "per app install" },
   { slug: "buyer-app-plg", x: 30, y: 60, z: 20, size: "md", value: "30% → 94%", label: "finished registering" },
-  { slug: "pricing-experiments", x: 62, y: 52, z: 25, size: "md", value: "2.9% → 29.5%", label: "orders with a coupon" },
+  { slug: "pricing-experiments", x: 62, y: 52, z: 25, size: "md", value: "6.9% → 36.6%", label: "orders with a coupon" },
   { slug: "rewards-retention", x: 40, y: 36, z: 15, size: "md", value: "50% vs 19%", label: "next-month re-order" },
   { slug: "doka", x: 70, y: 60, z: 0, size: "md", value: "5 steps · 3 angles", label: "cake configurator" },
   { slug: "ono-product", x: 24, y: 48, z: -10, size: "md", value: "19 malls", label: "kiosks I reported on" },
