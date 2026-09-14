@@ -36,7 +36,7 @@ export const profile = {
     {
       role: "Pricing and incentives",
       line: "Decide where the discount goes, and check what it bought.",
-      proof: "Cart coupons, item-level quantity discounts, ₹1 trial products and a funded cut in the base price, shipped in order and queried afterwards. Gift qualifiers re-ordered at three times the rate of everyone else; ₹1 first orders came back less often.",
+      proof: "Cart coupons, item-level quantity discounts, ₹1 trial products and a funded cut in the base price, shipped in order and queried afterwards. Then I built the tool to audit my own discounts, and it found 43% of one month’s coupon orders discounting above what the configuration allowed. Gift qualifiers re-ordered at three times the rate of everyone else; ₹1 first orders came back less often.",
       href: "/work/pricing-experiments",
     },
     {
@@ -54,7 +54,7 @@ export const profile = {
     {
       role: "Founding or first product hire",
       line: "Specify it, ship it, and build it myself when nobody else can.",
-      proof: "489 specifications, 805 of 1,613 pull requests merged, 242 releases. Two ordering products and a WhatsApp agent's first version written with AI coding assistants, and a partner-brand channel from idea to first delivery in seventeen days.",
+      proof: "489 specifications, 805 of 1,613 pull requests merged, 242 releases. Two ordering products and a WhatsApp agent's first version written with AI coding assistants. A discount-audit dashboard and a courier cost model I wrote myself, and a partner-brand channel from idea to first delivery in seventeen days.",
       href: "/work/buyer-app-plg",
     },
     {
@@ -75,7 +75,7 @@ export const profile = {
     {
       title: "I go back and check whether it worked",
       href: "/work/rewards-retention",
-      body: "I queried four reward programmes against repeat orders. Gift qualifiers re-ordered at nearly three times the rate of everyone else. A ₹4.57 crore credit run was used by 0.06% of the people who got it. Both numbers are on the page.",
+      body: "I queried four reward programmes against repeat orders. Gift qualifiers re-ordered at nearly three times the rate of everyone else. A ₹4.57 crore credit run was used by 0.06% of the people who got it. And returns were quietly switching the gift scheme off: 74 buyers in one month were denied a reward by a parcel coming back.",
     },
     {
       title: "I publish the figure that survives an audit",
