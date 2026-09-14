@@ -59,7 +59,7 @@ export const resume = {
       items: [
         { kind: "flat", text: "Product, growth, engineering delivery, QA and the AI pod across a team of 20. Monthly orders 219 → 5,784 over the tenure; 242 releases of three apps from one monorepo; #1 spec author, 489 of 1,585 tickets. Company wound down Sep 2026." },
         { kind: "sub", text: "Badho Wholesale (JIT pivot) — commission marketplace → own-warehouse distributor" },
-        { kind: "leaf", text: "Named the blocker in numbers (three per-brand minimums on one cart), then owned the operating model: warehouse and software specification, minimums replaced by a flat delivery fee. **First order live in 12 days**; of 81 orders in the 8 days before closure, **43 were packed and never dispatched**." },
+        { kind: "leaf", text: "Named the blocker in numbers (three per-brand minimums on one cart), then owned the operating model: warehouse and software specification, minimums replaced by a flat delivery fee. Plan to first delivery **12 days** (build started 29 Jul); of 81 orders in the 8 active days, **43 were packed and never dispatched** and only **6 of 19 own-fleet attempts arrived**." },
         { kind: "sub", text: "Fulfilment economics — freight legibility, automated courier claims, a returns stack" },
         { kind: "leaf", text: "Two in five courier orders came back and every order lost money. Specified 34 of 42 fulfilment features: **return-to-origin 42.6% → 21.4%**, contribution per order **−₹196 → +₹126**, median delivery 10.2 → 6.1 days, p90 28.2 → 10.1; return freight was **107% of the net loss**." },
         { kind: "sub", text: "WhatsApp channel — built, run and measured honestly" },
