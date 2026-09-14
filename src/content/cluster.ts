@@ -7,7 +7,7 @@ export const CLUSTER: ClusterNode[] = [
   { slug: "jit-pivot", x: 50, y: 44, z: 90, size: "lg", value: "3 → 0", label: "minimums per basket" },
   { slug: "contribution-turnaround", x: 21, y: 30, z: 30, size: "md", value: "−₹196 → +₹36", label: "per completed order" },
   { slug: "whatsapp-channel", x: 79, y: 28, z: 10, size: "md", value: "₹9.60", label: "per app install" },
-  { slug: "buyer-app-plg", x: 30, y: 60, z: 20, size: "md", value: "322 → 2,099", label: "orders a week" },
+  { slug: "buyer-app-plg", x: 30, y: 60, z: 20, size: "md", value: "30% → 94%", label: "finished registering" },
   { slug: "pricing-experiments", x: 62, y: 52, z: 25, size: "md", value: "2.9% → 29.5%", label: "orders with a coupon" },
   { slug: "rewards-retention", x: 40, y: 36, z: 15, size: "md", value: "50% vs 19%", label: "next-month re-order" },
   { slug: "doka", x: 70, y: 60, z: 0, size: "md", value: "5 steps · 3 angles", label: "cake configurator" },
