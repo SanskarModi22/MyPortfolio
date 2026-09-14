@@ -61,7 +61,7 @@ export const resume = {
         { kind: "sub", text: "Badho Wholesale (JIT pivot) — commission marketplace → own-warehouse distributor" },
         { kind: "leaf", text: "Named the blocker in numbers (three per-brand minimums on one cart), then owned the operating model: warehouse and software specification, minimums replaced by a flat delivery fee. **First order live in 12 days**; daily carts in the launch cities 4.5 to 45.5." },
         { kind: "sub", text: "Fulfilment economics — freight legibility, automated courier claims, a returns stack" },
-        { kind: "leaf", text: "Two in five courier orders came back and every order lost money. Specified 34 of 42 fulfilment features: **return-to-origin 42.6% → 21.4%**, contribution per order **−₹196 → +₹36** (company P&L), median delivery 10.2 → 6.1 days, p90 28.2 → 10.1." },
+        { kind: "leaf", text: "Two in five courier orders came back and every order lost money. Specified 34 of 42 fulfilment features: **return-to-origin 42.6% → 21.4%**, contribution per order **−₹196 → +₹126**, median delivery 10.2 → 6.1 days, p90 28.2 → 10.1. Return freight alone was **107% of the net loss**." },
         { kind: "sub", text: "WhatsApp channel — built, run and measured honestly" },
         { kind: "leaf", text: "Campaigns at 25k–62k recipients with per-send cost control, a seven-cohort model over 1.17M buyers, templates authored under my own name, vendor migrated in-house (₹0.145 → ₹0.115/msg); **₹9.60 per app install** across 29,172 buyers on same-day attribution. Recommended stopping the spend when July ROAS came in at 1.12× against a 13% take rate." },
         { kind: "sub", text: "Buyer app — made ordering easier, mostly by removing things" },
@@ -69,7 +69,7 @@ export const resume = {
         { kind: "sub", text: "Pricing and rewards — four experiments, then the query" },
         { kind: "leaf", text: "Cart coupons, item-level quantity discounts, ₹1 trial products and a funded base-price cut. Queried from production afterwards: coupon usage **2.9% to 29.5%** of orders with conversion flat; gift-scheme qualifiers re-ordered next month at **50% against 19%**; a ₹4.57 Cr free-credit run was spent by **0.06%** of the buyers who got it; ₹1 first orders repeated 2–8 points less." },
         { kind: "sub", text: "DAAS — delivery as a service, sold to the distributors on our own marketplace" },
-        { kind: "leaf", text: "Joint product owner: invoice photo to a 10–50 drop list, address locked per shop and geo-fence verified, routing without a helper in the truck, two-party handover codes, cash to the distributor's bank the same day. **Truck-days booked a month 137 to 497** (Feb–Jun 2026), 13,801 deliveries, **₹10.95 Cr of goods** for 48 paying distributors; his cost per trip ₹2,430 against our ₹1,600." },
+        { kind: "leaf", text: "Joint product owner: invoice photo to a 10–50 drop list, address locked per shop and geo-fence verified, routing without a helper in the truck, two-party handover codes, cash to the distributor's bank the same day. **Truck-days a month 137 to 634**, **17,174 deliveries** to 7,363 shops, **₹18.95 Cr of goods** and ₹21.5 L of fees for 60 paying distributors." },
         { kind: "sub", text: "AI programme and search — program-managed and specified" },
         { kind: "leaf", text: "Owned eleven epics for the four-person pod that shipped **20 production systems**; red-teamed the sales agent before launch; mandated model budget alerts. Specified vernacular search: **699,684 learned synonyms** on 32,536 roots." },
       ],
@@ -97,7 +97,7 @@ export const resume = {
   checklist: [
     { label: "Fits on one page", detail: "A4, nothing spills to a second page" },
     { label: "Reads cleanly as plain text", detail: "applicant-tracking systems get every line in order" },
-    { label: "All key figures present", detail: "−₹196 to +₹36 · ₹9.60 · 42.6% to 21.4% · 50% vs 19% re-order · 489 specs" },
+    { label: "All key figures present", detail: "−₹196 to +₹126 · ₹9.60 · 42.6% to 21.4% · 50% vs 19% re-order · 489 specs" },
     { label: "Links work", detail: "email · Portfolio · LinkedIn · GitHub" },
   ],
 };

@@ -139,7 +139,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       { id: "otp", label: "Code from both sides", sub: "proof checked against location", x: 690, y: 60, kind: "guard" },
       { id: "cash", label: "Cash to his bank", sub: "matched digitally, same day", x: 690, y: 320, w: 180, kind: "guard" },
       { id: "fail", label: "Named failure reasons", sub: "tallied, sent to his sales team", x: 470, y: 320, w: 180, kind: "store" },
-      { id: "cost", label: "₹2,430 → ₹1,600", sub: "his cost per trip against ours", x: 30, y: 320, w: 180, kind: "external" },
+      { id: "cost", label: "₹1,360 → ₹1,612", sub: "what a truck-day actually earned", x: 30, y: 320, w: 180, kind: "external" },
     ],
     edges: [
       { from: "distributor", to: "book" },
@@ -160,7 +160,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       otp: "A code that both people hold, and a photograph only accepted once the driver's location checks out. Proof on every order rather than on the disputed ones.",
       cash: "Normally the owner waits until late at night to receive the cash and match it to his bills. Here the money goes to his own bank account and goods and cash are reconciled digitally the same day, so any member of staff can do the handover.",
       fail: "Shop closed, refused, wrong address, payment not ready. A closed list rather than free text, counted and sent back to his sales team, so a failed delivery becomes something they can act on. A second attempt is priced, not absorbed.",
-      cost: "One trip on his own truck costs ₹2,430 or more; ours costs ₹1,600. Over twenty-two delivery days that is ₹35,200 against ₹53,500 to ₹64,500, so he saves ₹18,000 to ₹41,000 a month per truck. The sale is an argument about his money, which he can check himself.",
+      cost: "The sale was an argument about his money: a trip on his own truck against a trip on ours, nothing paid on idle days, and capital released from a vehicle. Those comparison figures came from the founders seed deck and I cannot verify them, because the database holds no cost rows at all. What is queryable is the price: a three-wheeler truck-day earned ₹1,360 in May and ₹1,612 by September, and fee income was ₹21.5 lakh on ₹18.95 crore of goods, a take of about 1.1%.",
     },
   },
 
