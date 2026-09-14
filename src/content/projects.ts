@@ -186,7 +186,7 @@ export const projects: Project[] = [
     stack: ["AiSensy, then our own platform", "WhatsApp Business API", "Cohort SQL over 1.17M buyers", "Utility vs marketing templates", "Same-day attribution", "City community groups"],
     headline: [
       { value: "₹9.60", label: "cost per app install", note: "₹1,87,589 ÷ 19,534 install-driven buyers, June 2026, same-day attribution", count: { to: 9.6, prefix: "₹", decimals: 2 } },
-      { value: "25k–62k", label: "recipients per campaign", note: "read rates 46–70%, click rates 3–13%, cost recorded per send" },
+      { value: "₹13.7 L", label: "order value the channel produced", note: "989 orders on the same-day rule. ₹21.4 lakh and 1,898 orders if you allow seven days" },
       { value: "2.60× → 1.12×", label: "return on spend, June to July", note: "same-day rule. A seven-day window would have shown 5.22× in June" },
     ],
     cta: "Read the campaigns and the report that halved its own headline",
@@ -220,6 +220,8 @@ export const projects: Project[] = [
       { value: "₹1,87,589 → ₹1,57,353", label: "spend, June to July 2026", note: "the two months the channel ran at scale" },
       { value: "19,534 → 8,419", label: "buyers who installed the app", note: "June ₹9.60 per install, July ₹12.43 per buyer" },
       { value: "647 → 251", label: "orders credited, same-day rule", note: "₹4,88,419 down to ₹1,76,376 of credited order value" },
+      { value: "₹13.7 L / ₹21.4 L", label: "channel order value, same-day against a seven-day window", note: "989 orders against 1,898, attributed on the app’s own canonical channel field rather than the tracking link" },
+      { value: "45% / 55%", label: "split of that order value between the marketplace and the own fleet", note: "₹7.57 lakh of the ₹13.7 lakh was the intercity model" },
       { value: "₹35,324 on ₹409", label: "one campaign, followed to the order book", note: "3,870 sent, 17 buyers ordered. ₹15,654 of it inside 24 hours" },
       { value: "₹0.145 → ₹0.115", label: "cost per message after moving in-house", note: "on about 169,000 messages a month. The vendor had cut us off once over an invoice" },
       { value: "3.3% → 10.8%", label: "WhatsApp-attributed buyers who ordered, June against September", note: "against 1.77% and 4.23% for every other channel. Same channel, 3.3 times better after the product changed" },
@@ -807,9 +809,11 @@ export function readMinutes(p: Project): number {
 
 // Headline numbers for the home page. Each says how it was measured.
 export const heroMetrics: Metric[] = [
-  { value: "−₹196 → +₹126", label: "contribution per completed order", note: "Feb to Aug 2026, before return costs. I drove the programme under it" },
-  { value: "₹9.60", label: "cost per app install on WhatsApp", note: "₹1,87,589 ÷ 19,534 install-driven buyers, same-day attribution", count: { to: 9.6, prefix: "₹", decimals: 2 } },
-  { value: "42.6% → 21.4%", label: "parcels returned to origin", note: "Mar to Aug 2026, queried from production" },
-  { value: "12,595", label: "buyer-app daily actives at the June peak", note: "up from 4,587 a day in February. Our own dashboard said 9,998, because one predicate dropped a third of them" },
-  { value: "489", label: "specifications written, most in the company", note: "of 1,585 tickets. 192 full requirement documents", count: { to: 489 } },
+  { value: "−26% → +11.5%", label: "contribution margin after discounts, delivery and marketing", note: "CM1, Feb to Aug 2026, as a share of order value. Positive from July" },
+  { value: "46% → under 1%", label: "delivery cost as a share of order value", note: "four months. Freight moved onto sellers instead of absorbed" },
+  { value: "₹13.7 L", label: "order value from the WhatsApp channel", note: "989 orders on the same-day rule, my conservative basis. ₹21.4 lakh within seven days" },
+  { value: "30% → 94%", label: "of verified phones that finished registering", note: "signup form removed. Mid-form abandonment 21,064 per three weeks to 9" },
+  { value: "22% → 64%", label: "orders that actually got fulfilled", note: "five months, while volume grew fourfold" },
+  { value: "107%", label: "of the whole net loss was the cost of returns", note: "₹13.71 lakh of return freight against a ₹12.84 lakh loss. Zero returns and it made money" },
 ];
+
