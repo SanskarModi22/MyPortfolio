@@ -97,18 +97,18 @@ export const profile = {
 
   experience: [
     {
-      role: "Product Manager",
+      role: "Program Manager – engineering delivery and release",
       org: "Badho Technologies, Gurugram",
-      period: "Oct 2025 – Apr 2026",
+      period: "Oct 2025 – Jan 2026",
       bullets: [
         "Hired to make engineering ship on time. Scope grew to product, growth and the delivery business across a team of twenty. The company closed in September 2026.",
         "Wrote more specifications than anyone in the company: 489 of 1,585 tickets, 192 full requirement documents. Ran the release gate for three apps: 242 versions, 805 of 1,613 pull requests.",
       ],
     },
     {
-      role: "Senior Product Manager, Growth & Strategy",
+      role: "Product Manager – growth, product-led growth and strategy",
       org: "Badho Technologies, Gurugram",
-      period: "May 2026 – Sep 2026",
+      period: "Feb 2026 – Sep 2026",
       bullets: [
         "Designed the contribution-margin cascade the marketplace was run on, and took **CM1 from −26% of order value to +11.5%** between February and August 2026, positive from July. Delivery cost fell from 46% of order value to under 1%, commission taken rose 12.7% to 19.4%, parcels returned to origin fell 42.6% to 21.4% and median delivery 10.2 to 6.1 days.",
         "Owned the operating model when we stopped taking commission and started buying, storing and delivering our own stock: twelve days from written plan to first delivery, and per-brand minimums replaced by one flat fee.",

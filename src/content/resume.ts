@@ -65,20 +65,18 @@ export const resume = {
 
   roles: [
     {
-      title: "Product Manager | Badho Technologies, Gurugram",
-      date: "Oct 2025 – Apr 2026",
+      title: "Program Manager, Engineering Delivery & Release | Badho Technologies, Gurugram",
+      date: "Oct 2025 – Jan 2026",
       items: [
-        { kind: "flat", text: "Hired to make engineering ship. Release gate for three apps: **204 of 204 release merges** on the production branch, 242 versions. **#1 spec author, 489 of 1,585 tickets**, 192 requirement docs. Bug inflow 114 → near zero monthly." },
-        { kind: "sub", text: "Unit economics — chose the metric, built the cascade, moved it" },
-        { kind: "leaf", text: "No COGS to cascade from, so built it top-down: commission − discounts − delivery − marketing = CM1; support/brand-success = CM2; tech = CM3. Marketing sits above the line deliberately, since LTV could not amortise it. **CM1 −26.3% → +11.5% of order value**, in sequence: delivery **46% → <1%**, commission taken **12.7% → 19.4%**, discounts to 15.1% to buy growth then cut to **5.3%**. Return freight alone was **107% of the net loss**." },
-        { kind: "sub", text: "AI programme and search — program-managed and specified" },
-        { kind: "leaf", text: "Owned eleven epics for the four-person AI pod that shipped **20 production systems**; red-teamed the sales agent pre-launch. Specified vernacular search: **699,684 synonyms live**." },
+        { kind: "flat", text: "Hired to make engineering ship. Owned the release gate for three apps from one monorepo: **204 of 204 release merges** on the production branch, 242 versions from 7.153 to 8.255, and the release notes support ran on. **#1 spec author, 489 of 1,585 tickets**, 192 requirement docs. Ran QA, the Play Store side, and eleven epics for the four-person AI pod that shipped **20 production systems**. Bug inflow 114 → near zero monthly." },
       ],
     },
     {
-      title: "Senior Product Manager, Growth & Strategy | Badho Technologies, Gurugram",
-      date: "May 2026 – Sep 2026",
+      title: "Product Manager, Growth, PLG & Strategy | Badho Technologies, Gurugram",
+      date: "Feb 2026 – Sep 2026",
       items: [
+        { kind: "sub", text: "Unit economics — chose the metric, built the cascade, moved it" },
+        { kind: "leaf", text: "No COGS to cascade from, so built it top-down: commission − discounts − delivery − marketing = CM1; support/brand-success = CM2; tech = CM3. Marketing sits above the line deliberately, since LTV could not amortise it. **CM1 −26.3% → +11.5% of order value**, in sequence: delivery **46% → <1%**, commission taken **12.7% → 19.4%**, discounts to 15.1% to buy growth then cut to **5.3%**. Return freight alone was **107% of the net loss**." },
         { kind: "sub", text: "Pricing and rewards — four experiments, then the query" },
         { kind: "leaf", text: "Cart coupons, item-level quantity discounts, ₹1 trial products, a funded base-price cut. Queried after: coupon usage **6.9% → 36.6%** of orders with conversion flat; a **37-minute config change cut item-coupon spend 45.7%** with no order loss. Built the discount-audit dashboard myself; its anomaly band surfaced **~₹81k** out of spec." },
         { kind: "sub", text: "Buyer app — made ordering easier, mostly by removing things" },
