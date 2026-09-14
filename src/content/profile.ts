@@ -97,18 +97,25 @@ export const profile = {
 
   experience: [
     {
-      role: "Product Manager — product, growth and delivery",
+      role: "Product Manager",
       org: "Badho Technologies, Gurugram",
-      period: "Oct 2025 – Sep 2026",
+      period: "Oct 2025 – Apr 2026",
       bullets: [
         "Hired to make engineering ship on time. Scope grew to product, growth and the delivery business across a team of twenty. The company closed in September 2026.",
-        "Owned the operating model when we stopped taking commission and started buying, storing and delivering our own stock: twelve days from written plan to first delivery, and per-brand minimums replaced by one flat fee.",
+        "Wrote more specifications than anyone in the company: 489 of 1,585 tickets, 192 full requirement documents. Ran the release gate for three apps: 242 versions, 805 of 1,613 pull requests.",
+      ],
+    },
+    {
+      role: "Senior Product Manager, Growth & Strategy",
+      org: "Badho Technologies, Gurugram",
+      period: "May 2026 – Sep 2026",
+      bullets: [
         "Designed the contribution-margin cascade the marketplace was run on, and took **CM1 from −26% of order value to +11.5%** between February and August 2026, positive from July. Delivery cost fell from 46% of order value to under 1%, commission taken rose 12.7% to 19.4%, parcels returned to origin fell 42.6% to 21.4% and median delivery 10.2 to 6.1 days.",
-        "Built and ran WhatsApp as a channel after measuring that push was failing: of 11.76 million notifications queued, 8.8% were confirmed delivered and 58% were never attempted. Campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Also specified the 12 order-status templates, one message per order per stage. Recommended stopping the campaign spend when July came in at 1.12× against 13% commission.",
+        "Owned the operating model when we stopped taking commission and started buying, storing and delivering our own stock: twelve days from written plan to first delivery, and per-brand minimums replaced by one flat fee.",
         "Ran the buyer-app changes that made ordering easier. Removing the signup form and an OTP tap took registration after phone verification from **30% to 94%**, and I later found it had broken our own daily-actives metric, which was understating itself by 108% by August because the missing shop names were being dropped by a null-unsafe filter. with mid-form abandonment falling from 21,064 people in three weeks to 9. Language set from the shop location cut wrong-language apps in non-Hindi states from 38-46% to under 1%. A lower first-order minimum, cart reminders, home tabs, free gifts, and a support tab with a named relationship manager for 1.47 million buyers. The honest half: the share of installs reaching a first order still fell, 2.52% to 1.43%.",
         "Shipped four pricing experiments and then queried them: coupon usage went from 7% to 37% of orders with conversion flat, and a 37-minute configuration change later cut item-coupon spend 45.7% without losing a single order; gift-scheme qualifiers re-ordered at three times the rate of everyone else.",
+        "Built and ran WhatsApp as a channel after measuring that push was failing: of 11.76 million notifications queued, 8.8% were confirmed delivered and 58% were never attempted. Campaigns of 25,000 to 62,000 recipients, ₹9.60 per app install across 29,172 buyers, approved templates written under my own name, a vendor replaced with our own platform at ₹0.115 a message. Also specified the 12 order-status templates, one message per order per stage. Recommended stopping the campaign spend when July came in at 1.12× against 13% commission.",
         "Joint product owner of DAAS, the delivery-as-a-service business sold to the distributors on our own marketplace: truck-days booked a month went 137 to 634, 3,016 in all, 17,174 deliveries of 20,231 attempted to 7,363 shops, ₹18.95 crore of goods moved and ₹21.5 lakh of fees from 60 paying distributors.",
-        "Wrote more specifications than anyone in the company: 489 of 1,585 tickets, 192 full requirement documents. Ran the release gate for three apps: 242 versions, 805 of 1,613 pull requests.",
       ],
     },
     {
