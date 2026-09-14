@@ -81,7 +81,7 @@ export const profile = {
     {
       title: "I publish the figure that survives an audit",
       href: "/work/whatsapp-channel",
-      body: "Same-day attribution at 2.60× over a seven-day window that would have read 5.22×. Two orders worth ₹5.6 lakh thrown out of my own daily report because the buyers had nothing to do with the campaign, and a later query showed one shopkeeper really was 75% of that month's channel revenue. A note at the top explaining that 1.12× is a loss when you keep 13% of the value.",
+      body: "Same-day attribution at 2.60× over a seven-day window that would have read 5.22×. Two orders worth ₹5.6 lakh thrown out of my own daily report because the buyers had nothing to do with the campaign. And three independent counts of the same channel: the tracking link said 1,321 buyers, my hand-built matching said 19,534, and the app's own session data later said 18,782. A note at the top explaining that 1.12× is a loss when you keep 13% of the value.",
     },
     {
       title: "I sell and negotiate, not only specify",
