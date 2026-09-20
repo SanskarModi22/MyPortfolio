@@ -379,6 +379,7 @@ export const projects: Project[] = [
       { src: "/screens/rewards-ladder-aug.webp", kind: "phone", alt: "August gift ladder with progress bar", caption: "August: a progress bar to the next gift — ₹384 ordered this month, ₹4,616 more to unlock the first level" },
       { src: "/screens/rewards-referral.webp", kind: "phone", alt: "Refer and earn", caption: "Refer & Earn: ₹100 to the friend on sign-up, ₹50 to the referrer on the first delivery, sent over WhatsApp" },
       { src: "/screens/rewards-streak.webp", kind: "phone", alt: "Daily login streak reward", caption: "The daily streak: open the app every day, collect ₹10 — miss a day and it resets to ₹2" },
+      { src: "/screens/rewards-wallet.webp", kind: "phone", alt: "Wallet balance and statement", caption: "The wallet: credit Badho gives a shopkeeper — an onboarding reward, a free balance — spendable on fully prepaid orders. The ₹75 run reached 609,245 of these wallets; 342 spent it" },
     ],
     cover: { src: "/screens/rewards-ladder-aug.webp", kind: "phone", alt: "", caption: "" },
     headline: [
