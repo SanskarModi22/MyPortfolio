@@ -677,8 +677,15 @@ export const projects: Project[] = [
     period: "Nov 2025 – Jun 2026 · Badho",
     stack: ["Synonym model", "Query learning", "Hindi labels", "Misspelling map", "Exact-first ranking"],
     screens: [
-      { src: "/screens/plg-filters.webp", kind: "phone", alt: "Search bar in Hindi", caption: "Search in Hindi — “प्रोडक्ट या ब्रांड सर्च करें” — ranked exact-first" },
+      { src: "/screens/search-doodh-miss.webp", kind: "phone", alt: "Search for doodh returning nothing", caption: "13 Nov 2025, testing the new search before launch: 'Doodh' returns nothing — the gap the synonym pipeline was specified to close", tag: "before" },
+      { src: "/screens/search-haldi.webp", kind: "phone", alt: "Search for haldi", caption: "'Haldi' — Hindi in English letters — finds the haldi powder" },
+      { src: "/screens/search-turmeric.webp", kind: "phone", alt: "Search for turmeric", caption: "'Turmeric' finds the same products: one synonym group, two languages" },
+      { src: "/screens/search-dahi.webp", kind: "phone", alt: "Search for dahi", caption: "'Dahi' finds the curd — the product cards carry Hindi labels for exactly this reason" },
+      { src: "/screens/search-chini.webp", kind: "phone", alt: "Search for chini", caption: "'Chini' finds sugar and the sugar biscuits" },
+      { src: "/screens/search-clove.webp", kind: "phone", alt: "Search for clove", caption: "'Clove' finds the whole-spice pack by a brand that calls it laung" },
+      { src: "/screens/search-zoff.webp", kind: "phone", alt: "Search for the brand Zoff", caption: "A brand name as the query: every Zoff pack, with the case options" },
     ],
+    cover: { src: "/screens/search-haldi.webp", kind: "phone", alt: "Search for haldi", caption: "Haldi" },
     headline: [
       { value: "699,684", label: "synonyms live in search" },
       { value: "32,536", label: "product terms, every one live in search" },
