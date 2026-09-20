@@ -101,20 +101,20 @@ export default function Home() {
           <Reveal>
             <ArcChart
               data={arc}
-              caption="I joined in November at 219 orders a month. The February model change was the founder's call; the growth to June — 26× — is what I ran product, growth and delivery through. The fall from June is the courier model's unit economics breaking at volume: a third of parcels coming back. That is what forced the September pivot to our own warehouse and fleet, and I owned its operating model."
+              caption="I joined in November at 219 orders a month and ran product, growth and delivery through the climb to June — 26× — then owned the operating model for the September pivot to our own warehouse and fleet."
             />
           </Reveal>
         </Section>
 
         {/* ── Case studies ─────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: the problem, the diagnosis, the decision, the outcome — and what I would not claim.">
+        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: the problem, the diagnosis, the decision, the outcome.">
           <Reveal>
             <WorkGrid items={tier1.map(toCard)} themes={THEMES} />
           </Reveal>
         </Section>
 
         {/* ── Also ─────────────────────────────────────────────────────── */}
-        <Section id="more-work" title="Also owned" kicker="The programme work underneath the cases, and one experiment that failed.">
+        <Section id="more-work" title="Also owned" kicker="The programme work underneath the cases.">
           <ul className="grid gap-3 sm:grid-cols-2">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>

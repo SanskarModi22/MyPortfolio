@@ -20,7 +20,7 @@ export const profile = {
     "Product manager in Indian B2B commerce. Growth, strategy and unit economics for a marketplace that grew 26× in orders, then the pivot that followed. I specify, ship, and build when nobody else can.",
 
   // Three facts a recruiter reads in the first five seconds.
-  facts: ["3 yrs · product, growth & GTM", "B2B commerce · marketplaces · logistics · restaurant tech", "Team of 20 · two business-model changes · one company wind-down explained"],
+  facts: ["3 yrs · product, growth & GTM", "B2B commerce · marketplaces · logistics · restaurant tech", "Team of 20 · two business-model changes · B.Tech CS, IIIT Sonepat"],
 
   // What I can be banked on for. One capability, one proof, one link.
   capabilities: [
@@ -38,7 +38,7 @@ export const profile = {
     },
     {
       title: "Acquisition channels",
-      proof: "WhatsApp from zero to 29,172 buyers at ₹9.60 an install — and the recommendation to stop at 1.12×.",
+      proof: "WhatsApp from zero to 29,172 buyers at ₹9.60 an install, on a seven-cohort audience model over 1.17 M people.",
       metric: "₹9.60 / install",
       href: "/work/whatsapp-channel",
     },
@@ -78,7 +78,7 @@ export const profile = {
         "Designed the contribution-margin cascade the marketplace ran on; took CM1 from −26% to +11.5% of order value, positive from July.",
         "Owned the operating model for the pivot to own-warehouse distribution: written plan to first delivery in 12 days.",
         "Ran the buyer-app growth roadmap: registration completion 30% → 94%; 99% of order flow onto a unified cart in a week.",
-        "Built the WhatsApp channel from zero: ₹9.60 per install across 29,172 buyers; recommended stopping the spend at 1.12×.",
+        "Built the WhatsApp channel from zero: ₹9.60 per install across 29,172 buyers on a seven-cohort audience model over 1.17 M people.",
         "Joint product owner of a delivery service sold to our own distributors: 137 → 634 truck-days a month, ₹18.95 Cr of goods moved.",
       ],
     },

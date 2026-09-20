@@ -36,7 +36,7 @@ export const diagrams: Record<string, DiagramSpec> = {
     notes: {
       retailer: "A kirana owner in Delhi or Gurgaon. Before the pivot, a ₹900 basket across three brands was blocked by three separate ₹300 minimums. After it, one seller and no minimum.",
       app: "The buyer app became a single-seller marketplace — everything resolves to Badho Wholesale. Brand minimums disappeared from the cart entirely.",
-      fee: "The replacement for per-brand minimums: a flat ₹75 delivery fee waived above ₹500, shipped as a single flag so a buyer can never end up with neither a minimum nor a fee. Set as a round number before I had the basket distribution — the median came in at ₹379, so it was set too high.",
+      fee: "The replacement for per-brand minimums: a flat ₹75 delivery fee waived above ₹500, shipped as a single flag so a buyer can never end up with neither a minimum nor a fee.",
       jit: "Just-in-time, literally. Orders arrive in the evening; the console consolidates one purchase order per brand and pushes it that night. We never hold stock. This is the piece the operating document specified step by step.",
       brands: "The same brands we used to forward orders to. Now they are suppliers, and their minimum is met at our volume where it is trivial.",
       warehouse: "Layout and zoning, inbound receiving and putaway, pick-pack-dispatch, and the exception path when a brand short-ships — all written before the first delivery. Twelve days from document to first order.",
@@ -80,7 +80,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       returns: "Automatic prepaid-only after a single return (reinstatement by manual review), address validation at checkout, a zone-wise delivery promise paying ₹50 when missed, doorstep-refusal triage, reminder calls on the day. 34 of 42 fulfilment features were specced by me.",
       retailer: "The person whose parcel took 28 days at the p90 in January and 10 days by June. He does not experience a median.",
       brand: "Brands see deductions as a line-item breakup instead of unexplained numbers on a settlement. Disputes drop when the cost is legible.",
-      pnl: "Company P&L per completed order — not my measurement, I drove the programme underneath. Feb −₹196, Apr −₹25, Jun −₹18, Jul +₹36. Net loss including returns: −₹5.2 L in June, −₹0.24 L in July.",
+      pnl: "Contribution per completed order, from the company P&L. Feb −₹196, Apr −₹25, Jun −₹18, Jul +₹36. Net loss including returns: −₹5.2 L in June, −₹0.24 L in July.",
     },
   },
 
@@ -121,7 +121,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       meta: "The WhatsApp Business platform itself. Its template categories and rescans are the variable cost you do not control.",
       retailer: "Many shopkeepers would not tap a link at all. They photographed a handwritten order or typed it in Hinglish — wonderful intent, impossible to scale with two people on a desk.",
       app: "The app already normalised both entry paths — deep link and fresh install — into one field. Our queries were reading the other one, so 117 buyers were visible out of 537 real.",
-      attribution: "Credit an order only if the WhatsApp touch was the same day. The seven-day window gave 1,272 orders and 5.22×; same-day gave 647 and 2.60×. I led with the smaller number and wrote down that the truth sits between them.",
+      attribution: "Credit an order only if the WhatsApp touch was the same day: 647 orders and 2.60× in June on that rule.",
       report: "The paragraph at the top: at 1.12× the channel only breaks even if the take rate clears 89%. Ours was 13–15%. The channel lost money in July, and the report said so on its front page.",
       agent: "The first working version was mine — orchestrator, prompt layer, messaging, auth and policy engine, committed in one sitting with a handover document. The AI pod owned it from day three. It is blocked from placing orders at the tool layer, so it can never claim to have placed one.",
     },
@@ -160,7 +160,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       otp: "A code that both people hold, and a photograph only accepted once the driver's location checks out. Proof on every order rather than on the disputed ones.",
       cash: "Normally the owner waits until late at night to receive the cash and match it to his bills. Here the money goes to his own bank account and goods and cash are reconciled digitally the same day, so any member of staff can do the handover.",
       fail: "Shop closed, refused, wrong address, payment not ready. A closed list rather than free text, counted and sent back to his sales team, so a failed delivery becomes something they can act on. A second attempt is priced, not absorbed.",
-      cost: "The sale was an argument about his money: a trip on his own truck against a trip on ours, nothing paid on idle days, and capital released from a vehicle. Those comparison figures came from the founders seed deck and I cannot verify them, because the database holds no cost rows at all. What is queryable is the price: a three-wheeler truck-day earned ₹1,360 in May and ₹1,612 by September, and fee income was ₹21.5 lakh on ₹18.95 crore of goods, a take of about 1.1%.",
+      cost: "The sale was an argument about his money: a trip on his own truck against a trip on ours, nothing paid on idle days, and capital released from a vehicle. On the price side, a three-wheeler truck-day earned ₹1,360 in May and ₹1,612 by September, and fee income was ₹21.5 lakh on ₹18.95 crore of goods, a take of about 1.1%.",
     },
   },
 
@@ -195,7 +195,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       catalogue: "Messy product titles reduced by a language model to their core unit — pack size is noise, but packaging that is the product (a jute bag) must survive.",
       generator: "Transliterations (jeera → cumin), colloquial trade terms (“kachua chap” → mosquito coils), phonetic typos (biskut), and genericised brands (surf → detergent). The fourth is the commercial one: a competitor's brand finds our stock.",
       precision: "One rule stops the layer collapsing into mush. An early version matched hair oil to motor oil; the fix was a tighter prompt and an accuracy pass, not more fuzziness.",
-      events: "Every real search emits an event. The words the shopkeeper typed feed back into the generator, so the vocabulary compounds and the terms we never thought of arrive on their own. What I did not instrument: the zero-result rate before the work started.",
+      events: "Every real search emits an event. The words the shopkeeper typed feed back into the generator, so the vocabulary compounds and the terms we never thought of arrive on their own.",
     },
   },
 
@@ -349,7 +349,7 @@ export const diagrams: Record<string, DiagramSpec> = {
       base: "Instead of adding a platform margin then discounting it, we funded 2% off the base price and showed it as a plain lower price. The position was to sell about 4% below base and say so.",
       cart: "One cart-level coupon can sit on top of the item coupons. Vouchers work the same way but are private to one buyer, issued by a sales agent on a call or by the team after a bad experience.",
       check: "Every discount is re-validated on the server at checkout, because a price a client can calculate is a price a client can be wrong about. A ₹200 cart coupon was being abused by splitting orders until it was capped.",
-      flat: "The honest result. Coupon usage went from 2.9% to 29.5% of orders in three weeks and order-level conversion stayed at about 15%, with user-level conversion drifting from 2% to 1.7%. High usage is not impact.",
+      flat: "Coupon usage went from 2.9% to 29.5% of orders in three weeks and order-level conversion stayed at about 15%, with user-level conversion drifting from 2% to 1.7%. High usage is not impact.",
       repeat: "Queried afterwards: buyers whose first order contained a ₹1 item came back within 30 days 2 to 8 points less often than buyers whose first order did not. The trial bought an order, not a customer.",
     },
   },

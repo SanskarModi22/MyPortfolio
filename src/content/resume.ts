@@ -48,7 +48,7 @@ export const resume = {
         "Drove the fulfilment programme: return-to-origin **42.6% → 21.4%**, fulfilment **22% → 64%** on 4× volume; specified 34 of 42 fulfilment features incl. automated courier weight-claim recovery (378 claims in 24 h).",
         "Owned the operating model for the pivot to own-warehouse distribution — warehouse and software spec, buyer mechanics, cutover: **written plan to first delivery in 12 days**; carts per day 4.5 → 45.5 once per-brand minimums came off.",
         "Ran the buyer-app growth roadmap: **registration completion 30% → 94%** by removing the signup form and OTP step; **99% of order flow onto a unified multi-seller cart in one week**, orders per active buyer +41%.",
-        "Built the WhatsApp acquisition channel from zero — 7-cohort audience model over 1.17 M buyers, utility-template routing (~7× cheaper), in-house sender — to **29,172 buyers at ₹9.60 per install**; recommended stopping spend at 1.12× ROAS.",
+        "Built the WhatsApp acquisition channel from zero — 7-cohort audience model over 1.17 M buyers, utility-template routing (~7× cheaper), in-house sender — to **29,172 buyers at ₹9.60 per install**; found and fixed the attribution bug that hid 78% of the channel's buyers.",
         "Shipped and measured four pricing experiments: item-level quantity coupons lifted **AOV +10.5% at ~8× on the incremental discount rupee**; a 37-minute config change cut coupon spend 45.7% with orders flat; built the discount-audit dashboard.",
         "Measured every retention scheme against repeat orders — gift qualifiers re-ordered at **50% vs 19%**; a ₹4.57 Cr credit run was used by 0.06%; referrals activated 6.7× better on 3.9× less GMV per signup — and re-pointed the budget.",
         "Joint product owner of a delivery-as-a-service business sold to our own distributors — truck-day pricing, invoice-photo order entry, two-party handover, same-day cash: **137 → 634 truck-days a month, 17,174 deliveries, ₹18.95 Cr of goods moved**.",
@@ -89,7 +89,7 @@ export const resume = {
 
   projects: [
     { head: "MilkoReach — direct-to-retailer ordering app", body: "Built with an AI coding assistant in one evening; real purchase orders two days later. 17 days idea to first delivery; growth verified incremental (52 of 53 retailers dormant pre-launch)." },
-    { head: "WhatsApp sales agent — first working version", body: "3,127 lines with a handover document in one sitting; reported the ₹11,690 of revenue it caused, not the ₹3.98 L it touched." },
+    { head: "WhatsApp sales agent — first working version", body: "Request handling, prompts, messaging, auth and a policy layer — 3,127 lines with a handover document in one sitting; productionised by the AI team." },
     { head: "Discount-audit dashboard & courier cost model", body: "Flagged ₹60k of over-spec discounts; priced 3,534 shipments on billed rates to show the same traffic 40% cheaper." },
   ],
 

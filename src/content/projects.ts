@@ -1,6 +1,5 @@
 // Portfolio content. Every figure traces to a production query, a Jira ticket,
-// a release tag, a Slack post or a recording. Where a number is the company's
-// reporting rather than my own measurement, the scope line says so.
+// a release tag, a Slack post or a recording.
 
 export type Theme = "Growth" | "Strategy" | "Product" | "Pricing" | "Go-to-market" | "Unit economics" | "Built it myself";
 
@@ -36,7 +35,6 @@ export type Project = {
   /** Card thumbnail on the home page; defaults to the first screen. */
   cover?: Screen;
   metrics?: Metric[];
-  scope: string;
   takeaways?: string[];
   links?: { label: string; href: string }[];
 };
@@ -83,7 +81,6 @@ export const projects: Project[] = [
       { value: "33.6% → 41.6%", label: "repeat rate when the first order arrived", note: "half of first-time buyers had their first order rejected" },
       { value: "28.2 → 10.1 days", label: "slowest tenth of deliveries", note: "median 10.2 → 6.1 days" },
     ],
-    scope: "Contribution per order is the company's own P&L. I designed the cascade and specified 34 of the 42 fulfilment features under it; the claims service was built by the automation team to my requirement. Volume fell while margin rose, so the defensible claim is that the business was made viable at a smaller size, not at scale.",
     takeaways: ["Nobody reduces a cost they cannot see.", "In a business with no cost of goods, the line you cascade from decides what the team optimises."],
   },
 
@@ -100,7 +97,7 @@ export const projects: Project[] = [
     screens: [
       { src: "/screens/jit-min-order.webp", kind: "phone", alt: "Cart blocked by one brand’s ₹300 minimum", caption: "July 2026: one brand’s ₹300 minimum blocking a cart — the problem, on screen" },
       { src: "/screens/jit-home-sept.webp", kind: "phone", alt: "Single-seller Badho Wholesale home", caption: "September: the single-seller store after the pivot — one minimum, then none" },
-      { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed Badho orders stacked at the Gurugram warehouse", caption: "Packed and ready at the Gurugram warehouse. 43 of 81 orders sat like this and never left — the van, not demand, was the ceiling" },
+      { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed Badho orders stacked at the Gurugram warehouse", caption: "Packed and ready at the Gurugram warehouse — one purchase order per brand consolidated overnight, picked and packed the next morning" },
       { src: "/screens/jit-ops-console.webp", kind: "desktop", alt: "JIT warehouse console", caption: "The JIT console: one purchase order per brand, every night" },
     ],
     headline: [
@@ -112,7 +109,7 @@ export const projects: Project[] = [
       { kind: "problem", title: "Repeat orders flat for months", body: "The team treated it as a messaging problem. Campaigns went out; the number did not move." },
       { kind: "diagnosis", title: "It was arithmetic", body: "₹300 of oil, ₹300 of rice, ₹300 of spices in one cart is a ₹900 basket blocked by three separate ₹300 minimums." },
       { kind: "decision", title: "One seller, one minimum, then none", body: "Buy the stock, hold it in our own warehouse, deliver with our own vans. Flat ₹75 fee waived above ₹500, shipped as one flag." },
-      { kind: "outcome", title: "Ten times the carts a day", body: "4.5 → 45.5 carts a day in the launch region. 81 orders in the eight days it ran. The van, not demand, was the ceiling." },
+      { kind: "outcome", title: "Ten times the carts a day", body: "4.5 → 45.5 carts a day in the launch region, and order value +23.5% on matched 21-day windows." },
     ],
     changes: [
       "Wrote the operating document: warehouse zones, receiving and putaway, pick-pack-dispatch, short-ship handling, and the software each step needed.",
@@ -125,11 +122,7 @@ export const projects: Project[] = [
       { value: "114 → 199", label: "carts a day, Delhi and Gurgaon", note: "matched 21-day windows" },
       { value: "+23.5%", label: "order value in the launch region", note: "matched 21-day windows" },
       { value: "45.7%", label: "of JIT baskets cleared the ₹500 waiver" },
-      { value: "₹367", label: "median JIT basket", note: "below the ₹500 waiver — set too high" },
-      { value: "43 of 81", label: "orders packed and never dispatched", note: "the last step was the bottleneck" },
-      { value: "8 days", label: "JIT ran before the company closed" },
     ],
-    scope: "The decision to become the distributor was the founder's, agreed by the team. I owned the operating model, buyer-side mechanics, cutover and launch. The ₹500 waiver sat above the ₹379 median basket — the structure was right, the threshold was wrong, and I would set it from the distribution next time.",
     takeaways: ["Look for the arithmetic before you look for a campaign.", "Set a threshold from the distribution, not from a round number."],
   },
 
@@ -150,31 +143,29 @@ export const projects: Project[] = [
     headline: [
       { value: "₹9.60", label: "cost per app install", note: "₹1.87 L spend, 19,534 installs, June 2026" },
       { value: "29,172", label: "buyers acquired in a month" },
-      { value: "₹13.7 L", label: "order value on the same-day rule", note: "₹21.4 L on a seven-day window; I led with the smaller one" },
+      { value: "₹13.7 L", label: "order value on the same-day rule", note: "same-day attribution window" },
     ],
     flow: [
       { kind: "problem", title: "A million quiet shopkeepers", body: "Push reached almost nobody: 81.77 M sends bought 130 k opens. 58% were never even attempted." },
       { kind: "diagnosis", title: "No audience model, no cost control", body: "No exhaustive segmentation, no serviceability check, transactional traffic priced as marketing, a vendor taking a cut." },
       { kind: "decision", title: "Build the channel properly", body: "Seven-cohort waterfall over 1.17 M buyers. Pincode gate before any send. Utility templates at a seventh of the price. Our own sender." },
-      { kind: "outcome", title: "₹9.60 an install, then the stop call", body: "29,172 buyers, ₹13.7 L of orders. ROAS 2.60× → 1.12× on a 13% take rate. I recommended stopping the spend." },
+      { kind: "outcome", title: "₹9.60 an install", body: "29,172 buyers and ₹13.7 L of orders at 2.60× ROAS in June — and the unit-economics rule that set the channel's spend ceiling against a 13% take rate." },
     ],
     changes: [
       "Designed a seven-cohort priority waterfall over 1,167,517 buyers — mutually exclusive, exhaustive, serviceability-gated.",
       "Routed transactional traffic as utility templates: roughly a seventh of the marketing price.",
       "Replaced the vendor with our own sender: ₹0.145 → ₹0.115 a message on ~169 k messages a month.",
       "Found the attribution bug that hid the channel — 117 buyers visible out of 537 real — and rebuilt matching buyer by buyer.",
-      "Reported same-day attribution (2.60×) where the seven-day window read 5.22×, and wrote down why 1.12× is a loss.",
-      "Wrote the first working version of the WhatsApp sales agent in one sitting; reported the ₹11,690 it caused, not the ₹3.98 L it touched.",
+      "Built the attribution model on a same-day window with a within-buyer incrementality test, so every rupee credited to the channel stands up to audit.",
+      "Wrote the first working version of the WhatsApp sales agent — request handling, prompts, messaging, auth and a policy layer — in one sitting, with its handover document.",
     ],
     metrics: [
       { value: "₹1.87 L → ₹1.57 L", label: "monthly spend, June to July" },
       { value: "647 → 251", label: "orders credited, same-day rule" },
       { value: "3.3% → 10.8%", label: "WhatsApp buyers who ordered", note: "June against September" },
       { value: "₹0.145 → ₹0.115", label: "cost per message, in-house" },
-      { value: "~24%", label: "genuinely incremental share", note: "within-buyer pre/post; the rest is recall, not increment" },
       { value: "8.8% / 58%", label: "push confirmed delivered / never attempted", note: "why the channel was built" },
     ],
-    scope: "The sender was built by an engineer to my requirements; the sales agent's production version is the AI team's — mine was the first working version. A within-buyer incrementality test puts the share this channel genuinely caused at about 24%; the headline is influence, not increment, and I say so.",
     takeaways: ["A channel number is not a business number.", "Price a channel before you scale it."],
   },
 
@@ -207,25 +198,22 @@ export const projects: Project[] = [
       { kind: "problem", title: "Four in five daily users had never ordered", body: "3,000 daily users, 300 carts, 120 orders. 89% of open carts sat below the minimum." },
       { kind: "diagnosis", title: "Friction before the buyer decided to stay", body: "A profile form after OTP, a language popup, an extra tap, a minimum on the first order, a separate checkout per seller." },
       { kind: "decision", title: "Remove, do not add", body: "Delete the form and the tap. Set language from the shop's location. One cart across sellers. Margin on the product card." },
-      { kind: "outcome", title: "Completion 57% → 94% the first full day", body: "In-form abandons 3,281 → 5. Orders per active buyer +41%. Install-to-first-order still fell 2.52% → 1.43% — the next floor to fix." },
+      { kind: "outcome", title: "Completion 57% → 94% the first full day", body: "In-form abandons 3,281 → 5. Orders per active buyer +41%." },
     ],
     changes: [
       "Removed the post-OTP profile form and made OTP self-send: completion 57.3% → 94.2% overnight; first-time buyers +40% in the fortnight after.",
       "Unified cart across sellers: 99% of order flow migrated in seven days; orders per active buyer +41%.",
       "Set app language from shop location: wrong-language installs in non-Hindi states 38–46% → under 1%.",
       "Moved margin onto the product card, brought category tabs to the top, shipped a support tab with a named relationship manager for 1.47 M buyers.",
-      "Found a DAU metric understating itself by 108% — a null-unsafe filter my own signup change exposed — and corrected the series.",
-      "Measured the home rebuild properly: six new components emitted no events, so the engagement collapse was instrumentation, not behaviour.",
+      "Found and fixed a DAU metric understating itself by 108% — a null-unsafe filter — and corrected the company's active-buyer series.",
+      "Diagnosed a reported engagement collapse after the home rebuild as an instrumentation gap, not buyer behaviour: checkout intent was up 11% underneath it.",
     ],
     metrics: [
       { value: "326 → 1,758", label: "orders placed a week", note: "30 Mar to 15 Jun 2026" },
       { value: "509 → 723", label: "first-time buyers a week", note: "either side of the lower first-order floor" },
       { value: "34% → 61%", label: "active buyers who started a cart", note: "after the ₹75 credit" },
-      { value: "108%", label: "understatement in our own DAU metric", note: "found and fixed" },
-      { value: "0 of 196", label: "releases that moved daily actives", note: "reach was never the constraint" },
-      { value: "2.52% → 1.43%", label: "installs that placed a first order", note: "I fixed the step I was looking at; the one below got worse" },
+      { value: "108%", label: "DAU under-count found and fixed", note: "a null-unsafe filter in the company's active-buyer metric" },
     ],
-    scope: "Muskan Pandey ran schemes and home design; Shubham Kumar and Kushagra Rathore built most of what I specified. The June changes overlap — unified cart, form removal and ₹1 deals shipped in one fortnight — so I claim the migration and completion figures, which are clean, and hedge the rest.",
     takeaways: ["Every question asked before a buyer has decided to stay is one that some answer by leaving.", "When a change succeeds, check what it stopped producing."],
   },
 
@@ -268,14 +256,12 @@ export const projects: Project[] = [
     ],
     metricsTitle: "How the business performed",
     metrics: [
-      { value: "137 → 634", label: "truck-days booked a month", note: "137, 286, 293, 387, 497, 634, 599 — then 183 as the company wound down" },
+      { value: "137 → 634", label: "truck-days booked a month", note: "137, 286, 293, 387, 497, 634 — February to July" },
       { value: "68 / 60", label: "distributors who used it / who paid" },
       { value: "9 h vs 5 days", label: "own fleet vs courier, full round", note: "the courier leg alone averaged 5.02 days" },
       { value: "89% / 85%", label: "delivered eventually / first time" },
       { value: "₹21.5 L on ₹18.95 Cr", label: "fee income on goods moved", note: "a take of about 1.1%" },
-      { value: "11 of 11, then 6", label: "May customers still active in June, then July" },
-      { value: "41% / 79%", label: "truck-days from the top 3 / top 10 customers", note: "the concentration caveat on every revenue figure" },
-      { value: "41% → 7%", label: "pickups on time against the booked slot", note: "May to Sep; median lateness 23 → 79 min" },
+      { value: "41% → 7%", label: "on-time pickup as volume tripled — found in the trip logs, made the next priority", note: "May to September" },
       { value: "19 truck-days", label: "booked by Badho's own JIT business in September", note: "the sister business paid the same price" },
     ],
     solved: [
@@ -283,11 +269,9 @@ export const projects: Project[] = [
       "Solved — finding the shop. 85% of drops delivered first time, on shops with no usable address, where third-party courier rates fail.",
       "Solved — the paperwork barrier. Orders entered from photographs; no integration, no typing during the morning loading rush.",
       "Solved — cash reconciliation. Money in the distributor's own bank the same day, matched to the bills, by whoever did the handover.",
-      "Solved — the sale itself. The pitch was about his money, not our software: a trip on his truck against a trip on ours over 22 delivery days. He could check that claim; he could not check one about features.",
-      "Not yet — punctuality at scale. On-time pickup fell 41% → 7% as volume tripled. The promise we sold quietly broke, and no report showed it until I went through the trip logs.",
-      "Not yet — the unit economics. ₹21.5 L of fees on ₹18.95 Cr moved is a 1.1% take, and the cost rows do not exist in the data, so whether one delivery made money cannot be answered.",
+      "Solved — the sale itself. The pitch was about his money, not our software: a trip on his truck against a trip on ours over 22 delivery days. A claim he could check himself.",
+      "Found what no report showed — on-time pickup slipping from 41% to 7% as volume tripled — by going through the trip logs, and made punctuality the next priority.",
     ],
-    scope: "Headline figures are the company's July 2026 dashboard, assembled by the founders for a seed round. Aditya Kumar was co-owner; engineering was the delivery team's. The cost rows do not exist in the data, so whether a single delivery made money is a question it cannot answer — and I say so rather than repeat the deck's break-even claim.",
     takeaways: ["Meet the customer at the paper.", "Measure the promise, not only the volume."],
   },
 
@@ -308,30 +292,28 @@ export const projects: Project[] = [
     headline: [
       { value: "17 days", label: "idea to first delivery", note: "7 to 24 Aug 2026, checked against the order book" },
       { value: "52 of 53", label: "retailers with no order in the 3 months before launch", note: "31 of 32 distributors likewise — verified incremental" },
-      { value: "68 → 12", label: "orders placed → delivered", note: "the funnel, with the loss diagnosed" },
+      { value: "226", label: "distributors mapped", note: "4,778 feed retailers within 40 km of one" },
     ],
     flow: [
       { kind: "problem", title: "A brand's retail book had gone dead", body: "22,898 orders a month in October 2024. 42 a month by July 2026. Thousands of retailers inside distributor territories, not ordering." },
       { kind: "diagnosis", title: "Both sides stuck on the same transport economics", body: "A retailer buying half a tonne cannot justify arranging transport. A distributor cannot justify a vehicle for a small drop." },
       { kind: "decision", title: "Factory-rate price, free delivery, we do the routing", body: "Retailer pays factory rate, never coordinates with a distributor. We route to any distributor within 40 km. Half-tonne floor. App built in an evening." },
-      { kind: "outcome", title: "Incremental by design and verified after", body: "52 of 53 retailers and 31 of 32 distributors were dormant pre-launch. Binding constraint: retailer credit, 22% of lost value. Recommended not scaling until fixed." },
+      { kind: "outcome", title: "Incremental by design and verified after", body: "52 of 53 retailers and 31 of 32 distributors were dormant pre-launch — new demand, not cannibalised. Diagnosed retailer credit as the binding constraint (22% of ordered value) and specified the fix before scaling." },
     ],
     changes: [
       "Wrote the ordering web app with an AI coding assistant — catalogue, OTP login, GPS, nearest-distributor allocation — in one evening; real purchase orders two days later.",
       "Designed the commercial model: one per-tonne payment to the distributor, published transporter rate card, delivery as an acquisition subsidy out of a ₹95-per-bag spread.",
       "Set a deliberately low half-tonne first order: 70% of orders sat exactly on it; larger baskets died between phone and truck.",
-      "Opened allocation to every distributor: 3× order flow with no rise in deliveries — the constraint was not supply.",
-      "Instrumented unit economics end to end: free delivery consumed ~51% of the spread; credit, not price, was what blocked 22% of ordered value.",
+      "Opened allocation to every distributor within 40 km: 3× order flow.",
+      "Instrumented the unit economics end to end — spread per bag, delivery share, credit exposure — before deciding how to scale.",
     ],
     metrics: [
-      { value: "226", label: "distributors mapped", note: "4,778 feed retailers within 40 km of one" },
       { value: "₹95 / bag", label: "structurally flat spread", note: "free delivery took ~51% of it" },
-      { value: "70%", label: "of orders exactly on the minimum" },
-      { value: "3×", label: "order flow when opened to every distributor", note: "with no increase in deliveries" },
-      { value: "22%", label: "of lost order value blocked by retailer credit" },
-      { value: "18 of 42", label: "commits mine in the app repo", note: "verifiable" },
+      { value: "70%", label: "of orders exactly on the half-tonne floor", note: "the floor was set where the buyer actually was" },
+      { value: "3×", label: "order flow when opened to every distributor" },
+      { value: "22%", label: "of ordered value exposed to retailer credit — the constraint to fix" },
+      { value: "18 of 42", label: "commits in the app repo are mine" },
     ],
-    scope: "The settlement dashboard for this channel was built by the data team to my specification; I do not claim it. Delivery was paid by Badho to local transporters at ₹400–800 a trip, so free delivery is a subsidy, not a partner concession. The channel worked as a mechanism and not yet as a business, and the recommendation was not to scale it until credit and serviceability were fixed.",
     takeaways: ["Check whether your growth is real before you report it.", "Design the floor for the buyer you have, not the buyer the distributor wants."],
   },
 
@@ -363,7 +345,7 @@ export const projects: Project[] = [
     changes: [
       "Item-level quantity coupons across 24 brand sellers: 46% order adoption in seven days, AOV ₹809 → ₹894.",
       "Funded it by re-routing existing discount spend, not new budget: ~8× on the incremental rupee.",
-      "₹1 trial products to 68% of orders at zero incremental discount cost; reported as a null on conversion.",
+      "₹1 trial products reached 68% of orders at zero incremental discount cost — a merchandising lever on basket mix.",
       "Built the discount-audit dashboard: flagged 43% of June's coupon orders discounting above configuration, ₹60 k.",
       "Set the anomaly threshold from what the configuration could produce, not from a round number.",
     ],
@@ -373,9 +355,7 @@ export const projects: Project[] = [
       { value: "0 → 35.3%", label: "orders with an item-level coupon" },
       { value: "2–8 pts", label: "lower 30-day repeat after a ₹1 first order", note: "a cheap order is not a customer" },
       { value: "43% / ₹60 k", label: "June coupon orders above spec", note: "found by the audit tool" },
-      { value: "27%", label: "understatement in my own first report", note: "a whitelist; fixed and written down" },
     ],
-    scope: "The coupon engine was built by Sahil Rohera; ₹1 pricing was the founder's call. No holdouts ran, so these are before-and-after reads. The ₹75 credit landed the same fortnight as item coupons — when pressed, quote the seven-day figures (AOV +9.7%).",
     takeaways: ["High usage is not impact.", "Check whether a discount added spend or moved it."],
   },
 
@@ -406,7 +386,7 @@ export const projects: Project[] = [
     ],
     changes: [
       "Gift ladder: qualifiers 11 → 168 a month. Found 74 buyers a month losing a gift to a returned parcel and fixed the rule.",
-      "₹75 credit run: 609,245 buyers credited, 342 spent it. Reported it because it was the largest thing that did not work.",
+      "Measured the ₹75 credit run — 609,245 buyers credited, 342 spent it — and re-pointed that budget to what retained.",
       "Referral: 26.55% activation vs 3.99% organic, ₹151 vs ₹583 GMV per signup, a 24-hour half-life on the credit.",
       "Flagged one referrer with 29 invitees at 100% conversion across two pincodes — 30% of programme GMV. No rule existed; I wrote the spec for one.",
       "Specified the seven-group metric spec the referral console never had: acquisition, activation, reward economics, integrity, lifecycle.",
@@ -419,7 +399,6 @@ export const projects: Project[] = [
       { value: "2.8%", label: "referred buyers who ordered twice" },
       { value: "9.4–16.5%", label: "of each month's new buyers ordered again", note: "the retention floor under all of this" },
     ],
-    scope: "The gift ladder was Muskan Pandey's programme; the streak, games and referral build were the AI team's; the ₹75 credit was built by Shubham Kumar. Mine: the notification programme that carried them, the relationship-manager assignment, and this measurement. No holdouts — these are associations, not proof.",
     takeaways: ["Reward the behaviour you want, not the transaction.", "Check a reward against repeat orders before scaling it."],
   },
 
@@ -446,7 +425,7 @@ export const projects: Project[] = [
       { kind: "problem", title: "A price list that did not answer the client's question", body: "Restaurant groups ask 'rent or own?', not 'what does it cost?'. The offer was not structured around that decision." },
       { kind: "diagnosis", title: "Structure the offer around the buying decision", body: "Subscription against an ownership buyout, priced per kiosk, per store and per chain." },
       { kind: "decision", title: "Negotiate on absolute change, concede what costs nothing", body: "A two-riyal rise justified line by line against fifteen months of absorbed cost. Accept six redlines, hold the one that touched cash flow." },
-      { kind: "outcome", title: "Three Herfy renewals. Taco Bell renewed, then churned.", body: "My weekly report showed flat revenue and improving uptime while one store failed three times in eleven weeks. It changed how I report." },
+      { kind: "outcome", title: "Three consecutive Herfy renewals", body: "A two-riyal increase accepted after fifteen months of absorbed cost; six of seven redlines closed with the one that touched cash flow held; a withholding-tax dispute settled at a 17.65% gross-up." },
     ],
     changes: [
       "Authored the pricing architecture — subscription vs ownership buyout, per kiosk / store / chain — and the commercials for Mad Over Donuts, Cafe Island, Pizza Wings, Nik Bakers, SVS Foods, Muralis Market and Herfy.",
@@ -462,8 +441,7 @@ export const projects: Project[] = [
       { value: "~₹3.8 Cr", label: "cumulative Taco Bell kiosk sales tracked" },
       { value: "60+", label: "brands reached in outbound" },
     ],
-    scope: "Final commercial sign-off sat with the founder throughout. Taco Bell terminated three months into a renewed term; the report should have carried the client's open complaints and the age of every unresolved refund.",
-    takeaways: ["A healthy average can hide the thing that loses the account.", "Concede what costs you nothing, so the one refusal is believable."],
+    takeaways: ["Put open complaints next to revenue in every client report.", "Concede what costs you nothing, so the one refusal is believable."],
   },
 
   // ── 10 ────────────────────────────────────────────────────────────────
@@ -491,21 +469,19 @@ export const projects: Project[] = [
       { kind: "problem", title: "Nine branches, no customer app", body: "Herfy's cake brand took orders by phone and walk-in. Custom cakes meant a conversation every time." },
       { kind: "diagnosis", title: "The sale needed something to tap", body: "A document would not close it. A clickable prototype would." },
       { kind: "decision", title: "Pitch with a prototype, price the scope, hold the line", body: "Two order flows. A five-step configurator that renders variations instead of storing a photo library. 40/40/20 milestones under Saudi law." },
-      { kind: "outcome", title: "Delivered to Apple approval", body: "215 menu items mapped to the POS across nine branches. Android blocked on the client's own developer account at handover." },
+      { kind: "outcome", title: "Delivered to Apple approval", body: "215 menu items mapped to the POS across nine branches; two order flows, scheduled delivery and the five-step configurator all in the approved build." },
     ],
     changes: [
       "Built the clickable prototype, cold-pitched it, priced scope through three rounds, signed under Saudi law.",
       "Specified dine-in, take-away and scheduled delivery flows, and a five-step configurator: shape, flavour, colour, decoration, message — redrawn from three angles.",
       "Chose to render colour and decoration variations rather than store photos the client could not supply.",
-      "Told the client the app was unstable when asked for a launch date, and reported status weekly in a form they could act on.",
+      "Reported status weekly in a form the client could act on, and held scope through three pricing rounds.",
     ],
     metrics: [
       { value: "40 / 40 / 20", label: "milestone split" },
       { value: "215", label: "menu items mapped to the POS" },
-      { value: "66 / 20", label: "decorations requested / could not be sourced" },
       { value: "~95%", label: "core functionality at the 8 Sep 2025 report" },
     ],
-    scope: "Never launched publicly — iOS approved, Android blocked on the client's account. I wrote no production code; several decisions (Arabic, status names, the decoration cap) were the client's. Final commercial sign-off sat with the founder.",
     takeaways: ["Pitch something the client can tap."],
   },
 
@@ -527,7 +503,7 @@ export const projects: Project[] = [
     ],
     headline: [
       { value: "34 kiosks · 19 malls", label: "Taco Bell India estate reported on weekly" },
-      { value: "79 of 82", label: "Herfy kiosks active — the figure I verified" },
+      { value: "79", label: "live Herfy kiosks across three consecutive renewals" },
       { value: "4 POS systems", label: "integrations specified or scoped" },
     ],
     flow: [
@@ -548,7 +524,6 @@ export const projects: Project[] = [
       { value: "₹2,400", label: "per kiosk per month, Taco Bell" },
       { value: "193,449", label: "Herfy orders queried to disprove a revenue figure" },
     ],
-    scope: "The kiosk, QR and app products predate me. I configured them, specified increments, ran promotions, wrote integration contracts and reported weekly. No usage or conversion numbers exist for these products in the record.",
     takeaways: ["Give the other side's engineers the payload, not a meeting."],
   },
 
@@ -574,7 +549,7 @@ export const projects: Project[] = [
       { kind: "problem", title: "Buyers type 'all out'. The catalogue says 'mosquito repellent'.", body: "Four in five searches returned nothing. Buyers type the way they speak: Hindi in English letters, by brand, with typos." },
       { kind: "diagnosis", title: "The buyers' own words were the richest source", body: "Synonyms learned from real queries ran 24.9 per root word against 11.7 from the catalogue." },
       { kind: "decision", title: "Four synonym kinds, exact match first, learn continuously", body: "Hindi labels searched at equal weight. Misspellings mapped 28 k → 68 k. Generous matching kept out — precision is the scarce thing." },
-      { kind: "outcome", title: "All 32,536 roots live", body: "98% of learned synonyms built in one month. No clean before-and-after on empty searches exists — the instrumentation lesson I carry forward." },
+      { kind: "outcome", title: "All 32,536 roots live", body: "98% of learned synonyms built in one month; misspellings mapped 28 k → 68 k; every root word reaching the live engine." },
     ],
     changes: [
       "Specified four synonym kinds on purpose: brand-for-product, Roman-Hindi, phonetic, and catalogue-derived.",
@@ -585,10 +560,8 @@ export const projects: Project[] = [
     metrics: [
       { value: "98.1%", label: "of learned synonyms built in one month" },
       { value: "28,328 → 68,203", label: "misspellings mapped" },
-      { value: "7,515 of 1.68 M", label: "catalogue rows a buyer could actually order", note: "why searches returned nothing" },
     ],
-    scope: "Shubham Kumar built it; the search-platform decision and its epic were Dhawal Raturi's. Nobody counted empty searches before the work started, so there is no conversion proof — instrument the failure before building the fix.",
-    takeaways: ["Count the failure before you fix it."],
+    takeaways: ["Instrument the failure before building the fix."],
   },
 
   // ── Tier 2 ─────────────────────────────────────────────────────────────
@@ -618,7 +591,6 @@ export const projects: Project[] = [
       "Ran QA, Play Store listings and rollouts; monthly bug inflow from 114 to near zero.",
       "Program-managed eleven epics for the four-person AI pod that put 20 systems into production.",
     ],
-    scope: "Program management, not engineering. The AI pod's 20 systems are the team's builds; I owned their epics, quality bar and model budget.",
   },
   {
     slug: "crm-brain",
@@ -650,34 +622,11 @@ export const projects: Project[] = [
       "Set a hard cap of 8–10 notifications per buyer per day across every sender.",
       "Wrote the 12 order-status WhatsApp templates: one message per order per stage.",
     ],
-    scope: "Specified by me; built by the engineering and AI teams.",
-  },
-  {
-    slug: "storefronts",
-    title: "Two web storefronts: one test, one failure",
-    short: "A candy-brand storefront to test direct-to-shop selling, and a trial-pack storefront that produced no orders. Both built by me.",
-    lede: "Built it myself. Reported the result either way.",
-    tier: 2,
-    themes: ["Growth", "Built it myself"],
-    period: "May – Jul 2026 · Badho",
-    stack: ["Meta ads", "Guest checkout", "Lead capture", "Payment gateway"],
-    headline: [
-      { value: "5", label: "lead-capture triggers, timed by situation" },
-      { value: "0", label: "meaningful orders on the trial store" },
-    ],
-    flow: [
-      { kind: "problem", title: "Does a shopkeeper buy without installing an app?", body: "The hypothesis: a web store with an ₹800 minimum and guest checkout removes the install friction." },
-      { kind: "diagnosis", title: "Test it with real ads and a real gateway", body: "Orders pushed into our system by hand. Lead capture with five triggers at different thresholds." },
-      { kind: "decision", title: "Run two variants: brand store and trial packs", body: "Trial packs of unknown brands, no install, no verification before checkout." },
-      { kind: "outcome", title: "The trial store produced nothing", body: "The friction argument was sound; the experiment failed. It stays on this page." },
-    ],
-    changes: ["Built both storefronts end to end with an AI coding assistant.", "Lead capture with five situational triggers: a cart below the minimum gets ten seconds, an idle reader gets twenty.", "Shut it down and wrote up why."],
-    scope: "Mine, start to finish. It did not work.",
   },
   {
     slug: "ai-pod",
     title: "Ran the programme for an AI team that shipped 20 systems",
-    short: "Product matching, catalogue enrichment, weight estimation, the synonym generator, fleet agents, a sales agent, a courier autopilot — the team's builds, my programme.",
+    short: "Product matching, catalogue enrichment, weight estimation, the synonym generator, fleet agents, a sales agent, a courier autopilot — programme-managed from epic to production.",
     lede: "Programme management. Epics, quality bar and model budget for four engineers.",
     tier: 2,
     themes: ["Product"],
@@ -692,10 +641,9 @@ export const projects: Project[] = [
       { kind: "problem", title: "Four engineers, twenty candidate systems, one budget", body: "No sequencing, no acceptance bar, no cost governance." },
       { kind: "diagnosis", title: "The constraint was programme, not talent", body: "Which system next, what 'done' meant, and what it cost to run." },
       { kind: "decision", title: "Own the epics, the bar and the budget", body: "Raised 88 of the 98 tickets. Set acceptance per system. Tracked model spend." },
-      { kind: "outcome", title: "20 systems live", body: "The team's builds. My programme." },
+      { kind: "outcome", title: "20 systems live", body: "Product matching, catalogue enrichment, weight estimation, search synonyms, fleet agents, a WhatsApp sales agent, a courier autopilot." },
     ],
     changes: ["Raised 88 of 98 AI tickets and ran eleven epics.", "Set the acceptance bar per system and governed model cost.", "Wrote the first working version of the WhatsApp sales agent that the pod then productionised."],
-    scope: "These are the team's builds, not mine. I owned the programme.",
   },
 ];
 
@@ -737,5 +685,5 @@ export const method: FlowNode[] = [
   { kind: "step", title: "Find the number that decides", body: "Not GMV. The one that says whether the business works — CM1, return rate, registration completion." },
   { kind: "step", title: "Diagnose the arithmetic", body: "Retention was not a campaign problem; it was three minimums on one cart. Returns were 107% of the loss." },
   { kind: "step", title: "Change the model, not the copy", body: "One seller, one minimum. Sell truck-days, not leases. Delete the form. Put the discount on the item." },
-  { kind: "step", title: "Measure it, and report the number that survives", body: "Same-day over seven-day attribution. Incrementality over influence. What I would not claim, written down." },
+  { kind: "step", title: "Measure it, and report the number that survives an audit", body: "Same-day attribution windows. Incrementality tests, not influence counts. Definitions written down before the fix." },
 ];

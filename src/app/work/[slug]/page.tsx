@@ -133,18 +133,15 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── What it solved ──────────────────────────────────────────── */}
           {p.solved?.length ? (
-            <Section title="What it solved — and what it had not yet">
+            <Section title="What it solved">
               <Reveal>
                 <ul className="card divide-y divide-line">
-                  {p.solved.map((s) => {
-                    const notYet = s.startsWith("Not yet");
-                    return (
-                      <li key={s.slice(0, 40)} className="flex gap-3 px-5 py-3.5">
-                        <span className={`mt-[7px] h-2 w-2 shrink-0 rounded-full ${notYet ? "bg-warn" : "bg-accent"}`} />
-                        <span className="text-[14.5px] leading-relaxed text-ink">{s}</span>
-                      </li>
-                    );
-                  })}
+                  {p.solved.map((s) => (
+                    <li key={s.slice(0, 40)} className="flex gap-3 px-5 py-3.5">
+                      <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-accent" />
+                      <span className="text-[14.5px] leading-relaxed text-ink">{s}</span>
+                    </li>
+                  ))}
                 </ul>
               </Reveal>
             </Section>
@@ -159,27 +156,19 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
             </Section>
           ) : null}
 
-          {/* ── Scope + takeaways ───────────────────────────────────────── */}
-          <div className="grid gap-4 md:grid-cols-[1.2fr_1fr]">
+          {/* ── Takeaways ───────────────────────────────────────────────── */}
+          {p.takeaways?.length ? (
             <Reveal>
-              <div className="card h-full border-l-4 border-l-warn p-5">
-                <h3 className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-warn">Scope — what was mine, what was not</h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-muted">{p.scope}</p>
+              <div className="card border-l-4 border-l-accent p-5">
+                <h3 className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent">What I carry forward</h3>
+                <ul className="mt-2 grid gap-2 sm:grid-cols-2">
+                  {p.takeaways.map((x) => (
+                    <li key={x} className="text-[15px] font-medium leading-snug text-ink">{x}</li>
+                  ))}
+                </ul>
               </div>
             </Reveal>
-            {p.takeaways?.length ? (
-              <Reveal delay={0.05}>
-                <div className="card h-full border-l-4 border-l-accent p-5">
-                  <h3 className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-accent">What I carry forward</h3>
-                  <ul className="mt-2 space-y-2">
-                    {p.takeaways.map((t) => (
-                      <li key={t} className="text-[15px] font-medium leading-snug text-ink">{t}</li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            ) : null}
-          </div>
+          ) : null}
         </div>
 
         {/* ── Prev / next ─────────────────────────────────────────────── */}
