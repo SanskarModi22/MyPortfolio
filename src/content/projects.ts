@@ -27,6 +27,8 @@ export type Project = {
   flow: FlowNode[];
   changes: string[];
   screens?: Screen[];
+  /** Card thumbnail on the home page; defaults to the first screen. */
+  cover?: Screen;
   metrics?: Metric[];
   scope: string;
   takeaways?: string[];
@@ -92,6 +94,7 @@ export const projects: Project[] = [
     screens: [
       { src: "/screens/jit-min-order.webp", kind: "phone", alt: "Cart blocked by one brand’s ₹300 minimum", caption: "July 2026: one brand’s ₹300 minimum blocking a cart — the problem, on screen" },
       { src: "/screens/jit-home-sept.webp", kind: "phone", alt: "Single-seller Badho Wholesale home", caption: "September: the single-seller store after the pivot — one minimum, then none" },
+      { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed Badho orders stacked at the Gurugram warehouse", caption: "Packed and ready at the Gurugram warehouse. 43 of 81 orders sat like this and never left — the van, not demand, was the ceiling" },
       { src: "/screens/jit-ops-console.webp", kind: "desktop", alt: "JIT warehouse console", caption: "The JIT console: one purchase order per brand, every night" },
     ],
     headline: [
@@ -180,10 +183,13 @@ export const projects: Project[] = [
     period: "Mar – Sep 2026 · Badho",
     stack: ["Onboarding", "Unified cart", "Home rebuild", "Language routing", "Catalogue", "Support tab", "Notifications"],
     screens: [
+      { src: "/screens/ob-number.webp", kind: "phone", alt: "Old onboarding, step 1: phone number and language", caption: "Before, step 1: phone number — and a language question before the buyer has seen a single product" },
+      { src: "/screens/ob-otp.webp", kind: "phone", alt: "Old onboarding, step 2: OTP typed by hand", caption: "Before, step 2: the OTP typed by hand — four boxes, a countdown, a keypad. Now auto-read" },
+      { src: "/screens/ob-form.webp", kind: "phone", alt: "Old onboarding, step 3: the profile form", caption: "Before, step 3: the profile form after OTP. 21,064 people abandoned it in three weeks. Deleted — completion 30% → 94%" },
       { src: "/screens/plg-home-before.webp", kind: "phone", alt: "Buyer app home before 18 July", caption: "Home before 18 Jul: icon rail, ₹1 Deal, promotional banners" },
       { src: "/screens/plg-home-after.webp", kind: "phone", alt: "Buyer app home after the rebuild", caption: "Home after the rebuild: coupons fold, category tabs, cart strip" },
-      { src: "/screens/plg-filters.webp", kind: "phone", alt: "Margin-first filters", caption: "Margin-first filters — more margin, lower price, deal items" },
     ],
+    cover: { src: "/screens/plg-home-before.webp", kind: "phone", alt: "", caption: "" },
     headline: [
       { value: "30% → 94%", label: "verified phones that finished registering", note: "signup form and OTP tap removed" },
       { value: "21,064 → 9", label: "mid-form abandons per three weeks" },

@@ -18,7 +18,7 @@ function findHeadshot() {
   return null;
 }
 
-const toCard = (p: (typeof tier1)[number]): WorkCard => ({ slug: p.slug, title: p.title, short: p.short, themes: p.themes, headline: p.headline, period: p.period, tier: p.tier, cover: p.screens?.[0] });
+const toCard = (p: (typeof tier1)[number]): WorkCard => ({ slug: p.slug, title: p.title, short: p.short, themes: p.themes, headline: p.headline, period: p.period, tier: p.tier, cover: p.cover ?? p.screens?.[0] });
 
 export default function Home() {
   const headshot = findHeadshot();
