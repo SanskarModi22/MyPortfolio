@@ -25,6 +25,31 @@ function Arrow({ vertical = false }: { vertical?: boolean }) {
   );
 }
 
+// Card bodies are written one idea per sentence; render each sentence as a
+// bullet. Fragments under 30 characters ("Then discounts.") join the bullet
+// before them so no bullet reads as a stub.
+const SENTENCE = /(?<=[.!?])\s+(?=[A-Z₹0-9"'“‘(])/;
+export function bullets(body: string): string[] {
+  const out: string[] = [];
+  for (const s of body.split(SENTENCE)) {
+    if (out.length && s.length < 30) out[out.length - 1] += " " + s;
+    else out.push(s);
+  }
+  return out;
+}
+
+function Body({ text }: { text: string }) {
+  const items = bullets(text);
+  if (items.length < 2) return <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{text}</p>;
+  return (
+    <ul className="mt-2 list-disc space-y-1.5 pl-4 text-[13.5px] leading-relaxed text-muted marker:text-faint">
+      {items.map((s, i) => (
+        <li key={i}>{s}</li>
+      ))}
+    </ul>
+  );
+}
+
 function Node({ n, i, numbered }: { n: FlowNode; i: number; numbered: boolean }) {
   return (
     <div className={`flow-node flow-${n.kind} card h-full p-4 sm:p-5`}>
@@ -34,7 +59,7 @@ function Node({ n, i, numbered }: { n: FlowNode; i: number; numbered: boolean })
         <span>{numbered ? `Step ${i + 1}` : KIND_LABEL[n.kind]}</span>
       </div>
       <h3 className="mt-2 text-[16px] font-semibold leading-snug text-ink">{n.title}</h3>
-      <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{n.body}</p>
+      <Body text={n.body} />
     </div>
   );
 }
