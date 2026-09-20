@@ -48,7 +48,7 @@ export const resume = {
         "Drove the fulfilment programme: return-to-origin **42.6% → 21.4%**, fulfilment **22% → 64%** on 4× volume; specified 34 of 42 fulfilment features incl. automated courier weight-claim recovery (378 claims in 24 h).",
         "Owned the operating model for the pivot to own-warehouse distribution — warehouse and software spec, buyer mechanics, cutover: **written plan to first delivery in 12 days**; carts per day 4.5 → 45.5 once per-brand minimums came off.",
         "Ran the buyer-app growth roadmap: **registration completion 30% → 94%** by removing the signup form and OTP step; **99% of order flow onto a unified multi-seller cart in one week**, orders per active buyer +41%.",
-        "Built the WhatsApp acquisition channel from zero — 7-cohort audience model over 1.17 M buyers, utility-template routing (~7× cheaper), in-house sender — to **29,172 buyers at ₹9.60 per install**; found and fixed the attribution bug that hid 78% of the channel's buyers.",
+        "Built the WhatsApp acquisition channel from zero — an audience model over 1.17 M buyers and two message-cost decisions worth ~7× and 21% — to **29,172 buyers at ₹9.60 per install**; found and fixed the attribution error that hid 78% of the channel's buyers.",
         "Shipped and measured four pricing experiments: item-level quantity coupons lifted **AOV +10.5% at ~8× on the incremental discount rupee**; a 37-minute config change cut coupon spend 45.7% with orders flat; built the discount-audit dashboard.",
         "Measured every retention scheme against repeat orders — gift qualifiers re-ordered at **50% vs 19%**; a ₹4.57 Cr credit run was used by 0.06%; referrals activated 6.7× better on 3.9× less GMV per signup — and re-pointed the budget.",
         "Joint product owner of a delivery-as-a-service business sold to our own distributors — truck-day pricing, invoice-photo order entry, two-party handover, same-day cash: **137 → 634 truck-days a month, 17,174 deliveries, ₹18.95 Cr of goods moved**.",
@@ -73,7 +73,7 @@ export const resume = {
         "Authored the pricing architecture — subscription vs ownership buyout, priced per kiosk, per store and per chain — and the commercials for seven restaurant brands including Herfy, Mad Over Donuts and Pizza Wings.",
         "Ran the Herfy account (Saudi Arabia) single-handed: **79 live kiosks, three consecutive renewals**, a price rise negotiated on absolute change, a 15% withholding-tax dispute settled at a 17.65% gross-up.",
         "Cold-pitched, priced and delivered DOKA Bakery House (Riyadh, nine branches) — a custom ordering app with a five-step cake configurator — **signed at ~$7,000 and approved for iOS release** with one developer.",
-        "Sole contact for Taco Bell India's **34 kiosks across 19 malls** with weekly reporting; specified the offer engine and the POS integration contract (GoFrugal, Petpooja, POSIST, Rista); registered partnerships with GoFrugal, Petpooja and Razorpay.",
+        "Product-managed the self-ordering kiosk: specified the offer engine (₹1 add-ons, buy-one-get-N), dine-in/take-away flows, WhatsApp e-bills, loyalty and coupon rules, payment-delay enforcement and four point-of-sale integrations; ran promotions on it; produced the weekly client report on **₹4.19 Cr of kiosk sales across 19 Taco Bell stores and 34 kiosks**.",
       ],
     },
     {

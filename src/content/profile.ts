@@ -55,10 +55,10 @@ export const profile = {
       href: "/work/move-it-daas",
     },
     {
-      title: "Ship it — and build it",
-      proof: "489 specs, 805 PRs merged, 242 releases. Two ordering products and a sales agent's first version written myself.",
-      metric: "242 releases",
-      href: "/work/release-gate",
+      title: "Build the product",
+      proof: "A self-ordering kiosk product across 19 Taco Bell stores — offers, flows, WhatsApp bills, loyalty, payments — plus a custom cake app and a partner ordering app I wrote myself.",
+      metric: "₹4.19 Cr",
+      href: "/work/ono-product",
     },
   ],
 
@@ -87,7 +87,7 @@ export const profile = {
       org: "Badho Technologies, Gurugram",
       period: "Oct 2025 – Jan 2026",
       bullets: [
-        "Owned the release gate for three apps from one monorepo: 242 versions, 805 of 1,613 pull requests, 204 of 204 release merges.",
+        "Owned the release gate for three apps: 242 versions, 805 of 1,613 code changes reviewed and shipped, every release signed off.",
         "Most-frequent specification author in the company: 489 of 1,585 tickets, 192 full requirement documents. Bug inflow 114 → near zero a month.",
       ],
     },

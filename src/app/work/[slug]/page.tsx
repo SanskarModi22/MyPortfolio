@@ -5,6 +5,7 @@ import { bySlug, projects } from "@/content/projects";
 import { diagrams } from "@/content/diagrams";
 import { Diagram } from "@/components/Diagram";
 import { FlowStrip } from "@/components/FlowStrip";
+import { ArcChart } from "@/components/ArcChart";
 import { Screens } from "@/components/Screens";
 import { Reveal } from "@/components/Reveal";
 import { Section, Chip } from "@/components/Section";
@@ -102,9 +103,35 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
             </Section>
           ) : null}
 
-          {/* ── What changed ────────────────────────────────────────────── */}
+          {/* ── What I got built ────────────────────────────────────────── */}
+          {p.features?.length ? (
+            <Section title="What I got built" kicker="The product, feature by feature — each one a problem a store or a client had, and what shipped for it.">
+              <ol className="grid gap-3 md:grid-cols-2">
+                {p.features.map((f, i) => (
+                  <Reveal key={f.title} as="li" delay={(i % 2) * 0.05}>
+                    <div className="card h-full p-5">
+                      <div className="font-mono text-[11px] text-faint">{String(i + 1).padStart(2, "0")}</div>
+                      <h3 className="mt-1 text-[16px] font-semibold leading-snug text-ink">{f.title}</h3>
+                      <p className="mt-2 text-[14px] leading-relaxed text-muted">{f.body}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </ol>
+            </Section>
+          ) : null}
+
+          {/* ── Chart ───────────────────────────────────────────────────── */}
+          {p.chart ? (
+            <Section title={p.chart.title} kicker={p.chart.kicker}>
+              <Reveal>
+                <ArcChart data={p.chart.data} caption={p.chart.caption} ariaLabel={p.chart.title} unit={p.chart.unit} />
+              </Reveal>
+            </Section>
+          ) : null}
+
+          {/* ── What I did ──────────────────────────────────────────────── */}
           {p.changes?.length ? (
-          <Section title="What I changed">
+          <Section title="What I did">
             <Reveal>
               <ul className="card divide-y divide-line">
                 {p.changes.map((c, i) => (
