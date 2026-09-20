@@ -59,11 +59,39 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
         <div className="mt-14 space-y-16">
           {/* ── The flow ─────────────────────────────────────────────────── */}
-          <Section title="How it went" kicker="Problem → diagnosis → decision → outcome.">
-            <Reveal>
-              <FlowStrip nodes={p.flow} />
-            </Reveal>
-          </Section>
+          {p.flow?.length ? (
+            <Section title="How it went" kicker="Problem → diagnosis → decision → outcome.">
+              <Reveal>
+                <FlowStrip nodes={p.flow} />
+              </Reveal>
+            </Section>
+          ) : null}
+
+          {/* ── The idea (business-from-scratch cases) ───────────────────── */}
+          {p.idea?.length ? (
+            <Section title="The idea" kicker="Why this business, in the customer's arithmetic.">
+              <ol className="grid gap-3 md:grid-cols-2">
+                {p.idea.map((b, i) => (
+                  <Reveal key={b.title} as="li" delay={(i % 2) * 0.05}>
+                    <div className="card h-full p-5">
+                      <div className="font-mono text-[11px] text-faint">0{i + 1}</div>
+                      <h3 className="mt-1 text-[16px] font-semibold leading-snug text-ink">{b.title}</h3>
+                      <p className="mt-2 text-[14px] leading-relaxed text-muted">{b.body}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </ol>
+            </Section>
+          ) : null}
+
+          {/* ── The flow we built ────────────────────────────────────────── */}
+          {p.built?.length ? (
+            <Section title="The flow we built" kicker="Booking to cash, step by step.">
+              <Reveal>
+                <FlowStrip nodes={p.built} numbered />
+              </Reveal>
+            </Section>
+          ) : null}
 
           {/* ── Screens ─────────────────────────────────────────────────── */}
           {p.screens?.length ? (
@@ -75,6 +103,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
           ) : null}
 
           {/* ── What changed ────────────────────────────────────────────── */}
+          {p.changes?.length ? (
           <Section title="What I changed">
             <Reveal>
               <ul className="card divide-y divide-line">
@@ -87,10 +116,11 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
               </ul>
             </Reveal>
           </Section>
+          ) : null}
 
           {/* ── Numbers ─────────────────────────────────────────────────── */}
           {p.metrics?.length ? (
-            <Section title="The numbers" kicker="Each one says how it was measured. None are estimates.">
+            <Section title={p.metricsTitle ?? "The numbers"} kicker="Each one says how it was measured. None are estimates.">
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {p.metrics.map((m, i) => (
                   <Reveal key={m.label} delay={(i % 3) * 0.05}>
@@ -98,6 +128,25 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
                   </Reveal>
                 ))}
               </div>
+            </Section>
+          ) : null}
+
+          {/* ── What it solved ──────────────────────────────────────────── */}
+          {p.solved?.length ? (
+            <Section title="What it solved — and what it had not yet">
+              <Reveal>
+                <ul className="card divide-y divide-line">
+                  {p.solved.map((s) => {
+                    const notYet = s.startsWith("Not yet");
+                    return (
+                      <li key={s.slice(0, 40)} className="flex gap-3 px-5 py-3.5">
+                        <span className={`mt-[7px] h-2 w-2 shrink-0 rounded-full ${notYet ? "bg-warn" : "bg-accent"}`} />
+                        <span className="text-[14.5px] leading-relaxed text-ink">{s}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Reveal>
             </Section>
           ) : null}
 

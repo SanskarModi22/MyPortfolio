@@ -1,7 +1,9 @@
 import type { FlowNode } from "@/content/projects";
 
-// A horizontal flowchart: Problem → Diagnosis → Decision → Outcome.
-// Cards joined by arrows; stacks vertically on phones.
+// A horizontal flowchart. Four nodes sit in one row joined by arrows
+// (Problem → Diagnosis → Decision → Outcome, or the four-step method).
+// Longer step sequences wrap into rows of four, numbered, each card carrying
+// its own arrow to the next.
 
 const KIND_LABEL: Record<FlowNode["kind"], string> = {
   problem: "Problem",
@@ -23,22 +25,44 @@ function Arrow({ vertical = false }: { vertical?: boolean }) {
   );
 }
 
+function Node({ n, i, numbered }: { n: FlowNode; i: number; numbered: boolean }) {
+  return (
+    <div className={`flow-node flow-${n.kind} card h-full p-4 sm:p-5`}>
+      <div className="flow-band" style={{ background: "var(--node)" }} />
+      <div className="mt-3 flex items-center gap-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em]" style={{ color: "var(--node)" }}>
+        {numbered ? <span className="inline-flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-semibold text-white" style={{ background: "var(--node)" }}>{i + 1}</span> : null}
+        <span>{numbered ? `Step ${i + 1}` : KIND_LABEL[n.kind]}</span>
+      </div>
+      <h3 className="mt-2 text-[16px] font-semibold leading-snug text-ink">{n.title}</h3>
+      <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{n.body}</p>
+    </div>
+  );
+}
+
 export function FlowStrip({ nodes, numbered = false }: { nodes: FlowNode[]; numbered?: boolean }) {
+  if (nodes.length > 4) {
+    // wrapping grid: arrow sits at each card's top-right corner, pointing on
+    return (
+      <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="The flow">
+        {nodes.map((n, i) => (
+          <li key={n.title} className="relative">
+            <Node n={n} i={i} numbered />
+            {i < nodes.length - 1 ? (
+              <span aria-hidden className="absolute right-3 top-3 hidden lg:block"><Arrow /></span>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+    );
+  }
+
   // cards take equal fractions; the arrow gutters between them stay auto-width
   const template = nodes.map(() => "minmax(0,1fr)").join(" auto ");
   return (
     <ol className="flow grid gap-2 md:gap-0" style={{ ["--flow-cols" as string]: template }} aria-label="How it went">
       {nodes.map((n, i) => (
         <li key={n.title} className="contents">
-          <div className={`flow-node flow-${n.kind} card h-full p-4 sm:p-5`}>
-            <div className="flow-band" style={{ background: "var(--node)" }} />
-            <div className="mt-3 flex items-center gap-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em]" style={{ color: "var(--node)" }}>
-              {numbered ? <span className="inline-flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-semibold text-white" style={{ background: "var(--node)" }}>{i + 1}</span> : null}
-              <span>{numbered ? `Step ${i + 1}` : KIND_LABEL[n.kind]}</span>
-            </div>
-            <h3 className="mt-2 text-[16px] font-semibold leading-snug text-ink">{n.title}</h3>
-            <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{n.body}</p>
-          </div>
+          <Node n={n} i={i} numbered={numbered} />
           {i < nodes.length - 1 ? (
             <>
               <div className="md:hidden"><Arrow vertical /></div>

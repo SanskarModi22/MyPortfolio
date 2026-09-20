@@ -24,8 +24,14 @@ export type Project = {
   period: string;
   stack: string[];
   headline: Metric[];
-  flow: FlowNode[];
-  changes: string[];
+  /** Generic case shape: problem → diagnosis → decision → outcome, then what changed. */
+  flow?: FlowNode[];
+  changes?: string[];
+  /** Alternative shape for a business built from scratch: the idea, the flow built, what it solved. */
+  idea?: { title: string; body: string }[];
+  built?: FlowNode[];
+  solved?: string[];
+  metricsTitle?: string;
   screens?: Screen[];
   /** Card thumbnail on the home page; defaults to the first screen. */
   cover?: Screen;
@@ -226,17 +232,17 @@ export const projects: Project[] = [
   // ── 05 ────────────────────────────────────────────────────────────────
   {
     slug: "move-it-daas",
-    title: "Took a delivery service to market and grew it 10× in bookings",
-    short: "Sold by the truck-day to the FMCG distributors already on our marketplace, booked from a photograph of the invoice.",
-    lede: "Strategy and go-to-market. Joint product owner: operating model, failure taxonomy, cash custody, commercial side.",
+    title: "DAAS: sell distributors a truck by the day, booked from a photo of the invoice",
+    short: "A delivery service for the FMCG distributors already on our marketplace. One truck-day at a time, no lease, drops built from photographed invoices, cash in the distributor's bank the same day.",
+    lede: "Joint product owner with Aditya Kumar: the idea, the operating flow, the failure taxonomy, cash custody and the commercial side.",
     tier: 1,
     themes: ["Strategy", "Go-to-market", "Unit economics"],
     period: "Jan – Sep 2026 · Badho",
     stack: ["Truck-day pricing", "Invoice OCR", "Address lock", "Route planning", "Two-party handover", "Cash ledger", "Failure taxonomy"],
     screens: [
       { src: "/screens/daas-van-road.webp", kind: "photo", alt: "Badho Delivery three-wheeler on the road", caption: "A Badho Delivery three-wheeler on the road — closed body, gas, built for market lanes" },
-      { src: "/screens/daas-booking.webp", kind: "phone", alt: "Vehicle selection with day rates", caption: "Book a truck by the day: 3-wheeler ₹1,602, 4-wheeler ₹2,000" },
-      { src: "/screens/daas-upload-bills.webp", kind: "phone", alt: "Upload bills to process orders", caption: "Upload the invoices — the drop list builds itself" },
+      { src: "/screens/daas-booking.webp", kind: "phone", alt: "Vehicle selection with day rates", caption: "Step 1 — book a truck by the day: 3-wheeler ₹1,602, 4-wheeler ₹2,000" },
+      { src: "/screens/daas-upload-bills.webp", kind: "phone", alt: "Upload bills to process orders", caption: "Step 2 — upload the invoices; the drop list builds itself" },
       { src: "/screens/daas-driver-bill.webp", kind: "phone", alt: "Driver photographing an invoice", caption: "The driver photographs the bill; 17,678 invoices were read this way" },
     ],
     headline: [
@@ -244,26 +250,42 @@ export const projects: Project[] = [
       { value: "17,174", label: "deliveries to 7,363 shops", note: "of 20,231 attempted — 85% first time" },
       { value: "₹18.95 Cr", label: "of goods moved", note: "₹21.5 L of fee income, 60 paying distributors" },
     ],
-    flow: [
-      { kind: "problem", title: "A truck costs ₹53–65 k a month whether it moves or not", body: "The trade is seasonal: a fixed fleet is too small at festivals and idle for months after. Orders live on paper." },
-      { kind: "diagnosis", title: "Sell days, not leases. Start where the paper is.", body: "Every competitor asked for an accounting integration. The distributor could not give one. He could hand over an invoice." },
-      { kind: "decision", title: "Truck by the day, invoice photo to drop list", body: "₹1,400–2,000 a day, nothing on idle days. Photo → 10–50 drops in seconds. Shop address locked after the first delivery. Cash in his bank the same day." },
-      { kind: "outcome", title: "10× monthly bookings, 60 paying distributors", body: "3,016 truck-days. 85% delivered first time. And the number nobody was reporting: on-time pickup fell 41% → 7% as volume tripled. I found it in the logs." },
+    idea: [
+      { title: "A distributor pays for his truck whether it moves or not", body: "Driver salary, the instalment, fuel, repairs, insurance, and the capital parked in the vehicle: ₹53,500–64,500 a month for one truck. If the driver quits, the day's sales stop. If a shop is missed, that sale is gone." },
+      { title: "The trade is seasonal, so a fixed fleet is always the wrong size", body: "Too small at festivals, idle for months after. Nobody sells him a truck for only the days it moves." },
+      { title: "So sell the day, not the truck", body: "Book a vehicle for an eight-hour duty up to seven days ahead, ₹1,400–2,000 a day. Nothing paid on idle days. We carry the fleet risk; he carries none. That is the whole commercial idea." },
+      { title: "And meet him at the paper", body: "His orders live on invoices, not in software. Every competitor asked for an accounting integration first. We asked for a photograph." },
     ],
-    changes: [
-      "Priced a truck-day at ₹1,400–2,000 with nothing paid on idle days — the whole commercial idea, read off the distributor's own cost structure.",
-      "Invoice photo → drop list: 17,678 invoices read by machine, drops counted rather than typed.",
-      "Locked shop → phone → verified GPS after the first successful delivery: a map of 7,363 real shops no competitor could buy.",
-      "Closed-list failure reasons from 21 May: 'shop closed' topped it at 644 — a scheduling problem, priced as a second attempt.",
-      "Sold against his cost, not our features: a trip on his truck against a trip on ours, over 22 delivery days.",
+    built: [
+      { kind: "step", title: "Book a truck-day", body: "In the seller app: date, vehicle class (3-wheeler ₹1,602, 4-wheeler ₹2,000), how many. Up to seven days ahead." },
+      { kind: "step", title: "Photograph the invoices", body: "10–50 drops set up in seconds. The drop count is read from the bills, never typed. 17,678 invoices read by machine." },
+      { kind: "step", title: "Lock the address once", body: "After the first successful delivery the shop is pinned to its phone number and verified GPS. The next driver goes straight there. 7,363 shops mapped." },
+      { kind: "step", title: "Plan the round", body: "The software plans the route. No helper riding along, no distributor sitting with a planner every morning." },
+      { kind: "step", title: "Two-party code at every handover", body: "Proof of delivery is checked against the driver's location before a photo is accepted. Proof on every drop, not only the disputed ones." },
+      { kind: "step", title: "Cash in his bank the same day", body: "Goods and money matched digitally. Any member of staff can do the handover; nothing depends on one person's memory." },
+      { kind: "step", title: "A failed drop becomes information", body: "A closed list of reasons — shop closed, refused, wrong address, payment not ready — tallied and sent to his sales team. A second attempt is a priced service." },
+      { kind: "step", title: "Small closed vehicles", body: "Three-wheelers took 98.5% of trips: market lanes are narrow, and FMCG goods must stay sealed and dry. Four in five run on gas." },
     ],
+    metricsTitle: "How the business performed",
     metrics: [
-      { value: "9 h vs 5 days", label: "own fleet vs courier, full round", note: "the courier leg alone averaged 5.02 days" },
+      { value: "137 → 634", label: "truck-days booked a month", note: "137, 286, 293, 387, 497, 634, 599 — then 183 as the company wound down" },
       { value: "68 / 60", label: "distributors who used it / who paid" },
+      { value: "9 h vs 5 days", label: "own fleet vs courier, full round", note: "the courier leg alone averaged 5.02 days" },
+      { value: "89% / 85%", label: "delivered eventually / first time" },
+      { value: "₹21.5 L on ₹18.95 Cr", label: "fee income on goods moved", note: "a take of about 1.1%" },
+      { value: "11 of 11, then 6", label: "May customers still active in June, then July" },
       { value: "41% / 79%", label: "truck-days from the top 3 / top 10 customers", note: "the concentration caveat on every revenue figure" },
       { value: "41% → 7%", label: "pickups on time against the booked slot", note: "May to Sep; median lateness 23 → 79 min" },
-      { value: "11 of 11, then 6", label: "May customers still active in June, then July" },
-      { value: "11,310 → 49", label: "driver installs → riders working", note: "72.7% of the drop on one form screen" },
+      { value: "19 truck-days", label: "booked by Badho's own JIT business in September", note: "the sister business paid the same price" },
+    ],
+    solved: [
+      "Solved — the idle-truck cost. 60 distributors paid by the day instead of owning the vehicle: 3,016 truck-days, nothing paid on the days they did not sell.",
+      "Solved — finding the shop. 85% of drops delivered first time, on shops with no usable address, where third-party courier rates fail.",
+      "Solved — the paperwork barrier. Orders entered from photographs; no integration, no typing during the morning loading rush.",
+      "Solved — cash reconciliation. Money in the distributor's own bank the same day, matched to the bills, by whoever did the handover.",
+      "Solved — the sale itself. The pitch was about his money, not our software: a trip on his truck against a trip on ours over 22 delivery days. He could check that claim; he could not check one about features.",
+      "Not yet — punctuality at scale. On-time pickup fell 41% → 7% as volume tripled. The promise we sold quietly broke, and no report showed it until I went through the trip logs.",
+      "Not yet — the unit economics. ₹21.5 L of fees on ₹18.95 Cr moved is a 1.1% take, and the cost rows do not exist in the data, so whether one delivery made money cannot be answered.",
     ],
     scope: "Headline figures are the company's July 2026 dashboard, assembled by the founders for a seed round. Aditya Kumar was co-owner; engineering was the delivery team's. The cost rows do not exist in the data, so whether a single delivery made money is a question it cannot answer — and I say so rather than repeat the deck's break-even claim.",
     takeaways: ["Meet the customer at the paper.", "Measure the promise, not only the volume."],
