@@ -73,22 +73,14 @@ export const profile = {
     {
       role: "Product Manager — Growth, PLG & Strategy",
       org: "Badho Technologies, Gurugram",
-      period: "Feb 2026 – Sep 2026",
+      period: "Oct 2025 – Sep 2026",
       bullets: [
         "Designed the contribution-margin cascade the marketplace ran on; took CM1 from −26% to +11.5% of order value, positive from July.",
         "Owned the operating model for the pivot to own-warehouse distribution: written plan to first delivery in 12 days.",
         "Ran the buyer-app growth roadmap: registration completion 30% → 94%; 99% of order flow onto a unified cart in a week.",
         "Built the WhatsApp channel from zero: ₹9.60 per install across 29,172 buyers on a seven-cohort audience model over 1.17 M people.",
         "Joint product owner of a delivery service sold to our own distributors: 137 → 634 truck-days a month, ₹18.95 Cr of goods moved.",
-      ],
-    },
-    {
-      role: "Program Manager — Engineering Delivery & Release",
-      org: "Badho Technologies, Gurugram",
-      period: "Oct 2025 – Jan 2026",
-      bullets: [
-        "Owned the release gate for three apps: 242 versions, 805 of 1,613 code changes reviewed and shipped, every release signed off.",
-        "Most-frequent specification author in the company: 489 of 1,585 tickets, 192 full requirement documents. Bug inflow 114 → near zero a month.",
+        "Ran the release gate for three apps — 242 versions, 805 of 1,613 code changes shipped, bug inflow 114 → near zero — and wrote the most specifications in the company: 489 of 1,585 tickets, 192 requirement documents.",
       ],
     },
     {

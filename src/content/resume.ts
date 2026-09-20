@@ -42,7 +42,7 @@ export const resume = {
       title: "Product Manager — Growth, PLG & Strategy",
       org: "Badho Technologies",
       location: "Gurugram",
-      date: "Feb 2026 – Sep 2026",
+      date: "Oct 2025 – Sep 2026",
       bullets: [
         "Designed the CM1/CM2/CM3 cascade for a B2B marketplace and took **CM1 from −26% to +11.5% of order value** in six months — delivery cost 46% → under 1%, discounts 15.1% → 5.3%, commission taken 12.7% → 19.4%.",
         "Drove the fulfilment programme: return-to-origin **42.6% → 21.4%**, fulfilment **22% → 64%** on 4× volume; specified 34 of 42 fulfilment features incl. automated courier weight-claim recovery (378 claims in 24 h).",
@@ -52,16 +52,7 @@ export const resume = {
         "Shipped and measured four pricing experiments: item-level quantity coupons lifted **AOV +10.5% at ~8× on the incremental discount rupee**; a 37-minute config change cut coupon spend 45.7% with orders flat; built the discount-audit dashboard.",
         "Measured every retention scheme against repeat orders — gift qualifiers re-ordered at **50% vs 19%**; a ₹4.57 Cr credit run was used by 0.06%; referrals activated 6.7× better on 3.9× less GMV per signup — and re-pointed the budget.",
         "Joint product owner of a delivery-as-a-service business sold to our own distributors — truck-day pricing, invoice-photo order entry, two-party handover, same-day cash: **137 → 634 truck-days a month, 17,174 deliveries, ₹18.95 Cr of goods moved**.",
-      ],
-    },
-    {
-      title: "Program Manager — Engineering Delivery & Release",
-      org: "Badho Technologies",
-      location: "Gurugram",
-      date: "Oct 2025 – Jan 2026",
-      bullets: [
-        "Owned the release gate for three apps from one monorepo: **242 versions, 805 of 1,613 pull requests merged, 204 of 204 release merges** on the production branch; monthly bug inflow 114 → near zero.",
-        "Most-frequent specification author in the company — **489 of 1,585 tickets, 192 requirement documents**; program-managed 11 epics for the four-person AI team that put 20 production systems live.",
+        "Ran the release gate for three apps from one monorepo — **242 versions, 805 of 1,613 pull requests merged, 204 of 204 release merges**, monthly bug inflow 114 → near zero — and wrote the most specifications in the company: **489 of 1,585 tickets, 192 requirement documents**; program-managed 11 epics for the four-person AI team that put 20 systems live.",
       ],
     },
     {
