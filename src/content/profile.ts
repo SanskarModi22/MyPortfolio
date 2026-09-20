@@ -92,10 +92,11 @@ export const profile = {
       ],
     },
     {
-      role: "Product Manager, Founder's Office (part-time)",
+      role: "Product Manager, Strategy & Growth",
       org: "ONO Suite / DailyKit, Gurugram",
-      period: "Jul 2024 – Sep 2026",
+      period: "Jul 2024 – Oct 2025 · Herfy account through Aug 2026",
       bullets: [
+        "Ran go-to-market: a 118-account funnel across seven cities reviewed weekly, 57 companies met in 2024, 37 introductory calls booked onto the founder's calendar, 26 POS and hardware partnership conversations.",
         "Authored the pricing architecture (subscription vs ownership buyout, per kiosk / store / chain) and commercials for seven restaurant brands.",
         "Ran the Herfy account in Saudi Arabia: 79 live kiosks, three consecutive renewals, a withholding-tax dispute settled at a 17.65% gross-up.",
         "Product-managed DOKA, a custom ordering app for a nine-branch Riyadh bakery with a design-your-own-cake flow, from prototype to App Store approval.",

@@ -65,11 +65,12 @@ export const resume = {
       ],
     },
     {
-      title: "Product Manager, Founder's Office (part-time)",
+      title: "Product Manager, Strategy & Growth",
       org: "ONO Suite / DailyKit",
       location: "Gurugram",
-      date: "Jul 2024 – Sep 2026",
+      date: "Jul 2024 – Oct 2025 · Herfy account through Aug 2026",
       bullets: [
+        "Ran go-to-market for a restaurant-technology company: a **118-account funnel across seven cities** reviewed weekly, **57 companies met in 2024**, 37 introductory calls booked onto the founder's calendar, 26 hardware and POS partnership conversations, 11 sales channels, and an international QSR target list for Bangladesh, Saudi Arabia and Thailand.",
         "Authored the pricing architecture — subscription vs ownership buyout, priced per kiosk, per store and per chain — and the commercials for seven restaurant brands including Herfy, Mad Over Donuts and Pizza Wings.",
         "Ran the Herfy account (Saudi Arabia) single-handed: **79 live kiosks, three consecutive renewals**, a price rise negotiated on absolute change, a 15% withholding-tax dispute settled at a 17.65% gross-up.",
         "Product-managed DOKA Bakery House's ordering app (Riyadh, nine branches) from a prototype I pitched to **App Store approval**: two order flows, a five-step design-your-own-cake configurator with live pricing, scheduled delivery, card and Apple Pay, kitchen-fed tracking, Arabic and English.",
@@ -82,7 +83,7 @@ export const resume = {
       location: "Delhi NCR / remote",
       date: "2021 – Jun 2024",
       bullets: [
-        "**Growth & Partnerships Intern, ONO Suite** (Jan–Jun 2024): outbound to 60+ restaurant and retail brands; managed two interns. **Founding Software Engineer, Taxian** (Oct 2023–Jun 2024): shipped a Flutter app to the Play Store (500+ users), led five. **Software Developer**, internships and freelance (2021–23); project team lead at OneAll Digital.",
+        "**Growth & Partnerships Intern, ONO Suite** (Jan–Jun 2024, full-time): outbound to 60+ restaurant and retail brands; managed three interns. **Founding Software Engineer, Taxian** (Oct 2023–Jun 2024): shipped a Flutter app to the Play Store (500+ users), led five. **Software Developer**, internships and freelance (2021–23); project team lead at OneAll Digital.",
       ],
     },
   ] as ResumeRole[],
