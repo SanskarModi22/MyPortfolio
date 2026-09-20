@@ -8,7 +8,7 @@ export type Metric = { value: string; label: string; note?: string };
 export type FlowKind = "problem" | "diagnosis" | "decision" | "outcome" | "step";
 export type FlowNode = { kind: FlowKind; title: string; body: string };
 
-export type ScreenKind = "phone" | "kiosk" | "desktop" | "photo";
+export type ScreenKind = "phone" | "kiosk" | "desktop" | "photo" | "diagram";
 export type Screen = { src: string; kind: ScreenKind; alt: string; caption: string; tag?: "before" | "after" };
 
 export type Project = {
@@ -101,6 +101,7 @@ export const projects: Project[] = [
     screens: [
       { src: "/screens/jit-min-order.webp", kind: "phone", alt: "Cart blocked by one brand’s ₹300 minimum", caption: "July 2026: one brand’s ₹300 minimum blocking a cart — the problem, on screen" },
       { src: "/screens/jit-home-sept.webp", kind: "phone", alt: "Single-seller Badho Wholesale home", caption: "September: the single-seller store after the pivot — one minimum, then none" },
+      { src: "/screens/jit-warehouse-plan.webp", kind: "diagram", alt: "Badho warehouse operations and the software involved, as a twelve-step flow diagram", caption: "The operating plan I wrote: twelve steps from the 6 PM order cutoff to the doorstep — consolidation, brand pickup, zones, picklists, packing, routing, delivery — with the software each step needed marked 'Tech Needed'" },
       { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed Badho orders stacked at the Gurugram warehouse", caption: "Packed and ready at the Gurugram warehouse — one purchase order per brand consolidated overnight, picked and packed the next morning" },
       { src: "/screens/jit-ops-console.webp", kind: "desktop", alt: "JIT warehouse console", caption: "The JIT console: one purchase order per brand, every night" },
     ],
@@ -373,9 +374,13 @@ export const projects: Project[] = [
     period: "Apr – Sep 2026 · Badho",
     stack: ["Gift ladder", "Wallet credit", "Referral", "Streak", "Notification programme", "Cohort SQL"],
     screens: [
-      { src: "/screens/notif-audiences.webp", kind: "desktop", alt: "Audiences with counts", caption: "Audiences: gift qualifiers, credit holders, lapsed buyers — each with its count" },
-      { src: "/screens/notif-templates.webp", kind: "desktop", alt: "Template library", caption: "The template library the retention programme ran on" },
+      { src: "/screens/rewards-ladder-april.webp", kind: "phone", alt: "April gift ladder with the month's winners", caption: "The gift ladder, April: five levels from ₹3,000 to ₹30,000 of orders, with the month's winners shown at the top" },
+      { src: "/screens/rewards-ladder-8.webp", kind: "phone", alt: "Eight-level gift ladder", caption: "Grown to eight levels, ₹3,000 to ₹1,00,000 — a helicopter fan at the bottom, a silver coin near the top" },
+      { src: "/screens/rewards-ladder-aug.webp", kind: "phone", alt: "August gift ladder with progress bar", caption: "August: a progress bar to the next gift — ₹384 ordered this month, ₹4,616 more to unlock the first level" },
+      { src: "/screens/rewards-referral.webp", kind: "phone", alt: "Refer and earn", caption: "Refer & Earn: ₹100 to the friend on sign-up, ₹50 to the referrer on the first delivery, sent over WhatsApp" },
+      { src: "/screens/rewards-streak.webp", kind: "phone", alt: "Daily login streak reward", caption: "The daily streak: open the app every day, collect ₹10 — miss a day and it resets to ₹2" },
     ],
+    cover: { src: "/screens/rewards-ladder-aug.webp", kind: "phone", alt: "", caption: "" },
     headline: [
       { value: "50% vs 19%", label: "next-month re-order, gift qualifiers vs everyone else" },
       { value: "0.06%", label: "of a ₹4.57 Cr credit run was ever spent", note: "609,245 buyers credited ₹75; 342 used it" },
