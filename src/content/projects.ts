@@ -8,7 +8,7 @@ export type Metric = { value: string; label: string; note?: string };
 export type FlowKind = "problem" | "diagnosis" | "decision" | "outcome" | "step";
 export type FlowNode = { kind: FlowKind; title: string; body: string };
 
-export type ScreenKind = "phone" | "kiosk" | "desktop" | "photo" | "diagram";
+export type ScreenKind = "phone" | "kiosk" | "desktop" | "photo" | "diagram" | "square";
 export type Screen = { src: string; kind: ScreenKind; alt: string; caption: string; tag?: "before" | "after" };
 
 export type Project = {
@@ -291,46 +291,67 @@ export const projects: Project[] = [
   },
   {
     slug: "milkoreach",
-    title: "Opened a direct-to-retailer channel for a partner brand in 17 days",
-    short: "Diagnosed why a cattle-feed brand's retail book had gone dead, designed the commercial mechanism, built the ordering app myself, and verified the growth was incremental.",
-    lede: "Strategy and 0→1. Commercial design, the app, and the measurement.",
+    title: "Built MilkoReach: a direct-to-retailer channel for a cattle-feed brand, from a web app in an evening to a mobile app with its own listing",
+    short: "Kapila's feed retailers had stopped ordering because a small order was not worth the transport, for them or for the distributor. I designed a channel that took transport off both sides, built the first ordering app myself, then moved the flow into the buyer app under its own MilkoReach listing — 17 days from idea to first delivery, and growth that was verifiably new.",
+    lede: "Product owner end to end: the commercial design, the first app, the mobile flow, the campaign, and the measurement.",
     tier: 1,
     themes: ["Strategy", "Go-to-market", "Built it myself"],
     period: "Aug – Sep 2026 · Badho and Kapila",
-    stack: ["Channel design", "Price ladder", "Distributor allocation", "AI-assisted build", "OTP + GPS", "Unit economics"],
+    stack: ["Channel design", "Factory-rate pricing", "Distributor routing", "AI-assisted build", "Mobile flow in the buyer app", "Campaign", "Unit economics"],
     screens: [
-      { src: "/screens/milko-catalogue.webp", kind: "desktop", alt: "MilkoReach catalogue", caption: "The ordering app I built: catalogue at factory rate, half-tonne floor" },
-      { src: "/screens/milko-map.webp", kind: "desktop", alt: "MilkoReach location picker", caption: "GPS capture routes the order to the nearest distributor within 40 km" },
+      { src: "/screens/milko-ad-1.webp", kind: "square", alt: "Milkomore ab aapke area mein — call to order", caption: "Phase 1 — the call-to-order campaign: Milkomore in your area, one number, a shopkeeper calls and we place the order" },
+      { src: "/screens/milko-ad-3.webp", kind: "square", alt: "Swasth pashu, khushhaal kisan — click and order", caption: "The creatives ran to feed retailers inside the distributors' territories" },
+      { src: "/screens/milko-catalogue.webp", kind: "desktop", alt: "MilkoReach web catalogue", caption: "The first ordering app, written in an evening: catalogue at factory rate, a half-tonne floor" },
+      { src: "/screens/milko-map.webp", kind: "desktop", alt: "MilkoReach location picker", caption: "Location capture routes each order to the nearest distributor within 40 km" },
+      { src: "/screens/milko-app-home.webp", kind: "phone", alt: "MilkoReach in the buyer app: home", caption: "Phase 2 — the same flow inside the buyer app: the Kapila range with the retailer's margin on every card" },
+      { src: "/screens/milko-app-cart-min.webp", kind: "phone", alt: "Cart showing the ₹10,000 minimum", caption: "The floor on the cart: ₹10,000 — about half a tonne — with how much is left to add" },
+      { src: "/screens/milko-app-advance.webp", kind: "phone", alt: "Choose how much to pay now", caption: "Pay at delivery, or an advance of 10%, 25% or 50% — because credit was the constraint" },
+      { src: "/screens/milko-app-pod.webp", kind: "phone", alt: "Pay on delivery notice: online only", caption: "Pay on delivery, online only — no cash changes hands with the transporter" },
+      { src: "/screens/milko-app-placed.webp", kind: "phone", alt: "Order placed", caption: "Order placed — ₹11,280 to pay at delivery, with the pay-on-delivery rules spelled out" },
+      { src: "/screens/milko-app-orders.webp", kind: "phone", alt: "Order list with referral tag", caption: "The order list — each order awaiting the distributor's acceptance — with the ₹50 referral prompt" },
     ],
+    cover: { src: "/screens/milko-app-home.webp", kind: "phone", alt: "", caption: "" },
     headline: [
       { value: "17 days", label: "idea to first delivery", note: "7 to 24 Aug 2026, checked against the order book" },
-      { value: "52 of 53", label: "retailers with no order in the 3 months before launch", note: "31 of 32 distributors likewise — verified incremental" },
+      { value: "52 of 53", label: "retailers with no order in the 3 months before launch", note: "31 of 32 distributors likewise — the demand was new" },
       { value: "226", label: "distributors mapped", note: "4,778 feed retailers within 40 km of one" },
     ],
     flow: [
       { kind: "problem", title: "A partner brand's retail network with nobody serving it", body: "Kapila, a cattle-feed brand and Badho partner, had 226 distributors and thousands of feed retailers inside their territories — and orders through them had collapsed from 22,898 a month in October 2024 to 42 by July 2026. For the brand that was lost volume. For Badho it was a ready-made retail network with no channel reaching it." },
       { kind: "diagnosis", title: "Both sides were stuck on the same transport arithmetic", body: "A retailer buying half a tonne could not justify arranging and paying for a vehicle, so the small order was not worth placing. A distributor could not justify sending a vehicle for a small drop, so it was not worth serving. Nobody was refusing to trade; the economics of a small order had stopped either side from starting." },
-      { kind: "decision", title: "Take the transport problem off both of them", body: "The retailer orders at factory rate through an app, pays nothing for delivery and never coordinates with a distributor; we route each order to whichever distributor is within 40 km and pay the transporter. I set a deliberately low half-tonne floor, wrote the ordering app myself with an AI coding assistant in an evening, and had it writing real purchase orders two days later." },
-      { kind: "outcome", title: "Seventeen days to first delivery, and the demand was new", body: "Fifty-two of the fifty-three retailers who ordered, and thirty-one of the thirty-two distributors who fulfilled, had placed no order on the brand in the three months before launch — the channel created new demand rather than moving existing orders. I then identified retailer credit as the constraint on scaling, at 22% of ordered value, and specified the fix." },
+      { kind: "decision", title: "Take the transport problem off both of them, and build it in two steps", body: "The retailer orders at factory rate, pays nothing for delivery and never coordinates with a distributor; we route each order to whichever distributor is within 40 km and pay the transporter. Step one, to learn cheaply: a web app I wrote myself with an AI coding assistant in an evening, with callers placing orders for retailers on the phone. Step two, once it worked: the same flow inside the buyer app under its own MilkoReach listing, so paid campaigns could point straight at the brand's own audience." },
+      { kind: "outcome", title: "Seventeen days to first delivery, and the demand was new", body: "Fifty-two of the fifty-three retailers who ordered, and thirty-one of the thirty-two distributors who fulfilled, had placed no order on the brand in the three months before launch — the channel created new demand rather than moving existing orders. The mobile flow shipped with the floor, the margin on every card, pay-on-delivery and advance options. I then identified retailer credit as the constraint on scaling, at 22% of ordered value, and specified the fix." },
     ],
-    changes: [
-      "Wrote the ordering app myself with an AI coding assistant — catalogue, login by OTP, location capture, routing to the nearest distributor — in one evening; it was placing real orders two days later.",
-      "Designed the commercial model: one per-tonne payment to the distributor, a published rate for transporters, and free delivery to the retailer paid out of the ₹95-a-bag margin.",
-      "Set a deliberately low half-tonne first order: 70% of orders sat exactly on it; larger baskets died between phone and truck.",
-      "Opened allocation to every distributor within 40 km: 3× order flow.",
-      "Instrumented the unit economics end to end — spread per bag, delivery share, credit exposure — before deciding how to scale.",
+    features: [
+      { title: "Factory-rate pricing with the margin on the card", body: "Every bag shows the retailer's price against MRP and his margin in percent, so the decision he actually makes — what he pays against what he sells for — is on the screen." },
+      { title: "The order routed to the nearest distributor", body: "The retailer never chooses or calls a distributor. His location is captured once and each order goes to whichever of the 226 mapped distributors is within 40 km." },
+      { title: "A deliberately low floor", body: "A half-tonne minimum — ₹10,000 on the cart, with the gap to it shown — set where the retailer actually was, not where the distributor wanted him. Seven in ten orders sat exactly on it." },
+      { title: "Free delivery, paid by us", body: "Badho paid the local transporter ₹400–800 a trip out of the ₹95-a-bag spread, so the retailer's landed price was the factory price." },
+      { title: "The first app in an evening", body: "Catalogue, login by OTP, location capture and distributor routing, written with an AI coding assistant; placing real purchase orders into the order book two days later." },
+      { title: "Then the flow inside the buyer app", body: "The assisted step removed and the same flow moved into the main buyer app behind its own MilkoReach listing on the Play Store — best sellers, the 50 kg collection, cart, delivery in 2–3 days." },
+      { title: "Payment built around the retailer's credit", body: "Pay on delivery — online only, so no cash sits with a transporter — or an advance of 10%, 25% or 50% chosen at checkout." },
+      { title: "A campaign that reached the right retailers", body: "Creatives with the brand's own ambassador, run to feed retailers inside the distributors' territories: first a number to call, then the app to download." },
+      { title: "Referral built in", body: "₹50 to a retailer for bringing in another, on the order list where he sees it." },
+      { title: "The books from day one", body: "Every order, payout and delivery fee in the settlement dashboard from the first day, so the channel's economics were known while it ran, not reconstructed after." },
     ],
+    metricsTitle: "How the channel performed",
     metrics: [
-      { value: "₹95 / bag", label: "structurally flat spread", note: "free delivery took ~51% of it" },
+      { value: "68 → 12", label: "orders placed → delivered", note: "the funnel, with where it leaked diagnosed" },
+      { value: "₹95 / bag", label: "spread between factory rate and retailer price", note: "free delivery took about half of it" },
       { value: "70%", label: "of orders exactly on the half-tonne floor", note: "the floor was set where the buyer actually was" },
-      { value: "3×", label: "order flow when opened to every distributor" },
+      { value: "3×", label: "order flow when opened to every distributor within 40 km" },
       { value: "22%", label: "of ordered value exposed to retailer credit — the constraint to fix" },
-      { value: "18 of 42", label: "commits in the app repo are mine" },
+      { value: "18 of 42", label: "commits in the first app's repository are mine" },
+    ],
+    solved: [
+      "Solved — a retailer can order half a tonne at factory rate without arranging a vehicle or calling anyone.",
+      "Solved — a distributor gets orders he had stopped serving, routed to him, with the transport already paid.",
+      "Solved — the channel could be tested in days, not months: an app in an evening, real orders in two days, a mobile flow once it worked.",
+      "Solved — the growth was real: 52 of 53 retailers and 31 of 32 distributors were dormant before launch.",
+      "Found the real constraint — retailer credit, 22% of ordered value — and specified the fix before scaling.",
     ],
     takeaways: ["Check whether your growth is real before you report it.", "Design the floor for the buyer you have, not the buyer the distributor wants."],
   },
-
-  // ── 07 ────────────────────────────────────────────────────────────────
   {
     slug: "pricing-experiments",
     title: "Ran four pricing experiments and found the one that paid",

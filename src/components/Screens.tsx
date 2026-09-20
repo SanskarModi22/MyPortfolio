@@ -10,6 +10,7 @@ const ASPECT: Record<Screen["kind"], string> = {
   desktop: "aspect-[16/10]",
   photo: "aspect-[4/3]",
   diagram: "aspect-[16/9]",
+  square: "aspect-square",
 };
 
 const TAG: Record<NonNullable<Screen["tag"]>, string> = {
@@ -20,8 +21,9 @@ const TAG: Record<NonNullable<Screen["tag"]>, string> = {
 function Frame({ s }: { s: Screen }) {
   const tall = s.kind === "phone" || s.kind === "kiosk";
   const wide = s.kind === "diagram";
+  const square = s.kind === "square";
   return (
-    <figure className={`flex flex-col ${tall ? "w-[160px] shrink-0 sm:w-[186px]" : wide ? "basis-full" : "min-w-0 flex-1 basis-[300px]"}`}>
+    <figure className={`flex flex-col ${tall ? "w-[160px] shrink-0 sm:w-[186px]" : square ? "w-[200px] shrink-0 sm:w-[236px]" : wide ? "basis-full" : "min-w-0 flex-1 basis-[300px]"}`}>
       <div className={`relative overflow-hidden border border-line ${wide ? "bg-white" : "bg-surface-2"} ${s.kind === "phone" ? "rounded-[18px]" : "rounded-xl"}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={s.src} alt={s.alt} loading="lazy" className={`block w-full ${wide ? "object-contain" : "object-cover"} ${s.kind === "photo" ? "object-center" : "object-top"} ${ASPECT[s.kind]}`} />
