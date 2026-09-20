@@ -58,10 +58,10 @@ export const projects: Project[] = [
       { value: "22% → 64%", label: "orders that reached the buyer", note: "five months, on 4× the volume" },
     ],
     flow: [
-      { kind: "problem", title: "Every order we grew lost us money", body: "The marketplace kept 13–15% of each order as commission. Shipping that order cost 46% of its value and a third of parcels came back at our expense. On a fixed ₹40 L monthly budget, growth had to pay for itself from inside the business or stop." },
-      { kind: "diagnosis", title: "Returns were the entire loss", body: "₹13.71 L of return freight against a ₹12.84 L net loss — 107%. Our own handover time fell 13×; the courier leg never moved." },
-      { kind: "decision", title: "Define CM1, attack the biggest line each month", body: "Commission − discounts − delivery − marketing. Freight first, then discounts, then returns. Marketing above the line: it could not be switched off." },
-      { kind: "outcome", title: "Positive from July", body: "+₹1.46 L CM1 in August, 11.5% of order value. Delivery cost under 1%. Fulfilment 22% → 64% while volume grew fourfold." },
+      { kind: "problem", title: "Every order we grew lost us money", body: "Badho's marketplace kept 13–15% of every order as commission, but shipping that order through third-party couriers cost 46% of its value, and a third of parcels came back at our expense. Every order we added lost more money than the one before. With a fixed ₹40 lakh monthly budget, the business had to become profitable per order or stop growing." },
+      { kind: "diagnosis", title: "Returns were the entire loss", body: "I separated the profit and loss into its cost lines and found that returned parcels alone cost ₹13.71 lakh between January and August — 107% of the whole net loss. Splitting the order clock into its legs showed our own handover time had fallen thirteen-fold while the courier's leg never improved. The cost we did not control was the one sinking us." },
+      { kind: "decision", title: "Define the number, then attack the biggest line each month", body: "I defined the metric the business would run on — CM1, which is commission minus discounts, delivery and marketing — and went after the largest cost line each month in turn. Freight first, by making it visible on every order and moving it onto sellers. Then discounts. Then returns, with a stack of rules: prepaid-only after a single return, address checks at checkout, and a delivery promise that paid out when missed." },
+      { kind: "outcome", title: "Positive from July", body: "CM1 moved from −26% of order value in February to +11.5% in August and stayed positive from July. Delivery cost fell from 46% of order value to under 1%, the return rate halved from 42.6% to 21.4%, and the share of orders that actually reached the buyer rose from 22% to 64% while volume grew fourfold." },
     ],
     changes: [
       "Built the cascade top-down for a business with no cost of goods: CM1, CM2, CM3, operating margin.",
@@ -106,10 +106,10 @@ export const projects: Project[] = [
       { value: "4.5 → 45.5", label: "carts a day in Delhi–Gurgaon", note: "before and after the minimum came off" },
     ],
     flow: [
-      { kind: "problem", title: "Buyers we paid to acquire were not coming back", body: "Fewer than one in ten new shopkeepers ordered again the next month, and months of campaigns had not moved it. In a marketplace that pays to acquire every buyer, a buyer who does not return is money spent for nothing — retention was the whole business case." },
-      { kind: "diagnosis", title: "It was arithmetic", body: "₹300 of oil, ₹300 of rice, ₹300 of spices in one cart is a ₹900 basket blocked by three separate ₹300 minimums." },
-      { kind: "decision", title: "One seller, one minimum, then none", body: "Buy the stock, hold it in our own warehouse, deliver with our own vans. Flat ₹75 fee waived above ₹500, shipped as one flag." },
-      { kind: "outcome", title: "Ten times the carts a day", body: "4.5 → 45.5 carts a day in the launch region, and order value +23.5% on matched 21-day windows." },
+      { kind: "problem", title: "Buyers we paid to acquire were not coming back", body: "Fewer than one in ten new shopkeepers ordered again the following month, and months of retention campaigns had not moved that figure. Badho paid to acquire every buyer, so a buyer who never returned was acquisition money spent for nothing. Retention was the whole business case, and nobody had found the cause." },
+      { kind: "diagnosis", title: "It was arithmetic, not marketing", body: "Every brand on the marketplace set its own minimum order value, and a shopkeeper's cart usually held several brands. ₹300 of oil, ₹300 of rice and ₹300 of spices made a ₹900 basket — but it was blocked three separate times by three separate ₹300 minimums. The buyer was not lapsing. The cart was refusing him." },
+      { kind: "decision", title: "One seller, one minimum, then none", body: "The fix had to be structural: make Badho the single seller. Buy the stock from the brands ourselves, hold it in our own warehouse and deliver it with our own vans, so there is one minimum and then none at all — replaced by a flat ₹75 delivery fee waived above ₹500. I wrote the operating model, from the warehouse layout to the software each step needed, and owned the launch." },
+      { kind: "outcome", title: "Ten times the carts a day", body: "The written plan reached its first delivery in twelve days. Carts per day in the launch region rose from 4.5 to 45.5, and order value rose 23.5% on matched three-week windows. A marketplace that had put three minimum order values on one basket now had none." },
     ],
     changes: [
       "Wrote the operating document: warehouse zones, receiving and putaway, pick-pack-dispatch, short-ship handling, and the software each step needed.",
@@ -130,7 +130,7 @@ export const projects: Project[] = [
   {
     slug: "whatsapp-channel",
     title: "Built WhatsApp into an acquisition channel at ₹9.60 per install",
-    short: "Audience model, template economics, in-house sending and attribution — built from zero.",
+    short: "I built WhatsApp into Badho's acquisition and reactivation channel from zero: the audience model, the template economics, the sending stack and the attribution.",
     lede: "Growth. I owned the channel end to end: audience, cost, sending stack, measurement.",
     tier: 1,
     themes: ["Growth", "Unit economics", "Built it myself"],
@@ -146,10 +146,10 @@ export const projects: Project[] = [
       { value: "₹13.7 L", label: "order value on the same-day rule", note: "same-day attribution window" },
     ],
     flow: [
-      { kind: "problem", title: "1.17 million shopkeepers we could not reach", body: "They had signed up, installed or ordered once, then gone quiet — the cheapest buyers to win back and the largest asset the company had. The only way to reach them was app push notifications, and when I measured push it was not arriving: of 11.76 M queued, 8.8% confirmed delivered and 58% never attempted. We needed a channel that reached the phone." },
-      { kind: "diagnosis", title: "WhatsApp reaches every shopkeeper — if it is run as a system", body: "Every kirana owner is on WhatsApp all day. But sending to a million people without an audience model, a serviceability check or template pricing burns money fast: no segmentation, transactional traffic priced as marketing, a vendor taking a cut on every message." },
-      { kind: "decision", title: "Build the channel properly", body: "Seven-cohort waterfall over 1.17 M buyers. Pincode gate before any send. Utility templates at a seventh of the price. Our own sender." },
-      { kind: "outcome", title: "₹9.60 an install", body: "29,172 buyers and ₹13.7 L of orders at 2.60× ROAS in June — and the unit-economics rule that set the channel's spend ceiling against a 13% take rate." },
+      { kind: "problem", title: "1.17 million shopkeepers we could not reach", body: "They had signed up, installed the app or ordered once, then gone quiet — the cheapest buyers to win back and the largest asset the company had. The only way to reach them was the app's push notifications, and when I measured push it was not arriving: of 11.76 million queued, 8.8% were confirmed delivered and 58% were never attempted. We needed a channel that reliably reached the phone." },
+      { kind: "diagnosis", title: "WhatsApp reaches every shopkeeper — if it is run as a system", body: "Every kirana owner is on WhatsApp all day, so the channel was obvious. Running it well was not. Sending to a million people without an audience model means messaging shopkeepers we cannot deliver to, paying marketing prices for transactional messages, and paying a vendor a cut on every one. Done naively, WhatsApp would burn money faster than push had." },
+      { kind: "decision", title: "Build the channel as a system", body: "I designed a seven-cohort audience model over all 1.17 million buyers, so every person lands in exactly one segment and nobody outside our delivery area is ever messaged. Transactional traffic was routed as utility templates, at roughly a seventh of the marketing price. And we replaced the vendor with our own sender, at ₹0.115 a message instead of ₹0.145." },
+      { kind: "outcome", title: "₹9.60 per install", body: "In June the channel acquired 29,172 buyers at ₹9.60 per app install and produced ₹13.7 lakh of orders on a same-day attribution rule — a 2.60× return on spend. The unit economics became a standing rule for the channel: spend continues while the return clears the take-rate breakeven." },
     ],
     changes: [
       "Designed a seven-cohort priority waterfall over 1,167,517 buyers — mutually exclusive, exhaustive, serviceability-gated.",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
   {
     slug: "buyer-app-plg",
     title: "Lifted registration completion from 30% to 94% by deleting steps",
-    short: "A year of product-led growth on the buyer app: onboarding, unified cart, home screen, catalogue, support. Mostly by removing things.",
+    short: "A year of product-led growth on the buyer app — onboarding, the unified cart, the home screen, catalogue and support — done mostly by removing steps.",
     lede: "Growth and product. I ran the buyer-app roadmap and measured every release against production.",
     tier: 1,
     themes: ["Growth", "Product"],
@@ -195,10 +195,10 @@ export const projects: Project[] = [
       { value: "99%", label: "of order flow on the unified cart in 7 days", note: "66.5% of carts held two or more sellers" },
     ],
     flow: [
-      { kind: "problem", title: "Installs we paid for were not becoming orders", body: "3,000 shopkeepers opened the app a day, 300 started a cart, 120 ordered — and four in five daily users had never placed an order at all. Every install that stalled before its first order was acquisition spend lost. The app itself was the leak." },
-      { kind: "diagnosis", title: "Friction before the buyer decided to stay", body: "A profile form after OTP, a language popup, an extra tap, a minimum on the first order, a separate checkout per seller." },
-      { kind: "decision", title: "Remove, do not add", body: "Delete the form and the tap. Set language from the shop's location. One cart across sellers. Margin on the product card." },
-      { kind: "outcome", title: "Completion 57% → 94% the first full day", body: "In-form abandons 3,281 → 5. Orders per active buyer +41%." },
+      { kind: "problem", title: "Installs we paid for were not becoming orders", body: "About 3,000 shopkeepers opened the app each day, 300 started a cart and 120 ordered — and four in five daily users had never placed an order at all. Every install that stalled before its first order was acquisition spend lost, and the app itself was where it leaked." },
+      { kind: "diagnosis", title: "All the friction sat before the buyer had decided to stay", body: "After entering the OTP a new shopkeeper faced a profile form, a language pop-up and an extra tap; his first order carried a minimum; and every brand in his cart needed a separate checkout. Each step asked a question that some buyers answered by leaving. 21,064 of them abandoned the form in three weeks." },
+      { kind: "decision", title: "Remove steps rather than add features", body: "Delete the profile form and let the OTP read itself in. Set the app's language from the shop's location instead of asking. Merge the per-brand checkouts into one cart and one payment. And put the margin on the product card, because margin is what a shopkeeper actually decides on." },
+      { kind: "outcome", title: "Registration completion 30% → 94%", body: "Mid-form abandons fell from 21,064 to 9 per three weeks. The unified cart carried 99% of order flow within seven days, two-thirds of carts held two or more sellers, and orders per active buyer rose 41%." },
     ],
     changes: [
       "Removed the post-OTP profile form and made OTP self-send: completion 57.3% → 94.2% overnight; first-time buyers +40% in the fortnight after.",
@@ -239,20 +239,20 @@ export const projects: Project[] = [
       { value: "₹18.95 Cr", label: "of goods moved", note: "₹21.5 L of fee income, 60 paying distributors" },
     ],
     idea: [
-      { title: "A distributor pays for his truck whether it moves or not", body: "Driver salary, the instalment, fuel, repairs, insurance, and the capital parked in the vehicle: ₹53,500–64,500 a month for one truck. If the driver quits, the day's sales stop. If a shop is missed, that sale is gone." },
-      { title: "The trade is seasonal, so a fixed fleet is always the wrong size", body: "Too small at festivals, idle for months after. Nobody sells him a truck for only the days it moves." },
-      { title: "So sell the day, not the truck", body: "Book a vehicle for an eight-hour duty up to seven days ahead, ₹1,400–2,000 a day. Nothing paid on idle days. We carry the fleet risk; he carries none. That is the whole commercial idea." },
-      { title: "And meet him at the paper", body: "His orders live on invoices, not in software. Every competitor asked for an accounting integration first. We asked for a photograph." },
+      { title: "A distributor pays for his truck whether it moves or not", body: "An FMCG distributor owns trucks and employs drivers to move goods from his warehouse to the shops around him, and the bill arrives every month whether goods moved or not: the driver's salary, the vehicle instalment, fuel, repairs, insurance and the capital parked in the vehicle — ₹53,500 to ₹64,500 a month for one truck. If the driver quits, that day's sales stop." },
+      { title: "The trade is seasonal, so a fixed fleet is always the wrong size", body: "Demand swings with festivals. A fleet big enough for the season sits idle for months afterwards, and one sized for the quiet months cannot cope when it matters. Nobody was selling him a truck for only the days it moved." },
+      { title: "So sell the day, not the truck", body: "That was the whole commercial idea. A distributor books a vehicle for an eight-hour duty, up to seven days ahead, at ₹1,400 to ₹2,000 a day, and pays nothing on the days he does not sell. We carry the fleet risk; he carries none." },
+      { title: "And meet him at the paper", body: "His orders live on paper invoices, not in software. Every competitor asked him to integrate his accounting system first, which would have ended the conversation at the first meeting. We asked for a photograph of the invoice." },
     ],
     built: [
-      { kind: "step", title: "Book a truck-day", body: "In the seller app: date, vehicle class (3-wheeler ₹1,602, 4-wheeler ₹2,000), how many. Up to seven days ahead." },
-      { kind: "step", title: "Photograph the invoices", body: "10–50 drops set up in seconds. The drop count is read from the bills, never typed. 17,678 invoices read by machine." },
-      { kind: "step", title: "Lock the address once", body: "After the first successful delivery the shop is pinned to its phone number and verified GPS. The next driver goes straight there. 7,363 shops mapped." },
-      { kind: "step", title: "Plan the round", body: "The software plans the route. No helper riding along, no distributor sitting with a planner every morning." },
-      { kind: "step", title: "Two-party code at every handover", body: "Proof of delivery is checked against the driver's location before a photo is accepted. Proof on every drop, not only the disputed ones." },
-      { kind: "step", title: "Cash in his bank the same day", body: "Goods and money matched digitally. Any member of staff can do the handover; nothing depends on one person's memory." },
-      { kind: "step", title: "A failed drop becomes information", body: "A closed list of reasons — shop closed, refused, wrong address, payment not ready — tallied and sent to his sales team. A second attempt is a priced service." },
-      { kind: "step", title: "Small closed vehicles", body: "Three-wheelers took 98.5% of trips: market lanes are narrow, and FMCG goods must stay sealed and dry. Four in five run on gas." },
+      { kind: "step", title: "Book a truck-day", body: "In the seller app the distributor picks a date up to seven days ahead, a vehicle class — a three-wheeler at ₹1,602 or a four-wheeler at ₹2,000 — and how many he needs." },
+      { kind: "step", title: "Photograph the invoices", body: "He photographs the day's invoices and the drop list builds itself: ten to fifty drops set up in seconds, with the number of drops read from the bills rather than typed. 17,678 invoices were read this way." },
+      { kind: "step", title: "Lock the address once", body: "Small shops rarely have a usable address, which is why third-party couriers fail on them. After the first successful delivery we pin the shop to its phone number and the GPS point where the driver actually stood, so the next driver goes straight there. That built a map of 7,363 real shops." },
+      { kind: "step", title: "Plan the round", body: "The software plans the route, so the distributor no longer sits with a planner every morning or sends a helper along in the truck to show the way." },
+      { kind: "step", title: "A code from both sides at every handover", body: "Each handover needs a code that both people hold, and the proof-of-delivery photograph is accepted only if the driver's location matches the shop. Proof exists for every drop, not only the disputed ones." },
+      { kind: "step", title: "Cash in his bank the same day", body: "Cash collected at the shop is matched to the bill digitally and settled to the distributor's own bank account the same day, so any member of staff can do the handover and nothing depends on one person's memory." },
+      { kind: "step", title: "A failed drop becomes information", body: "When a delivery fails the driver picks a reason from a closed list — shop closed, refused, wrong address, payment not ready — and the tally goes to the distributor's sales team so they can act on it. A second attempt is a priced service." },
+      { kind: "step", title: "Small closed vehicles", body: "Three-wheelers took 98.5% of trips because market lanes are narrow, and every body is closed because FMCG goods must stay sealed and dry. Four in five run on gas." },
     ],
     metricsTitle: "How the business performed",
     metrics: [
@@ -295,10 +295,10 @@ export const projects: Project[] = [
       { value: "226", label: "distributors mapped", note: "4,778 feed retailers within 40 km of one" },
     ],
     flow: [
-      { kind: "problem", title: "A partner brand's retail network with nobody serving it", body: "Kapila, a cattle-feed brand, had 226 distributors and thousands of feed retailers inside their territories — and orders had collapsed from 22,898 a month in October 2024 to 42 by July 2026. For the brand, lost volume. For Badho, a ready-made retail network with no channel reaching it." },
-      { kind: "diagnosis", title: "Both sides stuck on the same transport economics", body: "A retailer buying half a tonne cannot justify arranging transport. A distributor cannot justify a vehicle for a small drop." },
-      { kind: "decision", title: "Factory-rate price, free delivery, we do the routing", body: "Retailer pays factory rate, never coordinates with a distributor. We route to any distributor within 40 km. Half-tonne floor. App built in an evening." },
-      { kind: "outcome", title: "Incremental by design and verified after", body: "52 of 53 retailers and 31 of 32 distributors were dormant pre-launch — new demand, not cannibalised. Diagnosed retailer credit as the binding constraint (22% of ordered value) and specified the fix before scaling." },
+      { kind: "problem", title: "A partner brand's retail network with nobody serving it", body: "Kapila, a cattle-feed brand and Badho partner, had 226 distributors and thousands of feed retailers inside their territories — and orders through them had collapsed from 22,898 a month in October 2024 to 42 by July 2026. For the brand that was lost volume. For Badho it was a ready-made retail network with no channel reaching it." },
+      { kind: "diagnosis", title: "Both sides were stuck on the same transport arithmetic", body: "A retailer buying half a tonne could not justify arranging and paying for a vehicle, so the small order was not worth placing. A distributor could not justify sending a vehicle for a small drop, so it was not worth serving. Nobody was refusing to trade; the economics of a small order had stopped either side from starting." },
+      { kind: "decision", title: "Take the transport problem off both of them", body: "The retailer orders at factory rate through an app, pays nothing for delivery and never coordinates with a distributor; we route each order to whichever distributor is within 40 km and pay the transporter. I set a deliberately low half-tonne floor, wrote the ordering app myself with an AI coding assistant in an evening, and had it writing real purchase orders two days later." },
+      { kind: "outcome", title: "Seventeen days to first delivery, and the demand was new", body: "Fifty-two of the fifty-three retailers who ordered, and thirty-one of the thirty-two distributors who fulfilled, had placed no order on the brand in the three months before launch — the channel created new demand rather than moving existing orders. I then identified retailer credit as the constraint on scaling, at 22% of ordered value, and specified the fix." },
     ],
     changes: [
       "Wrote the ordering web app with an AI coding assistant — catalogue, OTP login, GPS, nearest-distributor allocation — in one evening; real purchase orders two days later.",
@@ -321,7 +321,7 @@ export const projects: Project[] = [
   {
     slug: "pricing-experiments",
     title: "Ran four pricing experiments and found the one that paid",
-    short: "Cart coupons, item-level quantity discounts, ₹1 trial products, a funded base-price cut — shipped in sequence, measured afterwards.",
+    short: "Four pricing experiments — cart coupons, item-level quantity discounts, ₹1 trial products and a funded base-price cut — shipped in sequence and measured, with the one that paid found and scaled.",
     lede: "Pricing and incentives. I owned discount design and built the tool that audited it.",
     tier: 1,
     themes: ["Pricing", "Growth", "Unit economics", "Built it myself"],
@@ -337,10 +337,10 @@ export const projects: Project[] = [
       { value: "−45.7%", label: "item-coupon spend from one config change", note: "37 minutes, no code, orders flat" },
     ],
     flow: [
-      { kind: "problem", title: "We were paying for orders we would have got anyway", body: "A kirana shopkeeper decides on one number: what he pays against what he can sell it for. Our discounts sat behind coupon codes found at checkout — after that decision was already made — so the money spent on discounts was not changing whether he added the item." },
-      { kind: "diagnosis", title: "High usage is not impact", body: "Cart coupons reached 30% of orders and conversion did not move. The discount was moving money, not adding it." },
-      { kind: "decision", title: "Put the discount on the item, scale it with quantity, audit it", body: "Per-SKU quantity tiers priced into every product card. Funded by re-routing flat coupon spend. Built the audit dashboard myself." },
-      { kind: "outcome", title: "AOV +10.5%, then the cheapest win of the year", body: "45.9% of orders carried an item coupon in a week. Offer-code spend ₹59.4 k → ₹6.2 k. A config change then cut item-coupon spend 45.7% with zero order loss." },
+      { kind: "problem", title: "We were paying for orders we would have got anyway", body: "A kirana shopkeeper decides on one number: what he pays against what he can sell it for. Badho's discounts sat behind coupon codes that he found at checkout — after he had already decided what to add. The money spent on discounts was not changing whether he bought the item." },
+      { kind: "diagnosis", title: "High usage is not impact", body: "The first experiment proved it. Cart-level coupons — a code applied to the whole order at checkout — rose from 6.9% to 36.6% of orders, and conversion did not move at all. Buyers who were going to order took the discount; buyers who were not did not appear. The discount had to reach the buyer at the moment of decision, on the product itself." },
+      { kind: "decision", title: "Put the discount on the item and scale it with quantity", body: "Per-product tiers that show on every product card, so the margin is visible while the shopkeeper is choosing and grows as he adds cases. Funded by re-routing the flat coupon budget rather than adding new spend. And a dashboard, which I built myself, to audit what every discount actually costs so the next decision has numbers." },
+      { kind: "outcome", title: "Average order value +10.5%, on the same discount budget", body: "Within a week 45.9% of orders carried an item-level coupon, average order value rose from ₹809 to ₹894, and revenue per active buyer rose 12.2% on flat traffic — roughly ₹8 of extra gross for every extra rupee of discount. Flat coupon spend fell from ₹59,400 to ₹6,200 a week. Later, a 37-minute configuration change cut item-coupon spend by 45.7% with no loss of orders." },
     ],
     changes: [
       "Item-level quantity coupons across 24 brand sellers: 46% order adoption in seven days, AOV ₹809 → ₹894.",
@@ -379,10 +379,10 @@ export const projects: Project[] = [
       { value: "6.7× / 3.9×", label: "referred buyers: better activation, worse GMV per signup", note: "26.55% vs 3.99%; ₹151 vs ₹583" },
     ],
     flow: [
-      { kind: "problem", title: "Four ways of paying buyers to return, and no idea which one worked", body: "By April the company was paying shopkeepers to come back four different ways — a monthly gift ladder, a daily login reward, ₹75 of free wallet credit, referral cash — with a ₹4.57 crore credit run the largest single line. None had a holdout. Nobody knew which bought a repeat order and which bought nothing." },
-      { kind: "diagnosis", title: "Query each against repeat orders", body: "Gift qualifiers re-ordered at 50% vs 19%. The credit run reached 609,245 buyers and 342 spent it. Referrals activated 6.7× better and bought 3.9× less." },
-      { kind: "decision", title: "Scale what retains, stop what does not", body: "Route relationship managers to gift qualifiers. Stop broadcasting credit. Recruit referrers from power buyers instead of everyone." },
-      { kind: "outcome", title: "Budget re-pointed, one fraud pattern flagged", body: "31–44% of monthly order value came from gift qualifiers at 7.8% cost. Referral paid out ₹47,840 at 24.9% redemption; one referrer was 30% of programme GMV." },
+      { kind: "problem", title: "Four ways of paying buyers to return, and no idea which one worked", body: "By April Badho was paying shopkeepers to come back in four different ways: a monthly gift ladder for order value, a daily login reward, ₹75 of free wallet credit for first orders, and cash for referrals. The credit alone was a ₹4.57 crore programme. None of them had a holdout group, so nobody knew which one bought a repeat order and which bought nothing." },
+      { kind: "diagnosis", title: "Query each scheme against repeat orders", body: "Shopkeepers who qualified for a gift re-ordered the next month at 50%, against 19% for everyone else. The ₹75 credit reached 609,245 buyers and 342 of them spent it. Referred buyers activated 6.7 times better than organic sign-ups but bought 3.9 times less per person." },
+      { kind: "decision", title: "Scale what retained, stop what did not", body: "Point the relationship managers at gift qualifiers, the group already proven to return. Stop broadcasting wallet credit. Recruit referrers from the power buyers who bring buyers like themselves, instead of from everyone. And carry all of it on one notification programme with a daily cap per buyer." },
+      { kind: "outcome", title: "The budget moved to what worked", body: "Gift qualifiers came to account for 31–44% of monthly order value at a cost of 7.8% of what they ordered. The referral programme's economics were measured for the first time — ₹47,840 paid out at 24.9% redemption — and its budget re-pointed. One referrer responsible for 30% of the programme's order value from a single neighbourhood was flagged, and a fraud rule specified." },
     ],
     changes: [
       "Gift ladder: qualifiers 11 → 168 a month. Found 74 buyers a month losing a gift to a returned parcel and fixed the rule.",
@@ -422,10 +422,10 @@ export const projects: Project[] = [
       { value: "17.65%", label: "gross-up that settled a 15% withholding-tax dispute" },
     ],
     flow: [
-      { kind: "problem", title: "Renewals were the revenue", body: "ONO sold kiosks and ordering software to restaurant chains, and its largest accounts — 79 kiosks at Herfy, 34 at Taco Bell India — came up for renewal every six months. Renewals, price rises and legal terms decided whether there was revenue next quarter, and the price list did not answer the question a restaurant group actually asks: rent it, or own it?" },
-      { kind: "diagnosis", title: "Structure the offer around the buying decision", body: "Subscription against an ownership buyout, priced per kiosk, per store and per chain." },
-      { kind: "decision", title: "Negotiate on absolute change, concede what costs nothing", body: "A two-riyal rise justified line by line against fifteen months of absorbed cost. Accept six redlines, hold the one that touched cash flow." },
-      { kind: "outcome", title: "Three consecutive Herfy renewals", body: "A two-riyal increase accepted after fifteen months of absorbed cost; six of seven redlines closed with the one that touched cash flow held; a withholding-tax dispute settled at a 17.65% gross-up." },
+      { kind: "problem", title: "Renewals were the revenue", body: "ONO sold self-ordering kiosks and ordering software to restaurant chains, and its largest accounts — 79 kiosks at Herfy in Saudi Arabia, 34 at Taco Bell India — came up for renewal every six months. Renewals, price rises and contract terms decided whether the company had revenue next quarter. The price list did not answer the question a restaurant group asks first: rent it, or own it?" },
+      { kind: "diagnosis", title: "A chain buying kiosks is making a capital decision", body: "It wants to compare a monthly subscription against buying the hardware outright, and it wants the number per kiosk, per store and per chain so it can scale the sum itself. A price list that does not answer in those terms gets negotiated line by line from scratch, every time." },
+      { kind: "decision", title: "Rewrite the commercials around that decision", body: "I authored the pricing architecture — subscription against an ownership buyout, priced per kiosk, per store and per chain — and wrote the commercials for seven brands on it. On renewals I negotiated on the absolute change rather than the percentage, showed fifteen months of costs we had absorbed, and accepted the legal redlines that cost nothing so the one refusal on cash flow would be believed." },
+      { kind: "outcome", title: "Three consecutive Herfy renewals", body: "Herfy accepted a two-riyal price increase, and a 15% withholding-tax dispute was settled at a 17.65% invoice gross-up. Six of seven redlines closed with the one that touched cash flow held. Formal partnerships were registered with GoFrugal and Petpooja — the point-of-sale systems through which chains we could not reach directly could still buy the product." },
     ],
     changes: [
       "Authored the pricing architecture — subscription vs ownership buyout, per kiosk / store / chain — and the commercials for Mad Over Donuts, Cafe Island, Pizza Wings, Nik Bakers, SVS Foods, Muralis Market and Herfy.",
@@ -466,10 +466,10 @@ export const projects: Project[] = [
       { value: "iOS approved", label: "December 2025, one developer" },
     ],
     flow: [
-      { kind: "problem", title: "A second product into an account we already held", body: "DOKA, the cake brand of our largest kiosk client Herfy, ran nine Riyadh branches on phone orders and walk-ins; a custom cake meant a conversation every time. For ONO it was expansion revenue inside an existing relationship — if we could win the deal ourselves rather than wait to be asked." },
-      { kind: "diagnosis", title: "The sale needed something to tap", body: "A document would not close it. A clickable prototype would." },
-      { kind: "decision", title: "Pitch with a prototype, price the scope, hold the line", body: "Two order flows. A five-step configurator that renders variations instead of storing a photo library. 40/40/20 milestones under Saudi law." },
-      { kind: "outcome", title: "Delivered to Apple approval", body: "215 menu items mapped to the POS across nine branches; two order flows, scheduled delivery and the five-step configurator all in the approved build." },
+      { kind: "problem", title: "A second product into an account we already held", body: "DOKA is the cake brand of Herfy, our largest kiosk client, with nine branches in Riyadh that took every order by phone or over the counter. A custom cake meant a conversation each time. For ONO it was expansion revenue inside an existing relationship — if we could win the deal ourselves rather than wait to be asked." },
+      { kind: "diagnosis", title: "The sale needed something to tap", body: "A proposal document would not have closed it. The client needed to watch a customer design a cake on a screen and see the price change as they chose, because that was the part nobody believed could be built without a photo library of every combination." },
+      { kind: "decision", title: "Pitch with a prototype, price the scope, hold the line", body: "I built a clickable prototype and pitched it cold, then priced the scope through three rounds from $6,400 to $7,000 under Saudi law with 40/40/20 milestones. The product had two order flows — dine-in or take-away, and scheduled delivery — and a five-step cake configurator for shape, flavour, colour, decoration and message, rendered from three angles with the price updating as the customer chose." },
+      { kind: "outcome", title: "Delivered to App Store approval", body: "Apple approved the app in December 2025, built with one developer, with 215 menu items mapped to the point-of-sale system across all nine branches and the configurator, both order flows and scheduled delivery in the approved build." },
     ],
     changes: [
       "Built the clickable prototype, cold-pitched it, priced scope through three rounds, signed under Saudi law.",
@@ -489,7 +489,7 @@ export const projects: Project[] = [
   {
     slug: "ono-product",
     title: "Specified kiosk features and POS integrations for QSR chains",
-    short: "Self-ordering kiosks, QR ordering and menu screens for restaurant chains — the offer engine, the integration contract, and the weekly client report.",
+    short: "Product ownership of self-ordering kiosks, QR ordering and menu screens for restaurant chains: the offer engine, the point-of-sale integration contract and the weekly client report.",
     lede: "Product owner between the client, the kiosk and the POS vendor.",
     tier: 1,
     themes: ["Product", "Go-to-market"],
@@ -507,10 +507,10 @@ export const projects: Project[] = [
       { value: "4 POS systems", label: "integrations specified or scoped" },
     ],
     flow: [
-      { kind: "problem", title: "A kiosk only earns its fee if it runs every hour the store is open", body: "Two live failures in one week at Taco Bell put a 34-kiosk account at risk. And every new chain needed the kiosk wired to a different point-of-sale system — integrations that stalled in meetings instead of shipping, which meant chains we could not onboard." },
-      { kind: "diagnosis", title: "Write the bug as a requirement; hand the vendor a contract", body: "The offer engine needed two rules, not a workaround. Integrations needed a payload and a webhook." },
-      { kind: "decision", title: "Specify, do not negotiate", body: "Offer-engine spec: ₹1-with-purchase, buy-one-get-N scaling. Five-case payload contract for GoFrugal, Petpooja, POSIST, Rista." },
-      { kind: "outcome", title: "Integrations in weeks; reports that survived audit", body: "Eleven Taco Bell report decks. 193,449 Herfy orders queried to settle a billing dispute with the database, not a spreadsheet." },
+      { kind: "problem", title: "A kiosk only earns its fee if it runs every hour the store is open", body: "Two live failures in one week at Taco Bell put a 34-kiosk, 19-mall account at risk. And every new chain needed the kiosk wired to a different point-of-sale system — integrations that stalled in meetings instead of shipping, which meant chains we could not onboard." },
+      { kind: "diagnosis", title: "Both were specification problems", body: "The kiosk promotions broke because the offer engine had no written rules for the cases the stores were actually running. The integrations stalled because point-of-sale vendors were being invited to a conversation when what their engineers needed was a payload." },
+      { kind: "decision", title: "Write the bug as a requirement; hand the vendor a contract", body: "I turned the two failures into the offer-engine specification — a ₹1-with-purchase rule and a buy-one-get-N rule that scales — and wrote a five-case payload and webhook contract that went to GoFrugal, Petpooja, POSIST and Rista as a document rather than a meeting." },
+      { kind: "outcome", title: "Integrations in weeks, reports that settled disputes", body: "Point-of-sale integrations moved from months of calls to weeks of implementation. Taco Bell received eleven weekly report decks on sales, per-location order value and per-kiosk uptime, and a billing dispute at Herfy was settled by querying 193,449 kiosk orders rather than arguing over a spreadsheet." },
     ],
     changes: [
       "Wrote the offer-engine requirement from two production failures on a live kiosk.",
@@ -531,7 +531,7 @@ export const projects: Project[] = [
   {
     slug: "vernacular-search",
     title: "Specified a search that understands how shopkeepers actually type",
-    short: "Hindi in Roman script, phonetic spellings, brand names for products — and a loop that learns new synonyms from real queries.",
+    short: "A search that understands Hindi typed in English letters, phonetic spellings and brand names used for products, with a loop that learns new synonyms from real queries.",
     lede: "Product. I defined what search had to understand; engineering chose and built the engine.",
     tier: 1,
     themes: ["Product"],
@@ -546,10 +546,10 @@ export const projects: Project[] = [
       { value: "24.9 vs 11.7", label: "synonyms per root — buyers' words vs the catalogue's" },
     ],
     flow: [
-      { kind: "problem", title: "A shopkeeper who cannot find the product does not order it", body: "Our buyers run kirana shops in smaller cities and type the way they speak — Hindi in English letters, by brand name, with spelling that varies. The catalogue was written in English product names. Four in five searches returned nothing." },
-      { kind: "diagnosis", title: "The buyers' own words were the richest source", body: "Synonyms learned from real queries ran 24.9 per root word against 11.7 from the catalogue." },
-      { kind: "decision", title: "Four synonym kinds, exact match first, learn continuously", body: "Hindi labels searched at equal weight. Misspellings mapped 28 k → 68 k. Generous matching kept out — precision is the scarce thing." },
-      { kind: "outcome", title: "All 32,536 roots live", body: "98% of learned synonyms built in one month; misspellings mapped 28 k → 68 k; every root word reaching the live engine." },
+      { kind: "problem", title: "A shopkeeper who cannot find the product does not order it", body: "Badho's buyers run kirana shops in smaller cities and type the way they speak: Hindi in English letters, by brand name rather than product, with spelling that varies from shop to shop. The catalogue was written in English product names. Four in five searches returned nothing." },
+      { kind: "diagnosis", title: "The buyers' own words were the richest source", body: "Synonyms learned from real search queries ran 24.9 per root word, against 11.7 from the catalogue's own descriptions. Someone typing 'all out' wants mosquito repellent, and only the search log knows that." },
+      { kind: "decision", title: "Four kinds of synonym, exact match first, and a loop that keeps learning", body: "I specified brand-for-product, Roman-script Hindi, phonetic and catalogue-derived synonyms, with Hindi labels searched at equal weight and exact matches ranked first so precise results are never outranked by loose ones. New synonyms are learned from what buyers type and pushed live." },
+      { kind: "outcome", title: "699,684 synonyms, all live", body: "Across 32,536 root words, every one reaching the live search engine, with 98% of the learned synonyms built in the first month and 68,203 misspellings mapped to their corrections." },
     ],
     changes: [
       "Specified four synonym kinds on purpose: brand-for-product, Roman-Hindi, phonetic, and catalogue-derived.",
@@ -568,7 +568,7 @@ export const projects: Project[] = [
   {
     slug: "release-gate",
     title: "Ran the release gate for three apps out of one codebase",
-    short: "Every merge to production, every version, the release notes support ran on — and the specification pipeline that fed it.",
+    short: "Ownership of every merge to production, every release version and the release notes support ran on — and the specification pipeline that fed it.",
     lede: "Programme management. The whole cycle from ticket to production.",
     tier: 2,
     themes: ["Product"],
@@ -580,10 +580,10 @@ export const projects: Project[] = [
       { value: "242", label: "release versions, 7.153 → 8.255", note: "204 of 204 release merges on the production branch" },
     ],
     flow: [
-      { kind: "problem", title: "Three apps, one codebase, and releases that slipped", body: "The buyer, seller and driver apps shipped from one repository to shopkeepers, distributors and drivers. 114 bugs a month were arriving, nobody owned what reached production, and the growth plan depended on shipping every week." },
-      { kind: "diagnosis", title: "The gap was specification and gatekeeping, not effort", body: "Tickets arrived under-specified; releases had no gate." },
-      { kind: "decision", title: "Own the cycle end to end", body: "Specify, design, build, test, release. Sit between founder, PMs and engineers and remove whatever would make a release slip." },
-      { kind: "outcome", title: "Bug inflow 114 → near zero a month", body: "242 versions, every one through the gate. Release notes that told support what changed." },
+      { kind: "problem", title: "Three apps, one codebase, and releases that slipped", body: "The buyer, seller and driver apps all shipped from one repository to shopkeepers, distributors and drivers. 114 bugs a month were arriving, nobody owned what reached production, and the growth plan depended on shipping every week." },
+      { kind: "diagnosis", title: "The gap was specification and gatekeeping, not effort", body: "Tickets reached engineers under-specified, so builds went back and forth. With no single gate on the production branch, whatever was ready went out, whether or not it had been tested." },
+      { kind: "decision", title: "Own the whole cycle", body: "Specify the work properly, sit between the founder, the product managers and the engineers, run the release gate on every merge to production, and write the release notes that support and operations run on." },
+      { kind: "outcome", title: "242 releases, bug inflow to near zero", body: "Every one of 204 release merges went through the gate; 805 of 1,613 pull requests were reviewed and merged; 489 tickets and 192 full requirement documents were written — the most in the company — and monthly bug inflow fell from 114 to near zero." },
     ],
     changes: [
       "Wrote 489 tickets and 192 full requirement documents — the most of anyone in the company.",
@@ -611,10 +611,10 @@ export const projects: Project[] = [
       { value: "1", label: "message per order per stage, ever", note: "12 order-status templates" },
     ],
     flow: [
-      { kind: "problem", title: "Every retention scheme needed to message the right shopkeeper at the right time", body: "But notifications wrote straight to the production database. Personalised sending at scale would have taken the app down with it — and without it, the gift ladder, credit and reactivation programmes had no way to reach anyone." },
-      { kind: "diagnosis", title: "Separate the pipeline, cap the buyer, name every audience", body: "Fetch → fill → send off a nightly copy. Each audience a question with a number attached." },
-      { kind: "decision", title: "Reusable audiences, holdouts, a first-week sequence", body: "A hard cap across brand and own campaigns. A first-week sequence that swaps a slot for a referral prompt once the first order lands." },
-      { kind: "outcome", title: "The programme that carried the retention schemes", body: "Gift ladder, credit, referral and reactivation all ran through it." },
+      { kind: "problem", title: "Every retention scheme needed to reach the right shopkeeper at the right moment", body: "But notifications wrote straight to the production database, so personalised sending at scale would have taken the app down with it. Without a sending system, the gift ladder, the wallet credit and the reactivation programmes had no way to reach anyone." },
+      { kind: "diagnosis", title: "Sending had to leave the live database, and audiences had to be countable", body: "Campaign sending had to run off a copy of the buyer base, each audience had to be defined precisely enough to count, and the total a buyer receives in a day had to be capped — or every team's campaigns would stack on the same phone." },
+      { kind: "decision", title: "A pipeline off a nightly copy, 31 named audiences, a daily cap", body: "I specified a fetch-fill-send pipeline reading a nightly copy of the buyer base, 31 audiences each defined as a question with a number attached, a hard cap of 8–10 notifications per buyer per day across every sender, and a first-week sequence that swaps in a referral prompt once the first order lands." },
+      { kind: "outcome", title: "The programme every retention scheme ran on", body: "Gift ladder, wallet credit, referrals and reactivation all sent through it without touching the production database, and the twelve order-status WhatsApp templates it runs send exactly one message per order per stage." },
     ],
     changes: [
       "Specified a fetch → fill → send pipeline off a nightly replica so campaigns never touched production.",
@@ -638,10 +638,10 @@ export const projects: Project[] = [
       { value: "11", label: "epics program-managed" },
     ],
     flow: [
-      { kind: "problem", title: "Four engineers, twenty candidate systems, one model budget", body: "With no sequencing, no acceptance bar and no cost governance, the team would ship whatever was most interesting rather than what the business needed next — and the model bill would be a surprise every month." },
-      { kind: "diagnosis", title: "The constraint was programme, not talent", body: "Which system next, what 'done' meant, and what it cost to run." },
-      { kind: "decision", title: "Own the epics, the bar and the budget", body: "Raised 88 of the 98 tickets. Set acceptance per system. Tracked model spend." },
-      { kind: "outcome", title: "20 systems live", body: "Product matching, catalogue enrichment, weight estimation, search synonyms, fleet agents, a WhatsApp sales agent, a courier autopilot." },
+      { kind: "problem", title: "Four engineers, twenty candidate systems, one model budget", body: "With no sequencing, no acceptance bar and no cost governance, the team would have shipped whatever was most interesting rather than what the business needed next, and the model bill would have been a surprise every month." },
+      { kind: "diagnosis", title: "The constraint was programme, not talent", body: "The engineers could build any of the twenty. What was missing was a decision on which came first, a written definition of done for each, and someone watching what each system cost to run." },
+      { kind: "decision", title: "Own the programme", body: "I raised 88 of the 98 AI tickets, sequenced the work into eleven epics, set the acceptance bar per system and governed the model spend." },
+      { kind: "outcome", title: "Twenty systems in production", body: "Product matching, catalogue enrichment, weight estimation, search synonyms, delivery fleet agents, a WhatsApp sales agent and a courier operations autopilot — all live, on budget." },
     ],
     changes: ["Raised 88 of 98 AI tickets and ran eleven epics.", "Set the acceptance bar per system and governed model cost.", "Wrote the first working version of the WhatsApp sales agent that the pod then productionised."],
   },
@@ -682,8 +682,8 @@ export const arc = [
 
 // How I work — four steps.
 export const method: FlowNode[] = [
-  { kind: "step", title: "Find the number that decides", body: "Not GMV. The one that says whether the business works — CM1, return rate, registration completion." },
-  { kind: "step", title: "Diagnose the arithmetic", body: "Retention was not a campaign problem; it was three minimums on one cart. Returns were 107% of the loss." },
-  { kind: "step", title: "Change the model, not the copy", body: "One seller, one minimum. Sell truck-days, not leases. Delete the form. Put the discount on the item." },
-  { kind: "step", title: "Measure it, and report the number that survives an audit", body: "Same-day attribution windows. Incrementality tests, not influence counts. Definitions written down before the fix." },
+  { kind: "step", title: "Find the number that decides", body: "Every business has one number that says whether it works. For a marketplace it was contribution margin per order, not gross sales. I start by finding that number and making it the target." },
+  { kind: "step", title: "Diagnose the arithmetic", body: "A stalled metric usually has a mechanical cause before it has a marketing one. Retention at Badho was not a campaign problem; it was three minimum order values on one cart. Returns were not a cost line; they were the entire loss." },
+  { kind: "step", title: "Change the model, not the copy", body: "Once the cause is structural, the fix is structural: one seller instead of many, truck-days instead of leases, a deleted form instead of a better one, the discount on the item instead of at checkout." },
+  { kind: "step", title: "Measure it, and report the number that survives an audit", body: "Every change goes back to the database. Attribution on same-day windows, incrementality tests rather than influence counts, and the definition of each metric written down before the fix so nobody can move it afterwards." },
 ];
