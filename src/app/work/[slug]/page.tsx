@@ -60,7 +60,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
         <div className="mt-14 space-y-16">
           {/* ── The flow ─────────────────────────────────────────────────── */}
           {p.flow?.length ? (
-            <Section title="How it went" kicker="Problem → diagnosis → decision → outcome.">
+            <Section title="How it went" kicker="Why it mattered → what we found → what we decided → what happened.">
               <Reveal>
                 <FlowStrip nodes={p.flow} />
               </Reveal>

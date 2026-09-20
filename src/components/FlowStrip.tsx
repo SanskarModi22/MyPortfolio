@@ -6,7 +6,7 @@ import type { FlowNode } from "@/content/projects";
 // its own arrow to the next.
 
 const KIND_LABEL: Record<FlowNode["kind"], string> = {
-  problem: "Problem",
+  problem: "Why",
   diagnosis: "Diagnosis",
   decision: "Decision",
   outcome: "Outcome",

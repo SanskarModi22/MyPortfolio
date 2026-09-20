@@ -107,7 +107,7 @@ export default function Home() {
         </Section>
 
         {/* ── Case studies ─────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: the problem, the diagnosis, the decision, the outcome.">
+        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: why it mattered, what we found, what we decided, what happened.">
           <Reveal>
             <WorkGrid items={tier1.map(toCard)} themes={THEMES} />
           </Reveal>
