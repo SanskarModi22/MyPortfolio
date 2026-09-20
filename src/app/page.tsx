@@ -107,14 +107,14 @@ export default function Home() {
         </Section>
 
         {/* ── Case studies ─────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: why it mattered, what we found, what we decided, what happened.">
+        <Section id="work" title="Case studies" kicker="Seven cases. Each one: why it mattered, what we found, what we decided, what happened.">
           <Reveal>
             <WorkGrid items={tier1.map(toCard)} themes={THEMES} />
           </Reveal>
         </Section>
 
         {/* ── Also ─────────────────────────────────────────────────────── */}
-        <Section id="more-work" title="Also owned" kicker="The programme work underneath the cases.">
+        <Section id="more-work" title="More cases" kicker="Eleven more, built the same way and to the same standard of evidence.">
           <ul className="grid gap-3 sm:grid-cols-2">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>

@@ -162,11 +162,11 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
           {p.solved?.length ? (
             <Section title="What it solved">
               <Reveal>
-                <ul className="card divide-y divide-line">
+                <ul className="space-y-3 pl-1">
                   {p.solved.map((s) => (
-                    <li key={s.slice(0, 40)} className="flex gap-3 px-5 py-3.5">
-                      <span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-accent" />
-                      <span className="text-[14.5px] leading-relaxed text-ink">{s}</span>
+                    <li key={s.slice(0, 40)} className="flex gap-3">
+                      <span className="mt-[8px] h-2 w-2 shrink-0 rounded-full bg-accent" />
+                      <span className="text-[15px] leading-relaxed text-ink">{s}</span>
                     </li>
                   ))}
                 </ul>

@@ -7,10 +7,11 @@ import { Chip } from "./Section";
 
 function Cover({ c }: { c: NonNullable<WorkCard["cover"]> }) {
   const tall = c.kind === "phone" || c.kind === "kiosk";
+  const wide = c.kind === "diagram";
   return (
-    <div className={`shrink-0 overflow-hidden border border-line bg-surface-2 ${tall ? "h-[124px] w-[64px] rounded-[10px]" : "h-[84px] w-[128px] rounded-lg"}`}>
+    <div className={`shrink-0 overflow-hidden border border-line ${wide ? "bg-white" : "bg-surface-2"} ${tall ? "h-[124px] w-[64px] rounded-[10px]" : "h-[84px] w-[128px] rounded-lg"}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={c.src} alt="" aria-hidden loading="lazy" className={`h-full w-full object-cover ${c.kind === "photo" ? "object-center" : "object-top"}`} />
+      <img src={c.src} alt="" aria-hidden loading="lazy" className={`h-full w-full ${wide ? "object-contain" : "object-cover"} ${c.kind === "photo" ? "object-center" : "object-top"}`} />
     </div>
   );
 }
