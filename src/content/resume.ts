@@ -31,7 +31,7 @@ export const resume = {
   ] as ResumeStat[],
 
   skills: [
-    { head: "Product", body: "Product Strategy, Product Requirements (PRD), Roadmap Prioritisation, Release Management, Experiment Design, Marketplace Mechanics, Agile / Jira" },
+    { head: "Product", body: "Product Strategy, Product Requirements (PRD), Roadmap Prioritisation, Release Management, Experiment Design, Marketplace Mechanics, Agile" },
     { head: "Growth & Analytics", body: "Growth Strategy, Product-Led Growth (PLG), Unit Economics, Pricing & Incentives, Cohort & Retention Analysis, Funnel Analysis, Attribution & Incrementality, CAC / ROAS, SQL / PostgreSQL, Metabase" },
     { head: "Go-to-Market", body: "Go-to-Market Strategy, B2B SaaS, Partnerships, Contract Negotiation, Enterprise Accounts (India, Saudi Arabia), FMCG Distribution, Logistics, WhatsApp Business API, Lifecycle Messaging" },
     { head: "Technical", body: "TypeScript, React, Python, AI Coding Assistants, Agent Systems (Claude Agent SDK, MCP)" },
@@ -66,13 +66,13 @@ export const resume = {
     },
     {
       title: "Product Manager, Strategy & Growth",
-      org: "ONO Suite / DailyKit",
+      org: "ONO Suite",
       location: "Gurugram",
-      date: "Jul 2024 – Oct 2025 · Herfy account through Aug 2026",
+      date: "Jul 2024 – Oct 2025",
       bullets: [
-        "Ran go-to-market for a restaurant-technology company: a **118-account funnel across seven cities** reviewed weekly, **57 companies met in 2024**, 37 introductory calls booked onto the founder's calendar, 26 hardware and POS partnership conversations, 11 sales channels, and an international QSR target list for Bangladesh, Saudi Arabia and Thailand.",
+        "Ran go-to-market: a funnel of **118 parent restaurant chains across seven cities** reviewed weekly, **57 companies met in 2024**, 37 introductory calls booked onto the founder's calendar, 26 POS and hardware partnership conversations, 11 sales channels tested.",
         "Authored the pricing architecture — subscription vs ownership buyout, priced per kiosk, per store and per chain — and the commercials for seven restaurant brands including Herfy, Mad Over Donuts and Pizza Wings.",
-        "Ran the Herfy account (Saudi Arabia) single-handed: **79 live kiosks, three consecutive renewals**, a price rise negotiated on absolute change, a 15% withholding-tax dispute settled at a 17.65% gross-up.",
+        "Ran the Herfy account (Saudi Arabia) single-handed through Aug 2026: **79 live kiosks, three consecutive renewals**, a price rise negotiated on absolute change, a 15% withholding-tax dispute settled at a 17.65% gross-up.",
         "Product-managed DOKA Bakery House's ordering app (Riyadh, nine branches) from a prototype I pitched to **App Store approval**: two order flows, a five-step design-your-own-cake configurator with live pricing, scheduled delivery, card and Apple Pay, kitchen-fed tracking, Arabic and English.",
         "Product-managed the self-ordering kiosk — offer engine, dine-in/take-away flows, WhatsApp e-bills, loyalty and coupons, payment-delay enforcement, four POS integrations — and produced the weekly client report on **₹4.19 Cr of kiosk sales across 19 Taco Bell stores and 34 kiosks**.",
       ],
@@ -91,7 +91,6 @@ export const resume = {
   projects: [
     { head: "MilkoReach — direct-to-retailer ordering app", body: "Built with an AI coding assistant in one evening; real purchase orders two days later. 17 days idea to first delivery; growth verified incremental (52 of 53 retailers dormant pre-launch)." },
     { head: "WhatsApp sales agent — first working version", body: "Request handling, prompts, messaging, auth and a policy layer — 3,127 lines with a handover document in one sitting; productionised by the AI team." },
-    { head: "Discount-audit dashboard & courier cost model", body: "Flagged ₹60k of over-spec discounts; priced 3,534 shipments on billed rates to show the same traffic 40% cheaper." },
   ],
 
   education: [{ degree: "B.Tech, Computer Science", school: "Indian Institute of Information Technology (IIIT) Sonepat — mentor institute: IIT Delhi", meta: "2020 – 2024 · GPA 9.415 / 10" }],
