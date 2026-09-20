@@ -2,19 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
 import { profile } from "@/content/profile";
-import { heroMetrics, tier1, tier2, readMinutes } from "@/content/projects";
-import { FleetHero } from "@/components/FleetHero";
+import { heroMetrics, tier1, tier2, arc, method, THEMES, type WorkCard } from "@/content/projects";
 import { Reveal } from "@/components/Reveal";
 import { Section, Chip } from "@/components/Section";
-import { StatRail } from "@/components/StatRail";
-import { Spotlight } from "@/components/Spotlight";
-import { WorkSwitch } from "@/components/WorkSwitch";
+import { ProofStrip } from "@/components/ProofStrip";
+import { FlowStrip } from "@/components/FlowStrip";
+import { ArcChart } from "@/components/ArcChart";
+import { WorkGrid } from "@/components/WorkGrid";
 import { CopyButton } from "@/components/CopyButton";
-import { Rich } from "@/components/Rich";
-import { Tilt } from "@/components/Tilt";
-import { Magnetic } from "@/components/Magnetic";
 
-// Build-time check: drop headshot.jpg/png into public/ and it appears.
 function findHeadshot() {
   for (const f of ["headshot.jpg", "headshot.jpeg", "headshot.png", "headshot.webp"]) {
     if (fs.existsSync(path.join(process.cwd(), "public", f))) return `/${f}`;
@@ -22,170 +18,116 @@ function findHeadshot() {
   return null;
 }
 
+const toCard = (p: (typeof tier1)[number]): WorkCard => ({ slug: p.slug, title: p.title, short: p.short, themes: p.themes, headline: p.headline, period: p.period, tier: p.tier, cover: p.screens?.[0] });
+
 export default function Home() {
   const headshot = findHeadshot();
-  const cards = tier1.map((p) => ({
-    slug: p.slug, title: p.title, short: p.short, themes: p.themes, stack: p.stack, headline: p.headline, period: p.period,
-    teaser: p.lessons?.[0], cta: p.cta, readMin: readMinutes(p),
-  }));
 
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <FleetHero>
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 pt-14 sm:pt-20 md:grid-cols-[1.25fr_1fr]">
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 pb-12 pt-12 sm:pt-16 md:grid-cols-[1fr_auto] md:gap-12">
           <div>
-            <p className="rise flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted" style={{ animationDelay: "0ms" }}>
-              <span className="live-dot" />
-              {profile.role} · {profile.company}
-            </p>
-            <h1 className="mt-5 text-[46px] leading-[0.95] tracking-[-0.02em] sm:text-[68px]">
-              <span className="rise block font-light text-muted" style={{ animationDelay: "90ms" }}>
-                {profile.name.first}
-              </span>
-              <span className="rise block font-extrabold text-ink" style={{ animationDelay: "180ms" }}>
-                {profile.name.last}
-              </span>
+            <p className="rise font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-accent">{profile.role}</p>
+            <h1 className="rise mt-3 text-[38px] font-extrabold leading-[1.05] tracking-[-0.025em] text-ink sm:text-[54px]" style={{ animationDelay: "80ms" }}>
+              {profile.name.first} {profile.name.last}
             </h1>
-            <p className="rise mt-6 max-w-xl text-[17px] leading-relaxed text-muted sm:text-lg" style={{ animationDelay: "300ms" }}>
+            <p className="rise mt-5 max-w-2xl text-[19px] font-medium leading-snug text-ink sm:text-[22px]" style={{ animationDelay: "160ms" }}>
+              {profile.headline}
+            </p>
+            <p className="rise mt-4 max-w-2xl text-[15px] leading-relaxed text-muted" style={{ animationDelay: "220ms" }}>
               {profile.tagline}
             </p>
-            <div className="rise mt-8 flex flex-wrap gap-3" style={{ animationDelay: "400ms" }}>
-              <Magnetic>
-                <a href="#work" className="inline-block rounded-md bg-accent px-4 py-2 text-sm font-semibold text-accent-ink shadow-[0_10px_30px_-12px_var(--accent)] transition-transform hover:-translate-y-0.5">
-                  See the work
-                </a>
-              </Magnetic>
-              <Magnetic>
-                <Link href="/resume" className="inline-block rounded-md border border-line px-4 py-2 text-sm text-ink transition-colors hover:border-rule">
-                  Resume
-                </Link>
-              </Magnetic>
-              <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="rounded-md border border-line px-4 py-2 text-sm text-ink transition-colors hover:border-rule">
-                LinkedIn
+            <ul className="rise mt-5 flex flex-wrap gap-2" style={{ animationDelay: "280ms" }}>
+              {profile.facts.map((f) => (
+                <li key={f}><Chip>{f}</Chip></li>
+              ))}
+            </ul>
+            <div className="rise mt-7 flex flex-wrap gap-3" style={{ animationDelay: "340ms" }}>
+              <a href="#work" className="rounded-lg bg-accent px-4 py-2.5 text-[14px] font-semibold text-accent-ink transition-transform hover:-translate-y-0.5">
+                See the case studies
               </a>
-              <a href={profile.links.github} target="_blank" rel="noreferrer" className="rounded-md border border-line px-4 py-2 text-sm text-ink transition-colors hover:border-rule">
-                GitHub
+              <Link href="/resume" className="rounded-lg border border-line bg-surface px-4 py-2.5 text-[14px] font-medium text-ink transition-colors hover:border-rule">
+                Resume
+              </Link>
+              <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="rounded-lg border border-line bg-surface px-4 py-2.5 text-[14px] font-medium text-ink transition-colors hover:border-rule">
+                LinkedIn ↗
               </a>
             </div>
           </div>
 
-          <Tilt max={10} className="rise relative justify-self-center md:justify-self-end">
-            <div aria-hidden className="absolute -inset-3 -z-10 rotate-[-3deg] rounded-[32px] bg-accent-soft transition-transform duration-500 group-hover:rotate-[-5deg]" />
-            <div aria-hidden className="absolute -inset-3 -z-10 rotate-[3deg] rounded-[32px] border border-line" />
-            {headshot ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img data-fleet-anchor src={headshot} alt={`${profile.name.first} ${profile.name.last}`} width={288} height={288} className="h-60 w-60 rounded-[28px] border border-line object-cover object-top sm:h-72 sm:w-72" />
-            ) : (
-              <div data-fleet-anchor className="flex h-60 w-60 items-center justify-center rounded-[28px] border border-line bg-surface sm:h-72 sm:w-72">
-                <span className="serif-lesson text-6xl text-muted">SM</span>
-              </div>
-            )}
-          </Tilt>
+          {headshot ? (
+            <div className="rise justify-self-center md:justify-self-end" style={{ animationDelay: "200ms" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={headshot} alt={`${profile.name.first} ${profile.name.last}`} width={224} height={224} className="h-44 w-44 rounded-2xl border border-line object-cover object-top shadow-[0_20px_50px_-30px_rgba(15,23,42,0.5)] sm:h-56 sm:w-56" />
+            </div>
+          ) : null}
         </div>
-      </FleetHero>
+      </section>
 
-      <div className="mx-auto max-w-7xl space-y-24 px-5 pt-16">
-        {/* ── Headline numbers ─────────────────────────────────────────── */}
-        <StatRail items={heroMetrics} />
+      <div className="mx-auto max-w-6xl space-y-20 px-5 pt-10 sm:space-y-24">
+        {/* ── Proof ────────────────────────────────────────────────────── */}
+        <ProofStrip items={heroMetrics} />
 
-
-        {/* ── Hire me for ──────────────────────────────────────────────── */}
-        <Section id="hire" title="What I can be hired for" kicker="Six roles I am a fit for. Each one links to the case behind it.">
+        {/* ── Capabilities ─────────────────────────────────────────────── */}
+        <Section id="capabilities" title="What you can bank on" kicker="Six things I have done end to end, each with the number that proves it and the case behind it.">
           <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {profile.hire.map((h, i) => (
-              <Reveal key={h.role} as="li" delay={i * 0.05} className="">
-                <Link href={h.href} className="block h-full">
-                  <Spotlight className="h-full">
-                    <div className="flex h-full flex-col p-5">
-                      <div className="flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
-                        <span>0{i + 1}</span>
-                        <span className="text-accent">→ the case</span>
-                      </div>
-                      <h3 className="mt-2 text-[18px] font-semibold leading-snug text-ink">{h.role}</h3>
-                      <p className="mt-1.5 text-[15px] font-medium leading-snug text-ink">{h.line}</p>
-                      <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{h.proof}</p>
-                    </div>
-                  </Spotlight>
+            {profile.capabilities.map((c, i) => (
+              <Reveal key={c.title} as="li" delay={i * 0.04}>
+                <Link href={c.href} className="card card-hover group flex h-full flex-col p-5">
+                  <div className="flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
+                    <span>0{i + 1}</span>
+                    <span className="text-accent opacity-0 transition-opacity group-hover:opacity-100">→ case</span>
+                  </div>
+                  <div className="tnum mt-3 text-[24px] font-bold leading-none tracking-tight text-accent">{c.metric}</div>
+                  <h3 className="mt-2.5 text-[16px] font-semibold leading-snug text-ink">{c.title}</h3>
+                  <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{c.proof}</p>
                 </Link>
               </Reveal>
             ))}
           </ol>
         </Section>
 
-        {/* ── Intro + signals ──────────────────────────────────────────── */}
-        <Section id="about" title="Who I am">
-          <div className="grid gap-10 md:grid-cols-[1fr_1.2fr]">
-            <Reveal className="prose-tight text-[15.5px] leading-relaxed text-muted md:sticky md:top-24 md:self-start">
-              {profile.intro.map((p) => (
-                <p key={p.slice(0, 20)}>
-                  <Rich text={p} />
-                </p>
-              ))}
-            </Reveal>
-            <ol className="grid gap-3">
-              {profile.signals.map((s, i) => (
-                <Reveal key={s.title} as="li" delay={i * 0.05}>
-                  <Link href={s.href} className="block">
-                    <Spotlight>
-                      <div className="flex gap-4 p-4">
-                        <span className="mt-0.5 font-mono text-[11px] text-faint">0{i + 1}</span>
-                        <div className="min-w-0 flex-1">
-                          <h3 className="text-[15px] font-semibold text-ink">{s.title}</h3>
-                          <p className="mt-1 text-[13.5px] leading-relaxed text-muted">{s.body}</p>
-                          <div className="grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity] duration-400 group-hover:grid-rows-[1fr] group-hover:opacity-100">
-                            <div className="overflow-hidden">
-                              <span className="inline-block pt-2 font-mono text-[11px] text-accent">→ see the case</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </Spotlight>
-                  </Link>
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-        </Section>
-
-        {/* ── Selected work ────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Eleven cases. Scroll, and each one takes its turn on the right. Click any of them for the problem, how it worked, the numbers, and what I got wrong.">
+        {/* ── How I work ───────────────────────────────────────────────── */}
+        <Section id="method" title="How I work" kicker="The same four moves, every time. The cases below are this loop run on different numbers.">
           <Reveal>
-            <WorkSwitch items={cards} />
+            <FlowStrip nodes={method} numbered />
           </Reveal>
         </Section>
 
-        {/* ── More work ────────────────────────────────────────────────── */}
-        <Section id="more-work" title="Also shipped" kicker="Things I took end to end, including the ones that did not work.">
-          <ul className="divide-y divide-line rounded-xl border border-line bg-surface">
+        {/* ── The arc ──────────────────────────────────────────────────── */}
+        <Section id="arc" title="The business I ran product through" kicker="Orders a month on Badho's B2B marketplace, October 2025 to September 2026. Non-test buyers and sellers, from the production database.">
+          <Reveal>
+            <ArcChart
+              data={arc}
+              caption="I joined in November at 219 orders a month. The February model change was the founder's call; the growth to June — 26× — is what I ran product, growth and delivery through. The fall from June is the courier model's unit economics breaking at volume: a third of parcels coming back. That is what forced the September pivot to our own warehouse and fleet, and I owned its operating model."
+            />
+          </Reveal>
+        </Section>
+
+        {/* ── Case studies ─────────────────────────────────────────────── */}
+        <Section id="work" title="Case studies" kicker="Twelve cases. Each one: the problem, the diagnosis, the decision, the outcome — and what I would not claim.">
+          <Reveal>
+            <WorkGrid items={tier1.map(toCard)} themes={THEMES} />
+          </Reveal>
+        </Section>
+
+        {/* ── Also ─────────────────────────────────────────────────────── */}
+        <Section id="more-work" title="Also owned" kicker="The programme work underneath the cases, and one experiment that failed.">
+          <ul className="grid gap-3 sm:grid-cols-2">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>
-                <details className="group">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-4 px-5 py-4 [&::-webkit-details-marker]:hidden">
-                    <div>
-                      <h3 className="text-[15px] font-semibold text-ink">{p.title}</h3>
-                      <p className="mt-1 text-[13.5px] text-muted">{p.short}</p>
-                    </div>
-                    <div className="flex shrink-0 flex-col items-end gap-1">
-                      {p.headline.slice(0, 1).map((m) => (
-                        <span key={m.label} className="font-mono text-[13px] text-ink">{m.value}</span>
-                      ))}
-                      <span className="font-mono text-[16px] leading-none text-faint transition-transform group-open:rotate-45">+</span>
-                    </div>
-                  </summary>
-                  <div className="px-5 pb-5 text-[14px] leading-relaxed text-muted">
-                    {p.detail?.map((d) => (
-                      <p key={d.slice(0, 16)} className="mt-3 first:mt-0">
-                        <Rich text={d} />
-                      </p>
-                    ))}
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {p.stack.map((s) => (
-                        <Chip key={s}>{s}</Chip>
-                      ))}
-                    </div>
+                <Link href={`/work/${p.slug}`} className="card card-hover group flex h-full items-start justify-between gap-4 p-5">
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-semibold leading-snug text-ink group-hover:text-accent">{p.title}</h3>
+                    <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{p.short}</p>
                   </div>
-                </details>
+                  <div className="shrink-0 text-right">
+                    <div className="tnum text-[16px] font-bold text-ink">{p.headline[0].value}</div>
+                    <div className="mt-0.5 max-w-[120px] text-[10.5px] leading-tight text-muted">{p.headline[0].label}</div>
+                  </div>
+                </Link>
               </Reveal>
             ))}
           </ul>
@@ -195,15 +137,15 @@ export default function Home() {
         <Section id="experience" title="Experience">
           <ol className="relative ml-2 border-l border-line pl-7">
             {profile.experience.map((e, i) => (
-              <Reveal key={e.role + e.org} as="li" delay={i * 0.05} className="relative pb-10 last:pb-0">
-                <span className="timeline-dot absolute -left-[35px] top-1.5 h-3 w-3 rounded-full bg-accent" />
+              <Reveal key={e.role + e.org} as="li" delay={i * 0.04} className="relative pb-8 last:pb-0">
+                <span className="absolute -left-[35px] top-1.5 h-3 w-3 rounded-full border-2 border-bg bg-accent" />
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="text-[16px] font-semibold text-ink">
-                    {e.role} <span className="text-muted">· {e.org}</span>
+                    {e.role} <span className="font-normal text-muted">· {e.org}</span>
                   </h3>
                   <span className="font-mono text-[11.5px] text-faint">{e.period}</span>
                 </div>
-                <ul className="mt-3 space-y-1.5 text-[14px] leading-relaxed text-muted">
+                <ul className="mt-2.5 space-y-1.5 text-[14px] leading-relaxed text-muted">
                   {e.bullets.map((b) => (
                     <li key={b.slice(0, 24)} className="flex gap-2.5">
                       <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-faint" />
@@ -215,26 +157,37 @@ export default function Home() {
             ))}
           </ol>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 md:grid-cols-[1fr_2fr]">
             <Reveal>
-              <h3 className="mb-3 font-mono text-[11px] uppercase tracking-[0.16em] text-faint">Education</h3>
-              <ul className="space-y-3">
+              <div className="card h-full p-5">
+                <h3 className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">Education</h3>
                 {profile.education.map((ed) => (
-                  <li key={ed.degree} className="rounded-lg border border-line bg-surface p-4">
+                  <div key={ed.degree} className="mt-3">
                     <div className="text-[15px] font-semibold text-ink">{ed.degree}</div>
-                    <div className="text-[13.5px] text-muted">{ed.school}</div>
+                    <div className="mt-0.5 text-[13.5px] text-muted">{ed.school}</div>
                     <div className="mt-1 font-mono text-[11.5px] text-faint">{ed.period} · {ed.note}</div>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </Reveal>
-            <Reveal delay={0.08}>
-              <h3 className="mb-3 font-mono text-[11px] uppercase tracking-[0.16em] text-faint">Skills</h3>
-              <div className="rounded-lg border border-line bg-surface p-4">
-                <div className="text-[12px] font-semibold text-muted">Product</div>
-                <div className="mt-2 flex flex-wrap gap-1.5">{profile.skills.core.map((s) => <Chip key={s}>{s}</Chip>)}</div>
-                <div className="mt-4 text-[12px] font-semibold text-muted">Growth & go-to-market</div>
-                <div className="mt-2 flex flex-wrap gap-1.5">{profile.skills.growth.map((s) => <Chip key={s} tone="accent">{s}</Chip>)}</div>
+            <Reveal delay={0.06}>
+              <div className="card h-full p-5">
+                <h3 className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">Skills</h3>
+                <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                  {(
+                    [
+                      ["Product", profile.skills.product],
+                      ["Growth & analytics", profile.skills.growth],
+                      ["Commercial", profile.skills.commercial],
+                      ["Technical", profile.skills.technical],
+                    ] as const
+                  ).map(([h, list]) => (
+                    <div key={h}>
+                      <div className="text-[12px] font-semibold text-ink">{h}</div>
+                      <div className="mt-1.5 flex flex-wrap gap-1.5">{list.map((s) => <Chip key={s}>{s}</Chip>)}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>
@@ -243,25 +196,23 @@ export default function Home() {
         {/* ── Contact ──────────────────────────────────────────────────── */}
         <Section id="contact" title="Contact">
           <Reveal>
-            <div className="rounded-xl border border-line bg-surface p-6 sm:p-8">
-              <p className="serif-lesson text-2xl text-ink sm:text-3xl">If a number in your business is going the wrong way and nobody has worked out why, that is the work I do.</p>
+            <div className="card p-6 sm:p-8">
+              <p className="max-w-2xl text-[20px] font-semibold leading-snug text-ink sm:text-[24px]">
+                If a number in your business is going the wrong way and nobody has worked out why, that is the work I do.
+              </p>
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
-                <a href={`mailto:${profile.email}`} className="font-mono text-[15px] text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
-                  {profile.email}
-                </a>
-                <CopyButton text={profile.email} label="Copy email" />
+                <a href={`mailto:${profile.email}`} className="font-mono text-[15px] text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">{profile.email}</a>
+                <CopyButton text={profile.email} label="Copy" />
               </div>
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-                <a href={`tel:${profile.phone.replace(/-/g, "")}`} className="font-mono text-[15px] text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">
-                  {profile.phone}
-                </a>
-                <CopyButton text={profile.phone} label="Copy number" />
+              <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2">
+                <a href={`tel:${profile.phone.replace(/-/g, "")}`} className="font-mono text-[15px] text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent">{profile.phone}</a>
+                <CopyButton text={profile.phone} label="Copy" />
               </div>
-              <div className="mt-5 flex flex-wrap gap-3 text-sm">
-                <a className="rounded-md border border-line px-3 py-1.5 text-ink hover:border-rule" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-                <a className="rounded-md border border-line px-3 py-1.5 text-ink hover:border-rule" href={profile.links.github} target="_blank" rel="noreferrer">GitHub</a>
-                <Link className="rounded-md border border-line px-3 py-1.5 text-ink hover:border-rule" href="/resume">Web resume</Link>
-                <a className="rounded-md border border-line px-3 py-1.5 text-ink hover:border-rule" href={profile.resumeHref}>Resume (PDF)</a>
+              <div className="mt-5 flex flex-wrap gap-2.5 text-[13.5px]">
+                <a className="rounded-lg border border-line px-3 py-1.5 font-medium text-ink hover:border-rule" href={profile.links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+                <a className="rounded-lg border border-line px-3 py-1.5 font-medium text-ink hover:border-rule" href={profile.links.github} target="_blank" rel="noreferrer">GitHub</a>
+                <Link className="rounded-lg border border-line px-3 py-1.5 font-medium text-ink hover:border-rule" href="/resume">Web resume</Link>
+                <a className="rounded-lg border border-line px-3 py-1.5 font-medium text-ink hover:border-rule" href={profile.resumeHref}>Resume (PDF)</a>
               </div>
             </div>
           </Reveal>

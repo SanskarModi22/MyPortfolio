@@ -12,7 +12,7 @@ function subscribe(cb: () => void) {
   return () => mo.disconnect();
 }
 const getSnapshot = (): Theme => (document.documentElement.dataset.theme === "dark" ? "dark" : "light");
-const getServerSnapshot = (): Theme => "dark";
+const getServerSnapshot = (): Theme => "light";
 
 export function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);

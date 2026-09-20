@@ -1,29 +1,21 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { NeuralField } from "@/components/NeuralField";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { profile } from "@/content/profile";
 import "./globals.css";
 
-const nunito = Nunito_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-nunito",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "500"],
-});
-
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: "400",
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sanskarmodi22.vercel.app";
@@ -43,20 +35,21 @@ export const metadata: Metadata = {
   },
 };
 
-// Runs before paint so the page never flashes the wrong theme. Dark is the default; a stored choice wins.
+// Runs before paint so the page never flashes the wrong theme. A stored choice
+// wins; otherwise follow the system preference; otherwise light.
 const themeScript = `
 (function(){try{var s=localStorage.getItem('theme');
-var t=s==='light'||s==='dark'?s:'dark';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='dark'}})();
+var m=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+var t=s==='light'||s==='dark'?s:(m?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light'}})();
 `;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${nunito.variable} ${mono.variable} ${serif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-dvh flex flex-col">
-        <NeuralField />
         <ScrollProgress />
         <div className="relative z-10 flex min-h-dvh flex-col">
           <Nav />
