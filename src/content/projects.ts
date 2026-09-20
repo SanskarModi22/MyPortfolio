@@ -10,7 +10,7 @@ export type FlowKind = "problem" | "diagnosis" | "decision" | "outcome" | "step"
 export type FlowNode = { kind: FlowKind; title: string; body: string };
 
 export type ScreenKind = "phone" | "kiosk" | "desktop" | "photo";
-export type Screen = { src: string; kind: ScreenKind; alt: string; caption: string };
+export type Screen = { src: string; kind: ScreenKind; alt: string; caption: string; tag?: "before" | "after" };
 
 export type Project = {
   slug: string;
@@ -183,9 +183,11 @@ export const projects: Project[] = [
     period: "Mar – Sep 2026 · Badho",
     stack: ["Onboarding", "Unified cart", "Home rebuild", "Language routing", "Catalogue", "Support tab", "Notifications"],
     screens: [
-      { src: "/screens/ob-number.webp", kind: "phone", alt: "Old onboarding, step 1: phone number and language", caption: "Before, step 1: phone number — and a language question before the buyer has seen a single product" },
-      { src: "/screens/ob-otp.webp", kind: "phone", alt: "Old onboarding, step 2: OTP typed by hand", caption: "Before, step 2: the OTP typed by hand — four boxes, a countdown, a keypad. Now auto-read" },
-      { src: "/screens/ob-form.webp", kind: "phone", alt: "Old onboarding, step 3: the profile form", caption: "Before, step 3: the profile form after OTP. 21,064 people abandoned it in three weeks. Deleted — completion 30% → 94%" },
+      { src: "/screens/ob-number.webp", kind: "phone", tag: "before", alt: "Old onboarding, step 1: phone number and language", caption: "Step 1: phone number — and a language question before the buyer has seen a single product" },
+      { src: "/screens/ob-otp.webp", kind: "phone", tag: "before", alt: "Old onboarding, step 2: OTP typed by hand", caption: "Step 2: the OTP typed by hand — four boxes, a countdown, a keypad" },
+      { src: "/screens/ob-form.webp", kind: "phone", tag: "before", alt: "Old onboarding, step 3: the profile form", caption: "Step 3: the profile form after OTP. 21,064 people abandoned it in three weeks" },
+      { src: "/screens/af-otp.webp", kind: "phone", tag: "after", alt: "New onboarding: OTP read automatically", caption: "The OTP reads itself in — no keypad, no tap" },
+      { src: "/screens/af-home.webp", kind: "phone", tag: "after", alt: "New onboarding: straight to the home screen", caption: "Then straight to the home screen. No form. Registration completion 30% → 94%" },
       { src: "/screens/plg-home-before.webp", kind: "phone", alt: "Buyer app home before 18 July", caption: "Home before 18 Jul: icon rail, ₹1 Deal, promotional banners" },
       { src: "/screens/plg-home-after.webp", kind: "phone", alt: "Buyer app home after the rebuild", caption: "Home after the rebuild: coupons fold, category tabs, cart strip" },
     ],
