@@ -130,7 +130,7 @@ export const projects: Project[] = [
   {
     slug: "whatsapp-channel",
     title: "Built WhatsApp into an acquisition channel at ₹9.60 per install",
-    short: "Audience model, template economics, in-house sending and attribution — built from zero, then the recommendation to stop the spend.",
+    short: "Audience model, template economics, in-house sending and attribution — built from zero.",
     lede: "Growth. I owned the channel end to end: audience, cost, sending stack, measurement.",
     tier: 1,
     themes: ["Growth", "Unit economics", "Built it myself"],
