@@ -101,7 +101,7 @@ export default function Home() {
           <Reveal>
             <ArcChart
               data={arc}
-              caption="I joined in November at 219 orders a month and ran product, growth and delivery through the climb to June — 26× — then owned the operating model for the September pivot to our own warehouse and fleet."
+              caption="I joined in November at 219 orders a month and ran product, growth and delivery through the climb to June, 26 times November, then owned the operating model for the September pivot to our own warehouse and fleet."
             />
           </Reveal>
         </Section>

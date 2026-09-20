@@ -223,7 +223,7 @@ export function Diagram({ spec, title }: { spec: DiagramSpec; title?: string }) 
               {pinned ? <span className="ml-2 font-mono text-[10.5px] text-faint">(pinned · click again to release)</span> : null}
             </>
           ) : (
-            <span className="text-faint">Hover or tap a component to see what it does — and why it exists.</span>
+            <span className="text-faint">Hover or tap a component to see what it does and why it exists.</span>
           )}
         </div>
         <ul className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10.5px] text-faint sm:max-w-[260px] sm:justify-end">

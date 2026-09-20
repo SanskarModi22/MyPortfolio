@@ -56,7 +56,7 @@ export const profile = {
     },
     {
       title: "Build the product",
-      proof: "A self-ordering kiosk product across 19 Taco Bell stores — offers, flows, WhatsApp bills, loyalty, payments — plus a custom cake app and a partner ordering app I wrote myself.",
+      proof: "A self-ordering kiosk product across 19 Taco Bell stores, plus a custom cake app and a partner ordering app I wrote myself.",
       metric: "₹4.19 Cr",
       href: "/work/ono-product",
     },
@@ -80,7 +80,7 @@ export const profile = {
         "Ran the buyer-app growth roadmap: registration completion 30% → 94%; 99% of order flow onto a unified cart in a week.",
         "Built the WhatsApp channel from zero: ₹9.60 per install across 29,172 buyers on a seven-cohort audience model over 1.17 M people.",
         "Joint product owner of a delivery service sold to our own distributors: 137 → 634 truck-days a month, ₹18.95 Cr of goods moved.",
-        "Ran the release gate for three apps — 242 versions, 805 of 1,613 code changes shipped, bug inflow 114 → near zero — and wrote the most specifications in the company: 489 of 1,585 tickets, 192 requirement documents.",
+        "Ran the release gate for three apps, 242 versions, 805 of 1,613 code changes shipped, bug inflow 114 → near zero, and wrote the most specifications in the company: 489 of 1,585 tickets, 192 requirement documents.",
       ],
     },
     {
