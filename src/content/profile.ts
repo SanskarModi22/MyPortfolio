@@ -98,7 +98,7 @@ export const profile = {
       bullets: [
         "Authored the pricing architecture (subscription vs ownership buyout, per kiosk / store / chain) and commercials for seven restaurant brands.",
         "Ran the Herfy account in Saudi Arabia: 79 live kiosks, three consecutive renewals, a withholding-tax dispute settled at a 17.65% gross-up.",
-        "Cold-pitched, priced and delivered DOKA — a custom ordering app for a nine-branch Riyadh bakery — to Apple approval, at ~$7,000.",
+        "Product-managed DOKA, a custom ordering app for a nine-branch Riyadh bakery with a design-your-own-cake flow, from prototype to App Store approval.",
         "Single point of contact for Taco Bell India's 34-kiosk estate across 19 malls, with weekly client reporting.",
       ],
     },

@@ -72,7 +72,7 @@ export const resume = {
       bullets: [
         "Authored the pricing architecture — subscription vs ownership buyout, priced per kiosk, per store and per chain — and the commercials for seven restaurant brands including Herfy, Mad Over Donuts and Pizza Wings.",
         "Ran the Herfy account (Saudi Arabia) single-handed: **79 live kiosks, three consecutive renewals**, a price rise negotiated on absolute change, a 15% withholding-tax dispute settled at a 17.65% gross-up.",
-        "Cold-pitched, priced and delivered DOKA Bakery House (Riyadh, nine branches) — a custom ordering app with a five-step cake configurator — **signed at ~$7,000 and approved for iOS release** with one developer.",
+        "Product-managed DOKA Bakery House's ordering app (Riyadh, nine branches) from prototype to **App Store approval**: two order flows, a five-step design-your-own-cake configurator with live pricing, scheduled delivery, card and Apple Pay, kitchen-fed order tracking, Arabic and English — pitched with a prototype I built and won at ~$7,000.",
         "Product-managed the self-ordering kiosk: specified the offer engine (₹1 add-ons, buy-one-get-N), dine-in/take-away flows, WhatsApp e-bills, loyalty and coupon rules, payment-delay enforcement and four point-of-sale integrations; ran promotions on it; produced the weekly client report on **₹4.19 Cr of kiosk sales across 19 Taco Bell stores and 34 kiosks**.",
       ],
     },
