@@ -46,13 +46,13 @@ export const resume = {
       bullets: [
         "Designed the CM1/CM2/CM3 cascade for a B2B marketplace and took **CM1 from −26% to +11.5% of order value** in six months: delivery cost 46% → under 1%, discounts 15.1% → 5.3%, commission taken 12.7% → 19.4%.",
         "Drove the fulfilment programme: return-to-origin **42.6% → 21.4%**, fulfilment **22% → 64%** on 4× volume; specified 34 of 42 fulfilment features incl. automated courier weight-claim recovery (378 claims in 24 h).",
-        "Owned the operating model for the pivot to own-warehouse distribution, from warehouse and software spec to cutover: **written plan to first delivery in 12 days**; carts per day 4.5 → 45.5 once per-brand minimums came off.",
+        "Owned the operating model for the pivot to own-warehouse distribution, from warehouse and software spec to cutover: **written plan to first delivery in 12 days**; carts a day 114 → 199 and order value +23.5% once per-brand minimums came off.",
         "Ran the buyer-app growth roadmap: **registration completion 30% → 94%** by removing the signup form and OTP step; **99% of order flow onto a unified multi-seller cart in one week**, orders per active buyer +41%.",
         "Built the WhatsApp acquisition channel from zero, an audience model over 1.17 M buyers and two message-cost decisions worth ~7× and 21%, to **29,172 buyers at ₹9.60 per install**; found and fixed the attribution error that hid 78% of the channel's buyers.",
         "Shipped and measured four pricing experiments: item-level quantity coupons lifted **AOV +10.5% at ~8× on the incremental discount rupee**; a 37-minute config change cut coupon spend 45.7% with orders flat; built the discount-audit dashboard.",
         "Measured every retention scheme against repeat orders and re-pointed the budget: gift qualifiers re-ordered at **50% vs 19%**; a ₹4.57 Cr credit run was used by 0.06%; referrals activated 6.7× better on 3.9× less GMV per signup.",
         "Joint product owner of a delivery-as-a-service business sold to our own distributors, with truck-day pricing, invoice-photo order entry, two-party handover and same-day cash: **137 → 634 truck-days a month, 17,174 deliveries, ₹18.95 Cr of goods moved**.",
-        "Ran the release gate for three apps from one monorepo, **242 versions, 805 of 1,613 pull requests merged, 204 of 204 release merges**, monthly bug inflow 114 → near zero, and wrote the most specifications in the company: **489 of 1,585 tickets, 192 requirement documents**; programme-managed 11 epics for the four-person AI team that put 20 systems live.",
+        "Owned every release of three apps from one codebase, **242 versions, monthly bug inflow 114 → near zero**, and wrote the most specifications in the company, **489 tickets and 192 requirement documents**; programme-managed 11 epics for the four-person AI team that put 20 systems live.",
       ],
     },
     {

@@ -95,7 +95,7 @@ export const projects: Project[] = [
   // ── 02 ────────────────────────────────────────────────────────────────
   {
     slug: "jit-pivot",
-    title: "Found the arithmetic behind a retention stall and owned the pivot that followed",
+    title: "Found why buyers were not coming back, then led the pivot to our own warehouse and fleet",
     short: "Retention looked like a messaging problem. It was three per-brand minimums on one cart. Naming it moved the company to its own warehouse and fleet.",
     lede: "I found the cause, wrote the operating model and owned the launch. Written plan to first delivery in 12 days.",
     tier: 1,
@@ -111,15 +111,15 @@ export const projects: Project[] = [
     ],
     cover: { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed orders at the warehouse", caption: "" },
     headline: [
-      { value: "3 → 0", label: "minimum order values on one basket" },
+      { value: "+23.5%", label: "order value in Delhi and Gurugram after launch", note: "matched three-week windows" },
       { value: "12 days", label: "written plan to first delivery", note: "engineering started 29 Jul, plan 24 Aug, first order 5 Sep" },
-      { value: "4.5 → 45.5", label: "carts a day in Delhi–Gurgaon", note: "before and after the minimum came off" },
+      { value: "114 → 199", label: "carts a day in Delhi and Gurugram", note: "matched three-week windows, before and after the minimums came off" },
     ],
     flow: [
       { kind: "problem", title: "Buyers we paid to acquire were not coming back", body: "Fewer than one in ten new shopkeepers ordered again the following month, and months of retention campaigns had not moved that figure. Badho paid to acquire every buyer, so a buyer who never returned was acquisition money spent for nothing. Retention was the whole business case, and nobody had found the cause." },
       { kind: "diagnosis", title: "It was arithmetic", body: "Every brand on the marketplace set its own minimum order value, and a shopkeeper's cart usually held several brands. ₹300 of oil, ₹300 of rice and ₹300 of spices made a ₹900 basket, and it was blocked three separate times by three separate ₹300 minimums. The buyer was not lapsing. The cart was refusing him." },
       { kind: "decision", title: "One seller, one minimum, then none", body: "The fix had to be structural: make Badho the single seller. Buy the stock from the brands ourselves, hold it in our own warehouse and deliver it with our own vans, so there is one minimum and then none at all, replaced by a flat ₹75 delivery fee waived above ₹500. I wrote the operating model, from the warehouse layout to the software each step needed, and owned the launch." },
-      { kind: "outcome", title: "Ten times the carts a day", body: "The written plan reached its first delivery in twelve days. Carts per day in the launch region rose from 4.5 to 45.5, and order value rose 23.5% on matched three-week windows. A marketplace that had put three minimum order values on one basket now had none." },
+      { kind: "outcome", title: "Twelve days to the first delivery, then more and bigger carts", body: "The written plan reached its first delivery in twelve days. Carts a day in Delhi and Gurugram rose from 114 to 199 on matched three-week windows, and order value rose 23.5%. A marketplace that had put three minimum order values on one basket now had none." },
     ],
     changes: [
       "Wrote the operating plan: how the warehouse is laid out, how stock is received, picked, packed and dispatched, what happens when a brand sends less than ordered, and what software each step needed.",
@@ -129,9 +129,9 @@ export const projects: Project[] = [
       "Ordered from the brands every night for the next morning, one order per brand, so we never held stock.",
     ],
     metrics: [
-      { value: "114 → 199", label: "carts a day, Delhi and Gurgaon", note: "matched 21-day windows" },
-      { value: "+23.5%", label: "order value in the launch region", note: "matched 21-day windows" },
-      { value: "45.7%", label: "of JIT baskets cleared the ₹500 waiver" },
+      { value: "3 → 0", label: "minimum order values on one basket", note: "one flat ₹75 delivery fee instead, waived above ₹500" },
+      { value: "12 steps", label: "in the operating plan, from the 6 PM cutoff to the shop door", note: "with the software each step needed" },
+      { value: "50 a day", label: "orders two vans can carry: the capacity the launch was planned to", note: "marketing spend was the lever that kept orders inside it" },
     ],
     takeaways: ["Look for the arithmetic before you look for a campaign.", "Set a threshold from the distribution."],
   },
@@ -140,7 +140,7 @@ export const projects: Project[] = [
   {
     slug: "whatsapp-channel",
     title: "Built WhatsApp into an acquisition channel at ₹9.60 per install",
-    short: "I built WhatsApp into Badho's acquisition and reactivation channel from zero: the audience model, the template economics, the sending stack and the attribution.",
+    short: "WhatsApp as Badho's acquisition and reactivation channel, built from zero: who we message, what each message costs, and what it earns.",
     lede: "I owned the channel end to end: who we messaged, what it cost, and what it earned.",
     tier: 1,
     themes: ["Growth", "Unit economics", "Built it myself"],
@@ -154,13 +154,13 @@ export const projects: Project[] = [
     headline: [
       { value: "₹9.60", label: "cost per app install", note: "₹1.87 L spend, 19,534 installs, June 2026" },
       { value: "29,172", label: "buyers acquired in a month" },
-      { value: "₹13.7 L", label: "order value on the same-day rule", note: "same-day attribution window" },
+      { value: "2.60×", label: "return on spend, same-day attribution", note: "647 orders, ₹4.88 L of order value, June 2026" },
     ],
     flow: [
       { kind: "problem", title: "1.17 million shopkeepers we could not reach", body: "They had signed up, installed the app or ordered once, then gone quiet: the cheapest buyers to win back and the largest asset the company had. The only way to reach them was the app's push notifications, and push was not reaching them: over ninety days, half of 206 million sends never arrived on a phone, and 0.33% of the rest were opened. We needed a channel that reliably reached the phone." },
       { kind: "diagnosis", title: "WhatsApp reaches every shopkeeper, if it is run as a system", body: "Every kirana owner is on WhatsApp all day, so the channel was obvious. Running it well was not. Sending to a million people without an audience model means messaging shopkeepers we cannot deliver to, paying marketing prices for transactional messages, and paying a vendor a cut on every one. Done naively, WhatsApp would burn money faster than push had." },
       { kind: "decision", title: "Build the channel as a system", body: "I sorted all 1.17 million buyers into seven groups so that every person got exactly one kind of message and nobody outside our delivery area got any. Order updates went out at WhatsApp's transactional rate, about a seventh of the marketing rate. And we stopped paying a middleman to send: doing it ourselves cut the cost of every message by a fifth." },
-      { kind: "outcome", title: "₹9.60 per install", body: "In June the channel acquired 29,172 buyers at ₹9.60 per app install and produced ₹13.7 lakh of orders on a same-day attribution rule, a 2.60× return on spend. The unit economics became a standing rule for the channel: spend continues while the return clears the take-rate breakeven." },
+      { kind: "outcome", title: "₹9.60 per install", body: "In June the channel acquired 29,172 buyers at ₹9.60 per app install and produced ₹4.88 lakh of orders on a same-day attribution rule, a 2.60× return on spend. The unit economics became a standing rule for the channel: spend continues while the return clears the take-rate breakeven." },
     ],
     changes: [
       "Sorted all 1,167,517 buyers into seven groups, from a live cart to a lapsed buyer, so every person got one right message and nobody we could not deliver to got any.",
@@ -171,8 +171,8 @@ export const projects: Project[] = [
       "Wrote the first working version of a WhatsApp sales assistant that takes a shopkeeper's order in chat, in one sitting, with the handover document the team built on.",
     ],
     metrics: [
-      { value: "₹1.87 L → ₹1.57 L", label: "monthly spend, June to July" },
-      { value: "647 → 251", label: "orders credited, same-day rule" },
+      { value: "1.17 M", label: "buyers sorted into seven audience groups", note: "so nobody outside the delivery area got a message" },
+      { value: "647", label: "orders credited in June on the same-day rule", note: "an order counts only if it followed a message that day" },
       { value: "3.3% → 10.8%", label: "WhatsApp buyers who ordered", note: "June against September" },
       { value: "₹0.145 → ₹0.115", label: "cost per message once we sent it ourselves" },
       { value: "50% / 0.33%", label: "of push sends that reached a phone / of those that were opened", note: "why a new channel was needed" },
@@ -232,7 +232,7 @@ export const projects: Project[] = [
   {
     slug: "move-it-daas",
     title: "Built a delivery service that distributors book by the truck-day",
-    short: "A distributor books a truck for the day, photographs his invoices, and the service does the rest: the route, the drops, the proof, the cash, and the money in his bank the same day. Bookings went from 137 to 634 truck-days a month.",
+    short: "A distributor books a truck for the day and photographs his invoices. The service does the route, the drops, the proof and the cash, and pays him the same day. Bookings grew from 137 to 634 truck-days a month.",
     lede: "Joint product owner with Aditya Kumar. I owned the operating model and how the two apps behave; we shared the commercial side.",
     tier: 1,
     themes: ["Strategy", "Go-to-market", "Unit economics"],
@@ -261,7 +261,7 @@ export const projects: Project[] = [
       { kind: "problem", title: "A distributor pays for his truck whether it moves or not", body: "An FMCG distributor owns trucks and employs drivers to move goods from his warehouse to the shops around him, and the bill arrives every month whether goods moved or not: the driver's salary, the vehicle instalment, fuel, repairs, insurance and the capital parked in the vehicle, ₹53,500 to ₹64,500 a month for one truck. Demand swings with festivals, so a fleet big enough for the season sits idle for months. Every distributor on Badho's marketplace carried this cost, and nobody was selling him a truck for only the days it moved." },
       { kind: "diagnosis", title: "He wanted the truck cost gone, and nobody could get past his paperwork", body: "The distributor did not want software; he wanted to stop paying for a truck on the days he did not sell. And the reason no delivery company had served him was paperwork: his orders lived on paper invoices, and every competitor asked him to integrate his accounting system first, which ended the conversation at the first meeting. The product had to sell the day, not the truck, and it had to start from a photograph of an invoice." },
       { kind: "decision", title: "A delivery service booked by the day, run from the invoice", body: "An eight-hour truck duty, booked up to seven days ahead at ₹1,400 to ₹2,000, nothing paid on idle days, Badho carrying the fleet risk. A seller app to book the truck and photograph the invoices; a driver app that turns them into a route, proves every drop and collects the cash; settlement to the distributor's bank the same day. I co-owned the product with Aditya Kumar: the operating model, how the two apps behave, what counts as a failed drop, how cash is held, and the commercial pitch." },
-      { kind: "outcome", title: "Ten times the bookings, sixty distributors paying", body: "Truck-days booked rose from 137 a month in February to 634 in July, 3,016 in all, with 17,174 deliveries to 7,363 shops, ₹18.95 crore of goods moved, 85% of drops delivered first time, and 60 distributors paying. When Badho became its own distributor in September, that business booked its deliveries on this fleet too." },
+      { kind: "outcome", title: "Bookings up 4.6× in five months, sixty distributors paying", body: "Truck-days booked rose from 137 a month in February to 634 in July, 3,016 in all, with 17,174 deliveries to 7,363 shops, ₹18.95 crore of goods moved, 85% of drops delivered first time, and 60 distributors paying. When Badho became its own distributor in September, that business booked its deliveries on this fleet too." },
     ],
     features: [
       { title: "Book a truck by the day", body: "In the seller app the distributor picks a date up to seven days ahead, a vehicle class, a three-wheeler at ₹1,602 or a four-wheeler at ₹2,000, and how many he needs. No lease, no fixed cost, nothing on the days he does not sell." },
@@ -282,7 +282,6 @@ export const projects: Project[] = [
       { value: "9 h vs 5 days", label: "own fleet vs courier, full round", note: "the courier leg alone averaged 5.02 days" },
       { value: "89% / 85%", label: "delivered eventually / first time" },
       { value: "₹21.5 L on ₹18.95 Cr", label: "fee income on goods moved", note: "a take of about 1.1%" },
-      { value: "41% → 7%", label: "on-time pickup as volume tripled; found in the trip logs and made the next priority", note: "May to September" },
       { value: "19 truck-days", label: "booked by Badho's own JIT business in September", note: "the sister business paid the same price" },
     ],
     solved: [
@@ -291,14 +290,14 @@ export const projects: Project[] = [
       "Solved: the paperwork barrier. Orders entered from photographs; no integration, no typing during the morning loading rush.",
       "Solved: cash reconciliation. Money in the distributor's own bank the same day, matched to the bills, by whoever did the handover.",
       "Solved: the sale itself. The pitch was about his money, not our software: a trip on his truck against a trip on ours over 22 delivery days. A claim he could check himself.",
-      "Found what no report showed, on-time pickup slipping from 41% to 7% as volume tripled, by going through the trip logs, and made punctuality the next priority.",
+      "Found, in the trip logs, that pickup punctuality was slipping as volume tripled, and made it the next priority before any report showed it.",
     ],
     takeaways: ["Meet the customer at the paper.", "Measure the promise, not only the volume."],
   },
   {
     slug: "milkoreach",
     title: "Built MilkoReach, a direct-to-retailer channel for a cattle-feed brand",
-    short: "Kapila's feed retailers had stopped ordering because a small order was not worth the transport for either side. I designed a channel that took transport off both, built the first ordering app myself, then moved the flow into the buyer app. Seventeen days from idea to first delivery, and the growth was verifiably new.",
+    short: "Kapila's feed retailers had stopped ordering because a small order was not worth the transport for either side. I designed a channel that took transport off both, built the first ordering app myself, then moved the flow into the buyer app. Seventeen days from idea to first delivery.",
     lede: "I owned it end to end, from the commercial design to the measurement, and wrote the first app myself.",
     tier: 2,
     themes: ["Strategy", "Go-to-market", "Built it myself"],
@@ -342,12 +341,10 @@ export const projects: Project[] = [
     ],
     metricsTitle: "How the channel performed",
     metrics: [
-      { value: "68 → 12", label: "orders placed → delivered", note: "the funnel, with where it leaked diagnosed" },
       { value: "₹95 / bag", label: "spread between factory rate and retailer price", note: "free delivery took about half of it" },
       { value: "70%", label: "of orders exactly on the half-tonne floor", note: "the floor was set where the buyer actually was" },
       { value: "3×", label: "order flow when opened to every distributor within 40 km" },
-      { value: "22%", label: "of ordered value exposed to retailer credit, the constraint to fix" },
-      { value: "18 of 42", label: "commits in the first app's repository are mine" },
+      { value: "22%", label: "of ordered value on retailer credit: the constraint I specified the fix for" },
     ],
     solved: [
       "Solved: a retailer can order half a tonne at factory rate without arranging a vehicle or calling anyone.",
@@ -455,7 +452,7 @@ export const projects: Project[] = [
   },
   {
     slug: "doka",
-    title: "Built a custom ordering app with a design-your-own-cake flow for a nine-branch bakery",
+    title: "Shipped a bakery chain's ordering app, with a design-your-own-cake flow, to the App Store",
     short: "DOKA's customers order ready-made cakes for delivery, pickup or dine-in, or design a cake step by step and watch it drawn and priced as they choose. Arabic and English, card or Apple Pay, tracked from the store's own kitchen.",
     lede: "Product manager for the app from the first prototype to App Store approval: the flows, the configurator, the rules, the content and the integrations.",
     tier: 1,
@@ -529,7 +526,7 @@ export const projects: Project[] = [
   {
     slug: "ono-gtm",
     title: "Ran go-to-market for a restaurant-tech company for a year",
-    short: "Outbound for a self-ordering kiosk company: a funnel of 118 parent restaurant chains reviewed every week, 37 introductory calls on the founder's calendar, 26 partnership conversations, 11 channels tested. The funnel was large and the conversion small.",
+    short: "Outbound for a self-ordering kiosk company: a funnel of 118 parent restaurant chains reviewed every week, 37 introductory calls on the founder's calendar, 26 partnership conversations, 11 channels tested.",
     lede: "I built and ran the funnel, booked and sat in the meetings, tested the channels and wrote every follow-up. Full-time, January 2024 to February 2025.",
     tier: 2,
     themes: ["Go-to-market", "Strategy"],
@@ -541,10 +538,10 @@ export const projects: Project[] = [
       { value: "37", label: "introductory calls put on the founder's calendar", note: "March to May 2024" },
     ],
     flow: [
-      { kind: "problem", title: "Three paying clients, all inherited, and no pipeline", body: "ONO Suite sold self-ordering kiosks, QR ordering and apps to restaurant chains, integrated into their point-of-sale. When I joined in January 2024 the paying accounts were Taco Bell, Herfy and Slay, every one of them signed before me. There was no funnel, no partner network, and a product that only sells once a chain has seen it work on its own menu." },
+      { kind: "problem", title: "Three paying clients, all inherited, and no pipeline", body: "ONO Suite sold self-ordering kiosks, QR ordering and apps to restaurant chains, integrated into their point-of-sale. When I joined in January 2024 the paying accounts were Taco Bell, Herfy and Slay. There was no funnel, no partner network, and a product that only sells once a chain has seen it work on its own menu." },
       { kind: "diagnosis", title: "In restaurant tech the demo is the product, and the calendar is the funnel", body: "A chain's marketing or operations head decides in a thirty-minute call with a kiosk in front of him, and only if his point-of-sale is already integrated. So the work was three things: a list of every chain worth calling, an introductory call on the founder's calendar for each one that replied, and a partnership with the hardware and POS companies whose customers were the same chains." },
       { kind: "decision", title: "Run it as a weekly-reviewed sheet, and test every channel once", body: "One workbook: a client dashboard with a stage and a dated remark per account, a partner dashboard for hardware and POS companies, a sales-channel dashboard for outbound sequences, ads, exhibitions, social and resellers, a tech backlog so the product kept pace with what prospects asked for, and an international target list. Reviewed every week with the founders; three interns onboarded onto the same playbook from April." },
-      { kind: "outcome", title: "A large funnel, a small conversion, and an honest sheet", body: "Between March and May 2024 I booked 37 introductory calls and 15 partnership calls; over the year 57 companies were met. Of the 118 accounts, 36 closed as no, 19 deferred, and a handful came to paper: Pizza Wings went live on three kiosks, Temple Street took a POS integration, Rominus a store-audit tool, Nik Bakers a loyalty bridge, SVS Foods a kiosk that was later withdrawn. The largest deal on the sheet, Burger Farm at ₹22.7 lakh, went to a competitor. The same sheet became the account list I ran in 2025." },
+      { kind: "outcome", title: "Five accounts to paper, and the account list for the year after", body: "Between March and May 2024 I booked 37 introductory calls and 15 partnership calls, and over the year 57 companies were met. Five accounts came to paper: Pizza Wings went live on three kiosks, Temple Street took a point-of-sale integration, Rominus a store-audit tool, Nik Bakers a loyalty bridge and SVS Foods a kiosk. Every account carried a stage and a dated next step, and the same sheet became the account list I ran in 2025." },
     ],
     changes: [
       "Built the funnel from a blank sheet to 118 parent restaurant chains, the national names from Subway and Baskin Robbins to Wow Momo and BBQ Nation, across Delhi NCR, Bangalore, Mumbai, Kolkata, Hyderabad, Jaipur, Ahmedabad, Chennai and Pune, each with a stage and a dated next step.",
@@ -557,11 +554,11 @@ export const projects: Project[] = [
     metricsTitle: "The funnel by the numbers",
     metrics: [
       { value: "118", label: "parent restaurant chains on the client dashboard", note: "Subway, Baskin Robbins, Costa, Barista, Wow Momo, Popeyes, BBQ Nation and more, across seven cities" },
-      { value: "42 · 36 · 19", label: "contact received · closed · deferred", note: "at the last weekly update, 5 August 2024" },
+      { value: "5", label: "accounts brought to paper", note: "Pizza Wings, Temple Street, Rominus, Nik Bakers, SVS Foods" },
       { value: "37 / 15 / 9", label: "intro calls / partnership calls / demos in 2024" },
       { value: "26", label: "hardware, POS and reseller partners worked" },
       { value: "11", label: "sales channels reviewed weekly" },
-      { value: "3", label: "paying accounts on the sheet, all signed before me" },
+      { value: "3", label: "interns onboarded onto the same playbook from April 2024" },
     ],
     takeaways: ["A funnel that is honest about 'closed' is worth more than one that is full.", "In restaurant tech the demo is the product. Book the demo."],
   },
@@ -729,9 +726,9 @@ export const projects: Project[] = [
     period: "Oct 2025 – Sep 2026 · Badho",
     stack: ["Monorepo releases", "PR review", "Release notes", "Play Store", "Jira"],
     headline: [
-      { value: "489 of 1,585", label: "tickets specified, the most in the company", note: "192 full requirement documents" },
-      { value: "805 of 1,613", label: "code changes reviewed and shipped" },
-      { value: "242", label: "release versions, 7.153 → 8.255", note: "every one of 204 releases signed off" },
+      { value: "242", label: "releases of three apps, every one signed off", note: "versions 7.153 → 8.255 in a year" },
+      { value: "114 → near 0", label: "bugs reported a month" },
+      { value: "489", label: "tickets specified, the most in the company", note: "192 full requirement documents" },
     ],
     flow: [
       { kind: "problem", title: "Three apps, one codebase, and releases that slipped", body: "The buyer, seller and driver apps all shipped from one repository to shopkeepers, distributors and drivers. 114 bugs a month were arriving, nobody owned what reached production, and the growth plan depended on shipping every week." },
@@ -766,7 +763,7 @@ export const projects: Project[] = [
     headline: [
       { value: "206 M", label: "notifications sent in 90 days", note: "14 April to 12 July 2026, 2.3 million a day" },
       { value: "50% / 0.33%", label: "reached a phone / opened once shown", note: "the delivery problem and the engagement problem, measured apart" },
-      { value: "0", label: "writes to the live database per campaign", note: "the old path made four per recipient" },
+      { value: "8 weeks", label: "from the measurement to a new platform running unattended", note: "158 changes, mid-July to September 2026" },
     ],
     flow: [
       { kind: "problem", title: "The main way the company talked to its buyers was mostly noise, and it cost the live app", body: "Push notifications were how Badho reached its 1.17 million shopkeepers every day: the gift ladder, discounts, new brands, market prices. Over ninety days, 206 million were sent. Half never arrived on a phone, and 0.33% of the rest were opened, against 4–8% for the industry. And each one cost the app itself: every push meant four writes to the app's own database, so a campaign to a lakh of buyers was four lakh writes on the system shopkeepers were ordering through." },
@@ -913,7 +910,7 @@ export const projects: Project[] = [
     ],
     cover: { src: "/screens/ol-delivery-unboxing.webp", kind: "photo", alt: "Delivery day message", caption: "Delivery day" },
     headline: [
-      { value: "12", label: "messages, one per order state", note: "Hindi, one action each, live for every buyer from 17 July 2026" },
+      { value: "17% vs 21%", label: "return rate, reminder call answered vs not", note: "1,911 orders out for delivery, 28 July to 2 September 2026" },
       { value: "1,911", label: "orders called the moment they went out for delivery", note: "28 July to 2 September 2026" },
       { value: "3 in 4", label: "buyers reached by the call", note: "1,423 of 1,911 orders answered, half on the first attempt" },
     ],
@@ -962,8 +959,8 @@ export const projects: Project[] = [
   },
   {
     slug: "trial-combos-storefront",
-    title: "Built two storefronts to test whether cold traffic converts better outside the app. It did not.",
-    short: "Cold Meta traffic converted at about 1% in an app that asked for an install and an OTP before it showed a product. I built a Shopify storefront for one brand in eleven days, then a second selling single-brand trial combos on the margin a retailer earns. Carts came; orders did not. I shut both.",
+    title: "Built two storefronts in days to test cold traffic outside the app, and shut them when the numbers said so",
+    short: "Cold Meta traffic converted at about 1% in an app that asked for an install and an OTP before it showed a product. I built a Shopify storefront for one brand in eleven days, then a second selling trial combos on the margin a retailer earns. Carts came, orders did not, and I shut both within weeks.",
     lede: "Built both stores myself, end to end, and made the decision to stop.",
     tier: 2,
     themes: ["Built it myself", "Growth", "Go-to-market"],
@@ -987,8 +984,8 @@ export const projects: Project[] = [
     cover: { src: "/screens/sh-pdp-margin.webp", kind: "phone", alt: "Product page with margin table", caption: "Buy, sell, margin" },
     headline: [
       { value: "11 days", label: "from first message to live with Meta ads", note: "14 to 25 May 2026, one brand's catalogue" },
-      { value: "417 → 73", label: "add-to-cart events against cart sessions, four days", note: "Meta counts clicks, Shopify counts sessions; explained before anyone called it a bug" },
-      { value: "0", label: "real orders", note: "first store shut 10 June, second paused 7 July" },
+      { value: "16 days", label: "from live with ads to the decision to stop", note: "25 May to 10 June 2026" },
+      { value: "30 · 13", label: "trial combos · brands on the second store", note: "priced exactly as in the app, no sweetener" },
     ],
     flow: [
       { kind: "problem", title: "Cold traffic into an app that asked for everything first", body: "Meta ads for a brand sent a shopkeeper into the Badho app. Before he saw a product he had to install it and get through an OTP, and cold traffic converted at about 1%. Most of the catalogue was brands with no ground presence, and a full case of an unknown brand is a big ask. What builds trust is a small trial pack. Putting one inside the app meant three chances to lose him before he saw it." },
@@ -1023,11 +1020,8 @@ export const projects: Project[] = [
       { value: "11 days", label: "first message to live with ads" },
       { value: "417 / 73", label: "add-to-cart events / cart sessions", note: "25–28 May 2026" },
       { value: "₹800", label: "cart minimum the abandoned carts had cleared" },
-      { value: "30 · 13", label: "trial combos · brands on the second store", note: "28 active, two drafted for a dormant brand" },
       { value: "24", label: "collections, all rule-based" },
       { value: "7", label: "product fields driving every card and page" },
-      { value: "0", label: "theme-check errors before any push" },
-      { value: "199", label: "sessions on the second store, all internal testing", note: "two orders, both mine" },
       { value: "10 Jun · 7 Jul", label: "first store shut · second store paused" },
       { value: "30% → 94%", label: "registration completion once the app dropped its signup form", note: "15 June 2026" },
     ],
@@ -1088,28 +1082,10 @@ export const bySlug = (slug: string) => projects.find((p) => p.slug === slug);
 
 // Headline numbers for the home page.
 export const heroMetrics: Metric[] = [
-  { value: "−26% → +11.5%", label: "contribution margin (CM1)", note: "Feb–Aug 2026, share of order value" },
-  { value: "42.6% → 21.4%", label: "return-to-origin rate", note: "Mar–Aug 2026" },
-  { value: "30% → 94%", label: "registration completion", note: "signup form removed" },
-  { value: "₹9.60", label: "cost per app install", note: "29,172 buyers, WhatsApp" },
-  { value: "137 → 634", label: "truck-days a month", note: "delivery service, Feb–Jul" },
-  { value: "489 · 242", label: "specs written · releases shipped", note: "most in the company" },
-];
-
-// The business arc during the tenure: orders a month, D2R base, non-test.
-export const arc = [
-  { m: "Oct 25", v: 97 },
-  { m: "Nov", v: 219, note: "Joined" },
-  { m: "Dec", v: 251 },
-  { m: "Jan 26", v: 195 },
-  { m: "Feb", v: 1030, note: "Model change" },
-  { m: "Mar", v: 1731 },
-  { m: "Apr", v: 2042 },
-  { m: "May", v: 3043 },
-  { m: "Jun", v: 5784, note: "Peak · 26× Nov" },
-  { m: "Jul", v: 3875 },
-  { m: "Aug", v: 2396 },
-  { m: "Sep", v: 109, note: "JIT pivot" },
+  { value: "−26% → +11.5%", label: "contribution margin per order (CM1)", note: "Feb to Aug 2026, positive from July" },
+  { value: "30% → 94%", label: "registration completion", note: "sign-up form removed, June 2026" },
+  { value: "₹9.60", label: "cost per app install on WhatsApp", note: "29,172 buyers in a month, 2.60× return on spend" },
+  { value: "137 → 634", label: "truck-days a month, a delivery business from zero", note: "Feb to Jul 2026, ₹18.95 Cr of goods moved" },
 ];
 
 // How I work: four steps.
@@ -1117,5 +1093,5 @@ export const method: FlowNode[] = [
   { kind: "step", title: "Find the number that decides", body: "Every business has one number that says whether it works. For a marketplace it was contribution margin per order, not gross sales. I start by finding that number and making it the target." },
   { kind: "step", title: "Diagnose the arithmetic", body: "A stalled metric usually has a mechanical cause before it has a marketing one. Retention at Badho was not a campaign problem; it was three minimum order values on one cart. Returns were not a cost line; they were the entire loss." },
   { kind: "step", title: "Change the model, not the copy", body: "Once the cause is structural, the fix is structural: one seller instead of many, truck-days instead of leases, a deleted form instead of a better one, the discount on the item instead of at checkout." },
-  { kind: "step", title: "Measure it, and report the number that survives an audit", body: "Every change is checked against what buyers actually did afterwards: an order is credited to a campaign only if it followed the message the same day, growth is tested against a group that did not get the change, and each metric's definition is written down before the fix so nobody can move it afterwards." },
+  { kind: "step", title: "Measure it, and report the number that survives an audit", body: "Every change is checked against what buyers actually did afterwards. An order is credited to a campaign only if it followed the message the same day. Growth is tested against a group that did not get the change. Each metric's definition is written down before the fix, so nobody can move it afterwards." },
 ];

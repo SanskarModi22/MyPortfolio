@@ -2,12 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
 import { profile } from "@/content/profile";
-import { heroMetrics, tier1, tier2, arc, method, THEMES, type WorkCard } from "@/content/projects";
+import { heroMetrics, tier1, tier2, method, THEMES, type WorkCard } from "@/content/projects";
 import { Reveal } from "@/components/Reveal";
 import { Section, Chip } from "@/components/Section";
 import { ProofStrip } from "@/components/ProofStrip";
 import { FlowStrip } from "@/components/FlowStrip";
-import { ArcChart } from "@/components/ArcChart";
+import { Timeline } from "@/components/Timeline";
 import { WorkGrid } from "@/components/WorkGrid";
 import { CopyButton } from "@/components/CopyButton";
 
@@ -26,14 +26,14 @@ export default function Home() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <section className="border-b border-line bg-surface">
-        <div className="mx-auto grid max-w-6xl items-center gap-8 px-5 pb-12 pt-12 sm:pt-16 md:grid-cols-[1fr_auto] md:gap-12">
+      <section className="hero border-b border-line bg-surface">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-5 pb-12 pt-12 sm:pt-16 md:grid-cols-[1fr_auto] md:gap-12">
           <div>
             <p className="rise font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-accent">{profile.role}</p>
-            <h1 className="rise mt-3 text-[38px] font-extrabold leading-[1.05] tracking-[-0.025em] text-ink sm:text-[54px]" style={{ animationDelay: "80ms" }}>
+            <h1 className="rise mt-3 text-[40px] font-extrabold leading-[1.02] tracking-[-0.03em] text-ink sm:text-[58px]" style={{ animationDelay: "80ms" }}>
               {profile.name.first} {profile.name.last}
             </h1>
-            <p className="rise mt-5 max-w-2xl text-[19px] font-medium leading-snug text-ink sm:text-[22px]" style={{ animationDelay: "160ms" }}>
+            <p className="rise mt-5 max-w-2xl text-[19px] font-medium leading-snug text-ink sm:text-[23px]" style={{ animationDelay: "160ms" }}>
               {profile.headline}
             </p>
             <p className="rise mt-4 max-w-2xl text-[15px] leading-relaxed text-muted" style={{ animationDelay: "220ms" }}>
@@ -55,12 +55,16 @@ export default function Home() {
                 LinkedIn ↗
               </a>
             </div>
+            <p className="rise mt-5 flex items-center gap-2.5 text-[13.5px] text-muted" style={{ animationDelay: "400ms" }}>
+              <span aria-hidden className="pulse-dot" />
+              {profile.availability}
+            </p>
           </div>
 
           {headshot ? (
             <div className="rise justify-self-center md:justify-self-end" style={{ animationDelay: "200ms" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={headshot} alt={`${profile.name.first} ${profile.name.last}`} width={224} height={224} className="h-44 w-44 rounded-2xl border border-line object-cover object-top shadow-[0_20px_50px_-30px_rgba(15,23,42,0.5)] sm:h-56 sm:w-56" />
+              <img src={headshot} alt={`${profile.name.first} ${profile.name.last}`} width={240} height={240} className="h-44 w-44 rounded-2xl border border-line object-cover object-top shadow-[0_24px_60px_-30px_rgba(15,23,42,0.55)] sm:h-60 sm:w-60" />
             </div>
           ) : null}
         </div>
@@ -71,16 +75,16 @@ export default function Home() {
         <ProofStrip items={heroMetrics} />
 
         {/* ── Capabilities ─────────────────────────────────────────────── */}
-        <Section id="capabilities" title="What you can bank on" kicker="Six things I have done end to end, each with the number that proves it and the case behind it.">
+        <Section id="capabilities" title="What I can own end to end" kicker="Six capabilities. Each one carries the number that proves it and links to the case behind it.">
           <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {profile.capabilities.map((c, i) => (
               <Reveal key={c.title} as="li" delay={i * 0.04}>
                 <Link href={c.href} className="card card-hover group flex h-full flex-col p-5">
                   <div className="flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.16em] text-faint">
                     <span>0{i + 1}</span>
-                    <span className="text-accent opacity-0 transition-opacity group-hover:opacity-100">→ case</span>
+                    <span className="text-accent opacity-0 transition-opacity group-hover:opacity-100">Read the case →</span>
                   </div>
-                  <div className="tnum mt-3 text-[24px] font-bold leading-none tracking-tight text-accent">{c.metric}</div>
+                  <div className="tnum mt-3 text-[26px] font-bold leading-none tracking-tight text-accent">{c.metric}</div>
                   <h3 className="mt-2.5 text-[16px] font-semibold leading-snug text-ink">{c.title}</h3>
                   <p className="mt-2 text-[13.5px] leading-relaxed text-muted">{c.proof}</p>
                 </Link>
@@ -89,32 +93,15 @@ export default function Home() {
           </ol>
         </Section>
 
-        {/* ── How I work ───────────────────────────────────────────────── */}
-        <Section id="method" title="How I work" kicker="The same four moves, every time. The cases below are this loop run on different numbers.">
-          <Reveal>
-            <FlowStrip nodes={method} numbered />
-          </Reveal>
-        </Section>
-
-        {/* ── The arc ──────────────────────────────────────────────────── */}
-        <Section id="arc" title="The business I ran product through" kicker="Orders a month on Badho's B2B marketplace, October 2025 to September 2026. Non-test buyers and sellers, from the production database.">
-          <Reveal>
-            <ArcChart
-              data={arc}
-              caption="I joined in November at 219 orders a month and ran product, growth and delivery through the climb to June, 26 times November, then owned the operating model for the September pivot to our own warehouse and fleet."
-            />
-          </Reveal>
-        </Section>
-
         {/* ── Case studies ─────────────────────────────────────────────── */}
-        <Section id="work" title="Case studies" kicker="Seven cases. Each one: why it mattered, what we found, what we decided, what happened.">
+        <Section id="work" title="Case studies" kicker="Seven cases. Each one: why it mattered, what I found, what I decided, and what happened.">
           <Reveal>
             <WorkGrid items={tier1.map(toCard)} themes={THEMES} />
           </Reveal>
         </Section>
 
-        {/* ── Also ─────────────────────────────────────────────────────── */}
-        <Section id="more-work" title="More cases" kicker="Eleven more, built the same way and to the same standard of evidence.">
+        {/* ── More ─────────────────────────────────────────────────────── */}
+        <Section id="more-work" title="More cases" kicker="Eleven more, written the same way and to the same standard of evidence.">
           <ul className="grid gap-3 sm:grid-cols-2">
             {tier2.map((p, i) => (
               <Reveal key={p.slug} as="li" delay={i * 0.04}>
@@ -131,6 +118,20 @@ export default function Home() {
               </Reveal>
             ))}
           </ul>
+        </Section>
+
+        {/* ── How I work ───────────────────────────────────────────────── */}
+        <Section id="method" title="How I work" kicker="The same four moves every time. The cases above are this loop run on different numbers.">
+          <Reveal>
+            <FlowStrip nodes={method} numbered />
+          </Reveal>
+        </Section>
+
+        {/* ── The year ─────────────────────────────────────────────────── */}
+        <Section id="year" title="One year at Badho" kicker="Two business models and a pivot in twelve months. Where the cases sit in the year.">
+          <div className="card p-5 sm:p-7">
+            <Timeline items={profile.timeline} />
+          </div>
         </Section>
 
         {/* ── Experience ───────────────────────────────────────────────── */}

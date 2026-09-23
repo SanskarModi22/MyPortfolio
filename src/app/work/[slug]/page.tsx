@@ -53,7 +53,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
           {p.headline.map((m, i) => (
             <Reveal key={m.label} delay={i * 0.05}>
-              <MetricCard m={m} />
+              <MetricCard m={m} tone="accent" />
             </Reveal>
           ))}
         </div>
@@ -61,7 +61,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
         <div className="mt-14 space-y-16">
           {/* ── The flow ─────────────────────────────────────────────────── */}
           {p.flow?.length ? (
-            <Section title="How it went" kicker="Why it mattered → what we found → what we decided → what happened.">
+            <Section title="How it went" kicker="Why it mattered, what I found, what I decided, what happened.">
               <Reveal>
                 <FlowStrip nodes={p.flow} />
               </Reveal>
@@ -105,7 +105,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── What I got built ────────────────────────────────────────── */}
           {p.features?.length ? (
-            <Section title="What I got built" kicker="The product, feature by feature — each one a problem a store or a client had, and what shipped for it.">
+            <Section title="What I got built" kicker="The product, feature by feature: the problem a store or a client had, and what shipped for it.">
               <ol className="grid gap-3 md:grid-cols-2">
                 {p.features.map((f, i) => (
                   <Reveal key={f.title} as="li" delay={(i % 2) * 0.05}>
@@ -176,7 +176,7 @@ export default async function WorkPage(props: PageProps<"/work/[slug]">) {
 
           {/* ── System (optional) ───────────────────────────────────────── */}
           {diagram ? (
-            <Section title="The system" kicker="How the pieces fit. Hover or tap any part.">
+            <Section title="The system" kicker="How the pieces fit together. Hover or tap any part.">
               <Reveal>
                 <Diagram spec={diagram} title={p.title} />
               </Reveal>

@@ -256,3 +256,38 @@ body, .bg-surface, .bg-surface-2, .border-line, .text-ink, .text-muted {
     color-scheme: light;
   }
 }
+
+/* ── hero: a soft accent glow top-right and a faint dot grid that fades out ── */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; z-index: -1; top: -35%; right: -12%; width: 58%; height: 170%;
+  background: radial-gradient(closest-side, var(--accent-soft), transparent 72%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ""; position: absolute; z-index: -1; inset: 0;
+  background-image: radial-gradient(var(--rule) 1px, transparent 1.2px);
+  background-size: 24px 24px; opacity: 0.3; pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+}
+[data-theme="dark"] .hero::after { opacity: 0.16; }
+
+/* availability marker */
+.pulse-dot { position: relative; display: inline-block; width: 8px; height: 8px; flex: none; border-radius: 999px; background: var(--accent); }
+.pulse-dot::after {
+  content: ""; position: absolute; inset: -4px; border-radius: 999px; border: 1.5px solid var(--accent);
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+@keyframes pulse-ring { from { transform: scale(0.6); opacity: 0.9; } to { transform: scale(1.5); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pulse-dot::after { animation: none; opacity: 0; } }
+
+/* ── timeline: a vertical spine on phones, a rail across the top on wide screens ── */
+.tl { position: relative; }
+.tl::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; border-radius: 2px; background: var(--rule); }
+.tl-dot { position: absolute; left: 0; top: 4px; width: 12px; height: 12px; border-radius: 999px; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+@media (min-width: 768px) {
+  .tl { grid-template-columns: repeat(var(--tl-cols, 5), minmax(0, 1fr)); }
+  .tl::before { left: 6px; right: 6px; top: 5px; bottom: auto; width: auto; height: 2px; }
+  .tl-dot { top: 0; left: 0; }
+}
