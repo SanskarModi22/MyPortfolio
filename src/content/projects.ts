@@ -68,12 +68,12 @@ export const projects: Project[] = [
     flow: [
       { kind: "problem", title: "Every order we grew lost us money", body: "Badho's marketplace kept 13–15% of every order as commission, but shipping that order through third-party couriers cost 46% of its value, and a third of parcels came back at our expense. Every order we added lost more money than the one before. With a fixed ₹40 lakh monthly budget, the business had to become profitable per order or stop growing." },
       { kind: "diagnosis", title: "Returns were the entire loss", body: "I separated the profit and loss into its cost lines and found that returned parcels alone cost ₹13.71 lakh between January and August, 107% of the whole net loss. Timing each stage of an order showed that the time our sellers took to hand a parcel over had fallen thirteen-fold, while the courier's part of the journey never improved. The cost we did not control was the one sinking us." },
-      { kind: "decision", title: "Define the number, then attack the biggest line each month", body: "I defined the metric the business would run on: CM1, which is commission minus discounts, delivery and marketing. Then I went after the largest cost line each month in turn. Freight first, by making it visible on every order and moving it onto sellers. Then discounts. Then returns, with a stack of rules: prepaid-only after a single return, address checks at checkout, and a delivery promise that paid out when missed." },
-      { kind: "outcome", title: "Positive from July", body: "CM1 moved from −26% of order value in February to +11.5% in August and stayed positive from July. Delivery cost fell from 46% of order value to under 1%, the return rate halved from 42.6% to 21.4%, and the share of orders that actually reached the buyer rose from 22% to 64% while volume grew fourfold." },
+      { kind: "decision", title: "Define the number, then attack the biggest line each month", body: "I defined the metric the business would run on: CM1, which is commission minus discounts, delivery and marketing. Then I went after the largest cost line each month in turn. Delivery first: Badho had been paying the courier for every parcel itself, so we began deducting the courier's charge from what each brand was paid for the order. Then discounts. Then returns, with a stack of rules: prepaid-only after a single return, address checks at checkout, and a delivery promise that paid out when missed." },
+      { kind: "outcome", title: "Positive from July", body: "CM1 moved from −26% of order value in February to +11.5% in August and stayed positive from July. The courier cost Badho carried fell from 46% of order value to under 1%, the return rate halved from 42.6% to 21.4%, and the share of orders that actually reached the buyer rose from 22% to 64% while volume grew fourfold." },
     ],
     changes: [
       "Defined the profit measure the business ran on, what an order earns after discounts, delivery and marketing, and made it the target every team reported against.",
-      "Showed every brand what its parcels cost to ship, order by order, and moved delivery cost onto the sellers: from 46% of order value to under 1%.",
+      "Stopped paying the courier out of Badho's pocket: showed every brand what each parcel cost to ship, then deducted that charge from the brand's payout for the order. Delivery cost to Badho fell from 46% of order value to under 1%.",
       "Automated the recovery of courier overcharges, where couriers re-weighed parcels and billed the difference, so claims were filed inside the courier's 24-hour window: 378 in one day.",
       "Cut returns with a set of rules: prepaid-only after a single return, address checks before an order is placed, a delivery promise that paid the buyer when missed, and a process for refusals at the door.",
       "Cut discounts from 15.1% to 5.3% of order value while commission taken rose from 12.7% to 19.4%.",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     ],
     metrics: [
       { value: "107%", label: "of the net loss was return freight", note: "₹13.71 L of returns against a ₹12.84 L loss, Jan–Aug 2026" },
-      { value: "46% → 0.29%", label: "delivery cost / order value", note: "Feb to Jun 2026, moved onto sellers" },
+      { value: "46% → 0.29%", label: "delivery cost carried by Badho, as a share of order value", note: "Feb to Jun 2026, once the courier charge was deducted from each brand's payout" },
       { value: "12.7% → 19.4%", label: "commission actually taken", note: "Jun to Aug 2026" },
       { value: "15.1% → 5.3%", label: "discount spend / order value", note: "Jun to Aug 2026" },
       { value: "143.9 h → 10.9 h", label: "time for a seller to hand a parcel over", note: "13× faster; the courier's part stayed at 88–123 hours every month" },
@@ -103,7 +103,8 @@ export const projects: Project[] = [
     period: "Jun – Sep 2026 · Badho",
     stack: ["Operating model", "Warehouse spec", "Fee and waiver", "Serviceability", "Capacity plan", "JIT console"],
     screens: [
-      { src: "/screens/jit-min-order.webp", kind: "phone", alt: "Cart blocked by one brand’s ₹300 minimum", caption: "July 2026: one brand's ₹300 minimum blocking a cart" },
+      { src: "/screens/jit-cart-three-brands.webp", kind: "phone", alt: "Home screen with a separate minimum order under each brand and a cart holding three brands", caption: "July 2026: one cart holding three brands, and a different minimum under every brand" },
+      { src: "/screens/jit-add-308-more.webp", kind: "phone", alt: "Cart at ₹192 of a ₹500 brand minimum: add ₹308 more to place order", caption: "₹192 already in the cart, and the brand's ₹500 minimum still asks for ₹308 more" },
       { src: "/screens/jit-home-sept.webp", kind: "phone", alt: "Single-seller Badho Wholesale home", caption: "September: the single-seller store after the pivot" },
       { src: "/screens/jit-warehouse-plan.webp", kind: "diagram", alt: "Badho warehouse operations and the software involved, as a twelve-step flow diagram", caption: "The operating plan: twelve steps from the 6 PM cutoff to the doorstep, with the software each step needed" },
       { src: "/screens/jit-boxes.webp", kind: "photo", alt: "Packed Badho orders stacked at the Gurugram warehouse", caption: "Packed overnight at the Gurugram warehouse, one order per brand" },
@@ -198,6 +199,7 @@ export const projects: Project[] = [
       { src: "/screens/af-home.webp", kind: "phone", tag: "after", alt: "New onboarding: straight to the home screen", caption: "Then straight to the home screen. No form. Registration completion 30% → 94%" },
       { src: "/screens/plg-home-before.webp", kind: "phone", alt: "Buyer app home before 18 July", caption: "Home before 18 Jul: icon rail, ₹1 Deal, promotional banners" },
       { src: "/screens/plg-home-after.webp", kind: "phone", alt: "Buyer app home after the rebuild", caption: "Home after the rebuild: coupons fold, category tabs, cart strip" },
+      { src: "/screens/plg-support-rm.webp", kind: "phone", alt: "Support tab with a named relationship manager, a call button and quick answers", caption: "The support tab: a named relationship manager, a one-tap call, and answers to the six questions buyers asked most" },
     ],
     cover: { src: "/screens/plg-home-before.webp", kind: "phone", alt: "", caption: "" },
     headline: [
@@ -365,7 +367,7 @@ export const projects: Project[] = [
     period: "Apr – Sep 2026 · Badho",
     stack: ["Cart coupons", "Item quantity tiers", "₹1 deals", "Base-price cut", "Sabse sasta positioning", "Discount audit dashboard"],
     screens: [
-      { src: "/screens/plg-filters.webp", kind: "phone", alt: "Margin on the product card", caption: "Margin on the card, coupon on the item" },
+      { src: "/screens/pricing-item-tiers.webp", kind: "phone", alt: "Product cards showing buy price, sell price, margin and two quantity discount tiers", caption: "Margin on every card, and two quantity tiers under it: 4% to start, 6% for buying more" },
       { src: "/screens/plg-home-before.webp", kind: "phone", alt: "₹1 Deal banner", caption: "The ₹1 Deal: 68% of orders carried a ₹1 item at the peak" },
       { src: "/screens/pricing-home-sabse-sasta.webp", kind: "phone", alt: "Home with the sabse sasta claim", caption: "Home, 5 Aug 2026: the 'sabse sasta' claim the slab logic had to make true" },
       { src: "/screens/pricing-meta-sabse-sasta.webp", kind: "square", alt: "Meta ad creative", caption: "The Meta creative: 'Sabse Sasta Milega Yahin'" },

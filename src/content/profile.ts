@@ -23,7 +23,7 @@ export const profile = {
   // Three facts a recruiter reads in the first five seconds.
   facts: ["3 yrs · product, growth & GTM", "B2B marketplaces · logistics · restaurant tech", "Team of 20 · B.Tech CS, IIIT Sonepat"],
 
-  availability: "Open to Senior PM, Growth PM and first-product-hire roles",
+  availability: "Open to Product Manager roles",
 
   // What I can own end to end. One capability, one number, one line, one case.
   capabilities: [
