@@ -171,7 +171,7 @@ export default function Home() {
                 {profile.education.map((ed) => (
                   <div key={ed.degree} className="mt-3 first:mt-3 [&+&]:mt-5 [&+&]:border-t [&+&]:border-line [&+&]:pt-4">
                     <div className="text-[15px] font-semibold text-ink">{ed.degree}</div>
-                    <div className="mt-0.5 text-[13.5px] text-muted">{ed.school}</div>
+                    <div className="mt-1 text-[14.5px] font-semibold leading-snug text-accent">{ed.school}</div>
                     {ed.period || ed.note ? <div className="mt-1 font-mono text-[11.5px] text-faint">{[ed.period, ed.note].filter(Boolean).join(" · ")}</div> : null}
                   </div>
                 ))}

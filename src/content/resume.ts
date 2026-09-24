@@ -96,7 +96,7 @@ export const resume = {
     { head: "WhatsApp sales agent, first working version", body: "Request handling, prompts, messaging, auth and a policy layer in one sitting, with the handover document; rebuilt by the AI pod into the live sales agent." },
   ],
 
-  education: [{ degree: "B.Tech, Computer Science", school: "Indian Institute of Information Technology (IIIT) Sonepat, mentor institute IIT Delhi", meta: "2020 – 2024 · GPA 9.415 / 10" }],
+  education: [{ degree: "B.Tech, Computer Science", school: "Indian Institute of Information Technology (IIIT) Sonepat, mentor institute IIT Delhi", meta: "2020 – 2024 · GPA 9.23 / 10" }],
 };
 
 const strip = (s: string) => s.replace(/\*\*/g, "");
