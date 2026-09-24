@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "-p", "3217"],
       "port": 3217
+    },
+    {
+      "name": "portfolio-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3999", "--directory", "out"],
+      "port": 3999
     }
   ]
 }

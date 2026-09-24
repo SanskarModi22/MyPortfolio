@@ -102,6 +102,18 @@ export function ResumeSheet() {
         </div>
       </div>
 
+      <div className="no-print mb-6 grid gap-2 sm:grid-cols-3">
+        {resume.variants.map((v) => (
+          <a key={v.key} href={v.href} className="card card-hover flex items-center justify-between gap-3 px-4 py-3">
+            <span className="min-w-0">
+              <span className="block text-[13.5px] font-semibold text-ink">{v.label} resume</span>
+              <span className="mt-0.5 block text-[12px] leading-snug text-muted">{v.blurb}</span>
+            </span>
+            <span aria-hidden className="shrink-0 font-mono text-[12px] text-accent">PDF ↓</span>
+          </a>
+        ))}
+      </div>
+
       {view === "web" ? (
         <Sheet />
       ) : (

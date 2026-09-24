@@ -4,7 +4,7 @@ import { resume } from "@/content/resume";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "One page. Identical to the PDF. ATS view shows exactly what a parser reads.",
+  description: "One page. The same record as the PDF cuts. ATS view shows exactly what a parser reads.",
 };
 
 export default function ResumePage() {
@@ -16,7 +16,7 @@ export default function ResumePage() {
           {resume.name.first} {resume.name.last}
         </h1>
         <p className="rise mt-3 max-w-2xl text-[15px] leading-relaxed text-muted" style={{ animationDelay: "160ms" }}>
-          Identical to the PDF. Switch to <em>ATS plain text</em> to see exactly what an applicant-tracking system reads, in the order it reads it.
+          The Product Manager cut, with every figure re-derived from production. The PDFs below are the same record condensed to one page each, for three roles. Switch to <em>ATS plain text</em> to see exactly what an applicant-tracking system reads, in the order it reads it.
         </p>
         <div className="rise mt-7" style={{ animationDelay: "240ms" }}>
           <ResumeSheet />

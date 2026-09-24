@@ -9,6 +9,7 @@ import { ProofStrip } from "@/components/ProofStrip";
 import { FlowStrip } from "@/components/FlowStrip";
 import { Timeline } from "@/components/Timeline";
 import { WorkGrid } from "@/components/WorkGrid";
+import { RoleLenses } from "@/components/RoleLenses";
 import { CopyButton } from "@/components/CopyButton";
 
 function findHeadshot() {
@@ -73,6 +74,11 @@ export default function Home() {
       <div className="mx-auto max-w-6xl space-y-20 px-5 pt-10 sm:space-y-24">
         {/* ── Proof ────────────────────────────────────────────────────── */}
         <ProofStrip items={heroMetrics} />
+
+        {/* ── Three roles, one record ──────────────────────────────────── */}
+        <Section id="roles" title="Three ways to read this" kicker="The same year, read as a product manager, a growth and strategy PM, or a product marketing manager. Same figures in each; only the emphasis and the resume cut change.">
+          <RoleLenses lenses={profile.lenses} />
+        </Section>
 
         {/* ── Capabilities ─────────────────────────────────────────────── */}
         <Section id="capabilities" title="What I can own end to end" kicker="Six capabilities. Each one carries the number that proves it and links to the case behind it.">
@@ -179,6 +185,7 @@ export default function Home() {
                     [
                       ["Product", profile.skills.product],
                       ["Growth & analytics", profile.skills.growth],
+                      ["Marketing & go-to-market", profile.skills.marketing],
                       ["Commercial", profile.skills.commercial],
                       ["Technical", profile.skills.technical],
                     ] as const
