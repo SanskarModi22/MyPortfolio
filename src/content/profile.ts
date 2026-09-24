@@ -188,5 +188,8 @@ export const profile = {
     },
   ],
 
-  education: [{ degree: "B.Tech, Computer Science", school: "IIIT Sonepat (mentor institute: IIT Delhi)", period: "2020 – 2024", note: "GPA 9.415 / 10" }],
+  education: [
+    { degree: "B.Tech, Computer Science", school: "Indian Institute of Information Technology, Sonepat (mentor institute: IIT Delhi)", period: "2020 – 2024", note: "GPA 9.415 / 10" },
+    { degree: "Class XII (ISC) · Class X (ICSE)", school: "City Montessori School, Lucknow", period: "", note: "" },
+  ],
 } as const;
