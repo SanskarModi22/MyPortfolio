@@ -241,7 +241,7 @@ export const projects: Project[] = [
     tier: 1,
     themes: ["Go-to-market", "Strategy", "Unit economics"],
     period: "Feb – Sep 2026 · Badho",
-    stack: ["Truck-day booking", "Invoice OCR", "Address lock", "Route planning", "Driver app", "Two-party handover", "Cash settlement", "Failure taxonomy"],
+    stack: ["Truck-day booking", "Invoice OCR", "Address lock", "Route planning", "Driver app", "Two-party handover", "Cash settlement", "Failure taxonomy", "WhatsApp supply recruitment"],
     screens: [
       { src: "/screens/daas-van-road.webp", kind: "photo", alt: "Badho Delivery three-wheeler on the road", caption: "A Badho Delivery three-wheeler: closed body, gas, built for market lanes" },
       { src: "/screens/daas-booking.webp", kind: "phone", alt: "Vehicle selection with day rates", caption: "Book a truck by the day: three-wheeler ₹1,600, four-wheeler ₹2,000" },
@@ -254,6 +254,9 @@ export const projects: Project[] = [
       { src: "/screens/daas-driver-handover.webp", kind: "phone", alt: "End of trip: driver back, route summary, start handover", caption: "End of trip: delivered, returned, cash collected, handover begins" },
       { src: "/screens/daas-driver-otp.webp", kind: "phone", alt: "Rider ko OTP bataiye: the code the distributor reads to the driver", caption: "A code the distributor reads to the driver closes the trip" },
       { src: "/screens/daas-ops-dashboard.webp", kind: "desktop", alt: "Delivery management dashboard", caption: "The operations dashboard: every trip and drop, routes re-ordered by drag" },
+      { src: "/screens/daas-wa-driver.webp", kind: "phone", alt: "WhatsApp campaign to driver leads: permanent local work, weekly pay, two quick-reply buttons for three-wheeler or four-wheeler", caption: "Recruiting drivers on WhatsApp, 8 Jul 2026: 500 sent, 74% read, 32% replied with a button" },
+      { src: "/screens/daas-wa-supply.webp", kind: "phone", alt: "WhatsApp campaign with a 44-second video to distributors, vehicle owners and drivers, each with a quick-reply button", caption: "One message, three kinds of supply: a 44-second video, then a button for distributor, vehicle owner or driver" },
+      { src: "/screens/daas-wa-distributor.webp", kind: "phone", alt: "WhatsApp survey to 2,688 distributors asking what their biggest delivery headache is, with three option buttons", caption: "2,688 distributors asked one question, 28 Jul: vehicle or driver not on time, no live status or cash proof, or all of it" },
     ],
     cover: { src: "/screens/daas-van-road.webp", kind: "photo", alt: "", caption: "" },
     headline: [
@@ -278,6 +281,8 @@ export const projects: Project[] = [
       { title: "A failed drop becomes information", body: "When a delivery fails the driver picks a reason from a closed list, such as customer not available, wrong address, refused or payment not ready, and the tally goes to the distributor's sales team so they can act on it. A second attempt is a priced service." },
       { title: "Returns and redelivery handled in the app", body: "Undelivered stock goes back to the warehouse against a code, and the driver chooses redelivery options for the next day instead of goods quietly coming back." },
       { title: "Small closed vehicles on gas", body: "Three-wheelers took 98.5% of trips because market lanes are narrow; every body is closed because FMCG goods must stay sealed and dry; four in five run on gas." },
+      { title: "Supply recruited on WhatsApp, in the driver's own words", body: "Leads from the ads got a WhatsApp message, not a form: permanent local work, ten hours a day, weekly pay straight to the account, and two buttons, three-wheeler or four-wheeler, can you start this week. 500 drivers sent, 371 read it, 157 tapped a button. A second message with a 44-second video sorted 689 leads into distributor, vehicle owner or driver with one tap each. Every message cost ₹0.145." },
+      { title: "The customer asked what hurts, before the pitch", body: "2,688 distributors got one question on WhatsApp: when you manage delivery, what is the biggest headache: the vehicle or driver not turning up on time, no live status and no proof of cash and delivery, or all of it together. Three buttons, 132 answers, and the answers went to the sales team as the opening line of the call." },
     ],
     metricsTitle: "How the business performed",
     metrics: [
@@ -287,6 +292,8 @@ export const projects: Project[] = [
       { value: "85%", label: "of drops delivered", note: "17,174 of 20,231" },
       { value: "₹29.2 L on ₹16.9 Cr", label: "fees billed on goods delivered, May to September", note: "a take of about 1.7%" },
       { value: "9 truck-days", label: "booked by Badho's own JIT business, 31 Aug to 7 Sep", note: "billed internally" },
+      { value: "32%", label: "of 500 driver leads replied to the WhatsApp recruitment message with a button", note: "8 Jul 2026; 74% read it; ₹72 for the whole send" },
+      { value: "2,688", label: "distributors asked one question on WhatsApp about their delivery headache", note: "28 Jul 2026; 62% read, 132 answered, ₹357" },
     ],
     solved: [
       "Solved: the idle-truck cost. 53 distributors paid by the day instead of owning the vehicle: 3,016 truck-days booked, nothing paid on the days they did not sell.",
@@ -294,6 +301,7 @@ export const projects: Project[] = [
       "Solved: the paperwork barrier. Orders entered from photographs; no integration, no typing during the morning loading rush.",
       "Solved: cash reconciliation. Money in the distributor's own bank, matched to the bills, by whoever did the handover.",
       "Solved: the sale itself. The pitch was about his money, not our software: a trip on his truck against a trip on ours over 22 delivery days. A claim he could check himself.",
+      "Solved: finding drivers and vehicles. Leads from the ads were recruited on WhatsApp in their own words, with a button to answer; one in three drivers replied.",
       "Found, in the trip logs, that pickup punctuality was slipping as volume tripled, and made it the next priority before any report showed it.",
     ],
     takeaways: ["Meet the customer at the paper.", "Measure the promise, not only the volume."],
